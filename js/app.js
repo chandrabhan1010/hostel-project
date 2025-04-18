@@ -8,7 +8,7 @@ $(document).ready(function(){
     dots:false,
     smartSpeed:1000,
     navText:['PREV','NEXT'],
-    autoplay:false,
+    autoplay:true,
     autoplayTimeout:3000,
     responsive:{
         0:{
