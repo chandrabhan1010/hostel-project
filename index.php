@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="./css/styel.css">
     <link rel="stylesheet" href="./css/footer.css">
 
-    
-
     <title>Home</title>
 
 </head>
@@ -37,8 +35,7 @@
                     <a href="#"><i class='bx bxl-facebook' ></i></a>
                     <a href="#"><i class='bx bxl-twitter' ></i></a>
                     <a href="#"><i class='bx bxl-google' ></i></a>
-                    <a href="#"><i class='bx bxl-youtube' ></i></a>
-                   
+                    <a href="#"><i class='bx bxl-youtube' ></i></a> 
                 </div>
             </div>
         </div>
@@ -281,7 +278,7 @@
 <!-- Information Brochure-->
  <h2 class="text-center mt-5" style="font-size: 40px;">Information Brochure</h2>
   <div class="underline"></div>
-<div class="row g-2" style="margin-left: 20%;margin-right:20%" >
+  <div class="row g-2" style="margin-left: 20%;margin-right:20%" >
 
         <div class="row" >
             <div class="col  mt-3">
@@ -360,12 +357,13 @@
             </div>
         </div>
     </div>
-</div>  
+ </div>  
 
-<div class="text-center mt-5 ">
-<a href="#" class="clickhere">Click here </a><span  style="font-size: 22px;">to see the Information Brochure.</span>
-</div>
+ <div class="text-center mt-5 ">
+ <a href="#" class="clickhere">Click here </a><span  style="font-size: 22px;">to see the Information Brochure.</span>
+ </div>
 <div class="underline"></div>
+
 
 <!-- Meet The   Authorities -->
     <section>
