@@ -32,7 +32,7 @@
                 <span>(219) 555-0114</span>
                 </p>
             </div>
-            <div class="col-auto fs-5">
+            <div class="col-auto fs-5 socialicons">
                 <div class="social-links">
                     <a href="#"><i class='bx bxl-facebook' ></i></a>
                     <a href="#"><i class='bx bxl-twitter' ></i></a>
@@ -47,7 +47,7 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-ly-2 shadow-sm sticky-top">
         <div class="container-fluid">
            <a href="index.php"> <img src="./images/hostellogo.png" class="logo"></a>
-            <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">GGBH HOSTEL<span>.</span></a>
+            <a class="navbar-brand me-4 fw-bold fs-3 h-font" href="index.php">GGBH HOSTEL<span>.</span></a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -105,12 +105,12 @@
 <!-- Slider -->
 <div class="slider-wrapper owl-carousel owl-theme" id="hero-slider">
 
-        <div class="slide1 custom-height bg-cover d-flex align-items-center">
+        <div class="slide1 custom-height bg-cover d-flex align-items-center ">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="display-2 my-3 text-white  text-uppercase">Online Hostel Record System</h1>
-                        <h6 class="text-uppercase text-center text-white">IGNTU AMARKANTAK</h6>
+                        <h1 class="display-2 my-3 text-white  text-uppercase fontsize">Online Hostel Record System</h1>
+                        <h6 class="text-uppercase text-center text-white fontsize1">IGNTU AMARKANTAK</h6>
                         <div class="btn">
                             <a href="#" class="btn btn-brand">Get Started</a>
                         </div>
@@ -123,8 +123,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="display-2 my-3 text-white  text-uppercase">University Campus Main Gate</h1>
-                        <h6 class="text-uppercase  text-white">IGNTU AMARKANTAK</h6>
+                        <h1 class="display-2 my-3 text-white  text-uppercase fontsize">University Campus Main Gate</h1>
+                        <h6 class="text-uppercase  text-white fontsize1">IGNTU AMARKANTAK</h6>
                         
                     </div>
                 </div>
@@ -135,8 +135,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="display-2 my-3 text-white  text-uppercase">Guru Govind Boy's Hostel</h1>
-                        <h6 class="text-uppercase  text-white">IGNTU AMARKANTAK</h6>
+                        <h1 class="display-2 my-3 text-white  text-uppercase fontsize">Guru Govind Boy's Hostel</h1>
+                        <h6 class="text-uppercase  text-white fontsize1">IGNTU AMARKANTAK</h6>
                         
                     </div>
                 </div>
@@ -147,8 +147,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="display-2 my-3 text-white  text-uppercase">IGNTU University Campus</h1>
-                        <h6 class="text-uppercase  text-white">IGNTU AMARKANTAK</h6>
+                        <h1 class="display-2 my-3 text-white  text-uppercase fontsize">IGNTU University Campus</h1>
+                        <h6 class="text-uppercase  text-white fontsize1">IGNTU AMARKANTAK</h6>
                         
                     </div>
                 </div>
@@ -159,8 +159,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h1 class="display-2 my-3 text-white  text-uppercase">Guru Govind Boy's Hostel</h1>
-                        <h6 class="text-uppercase  text-white">IGNTU AMARKANTAK</h6>
+                        <h1 class="display-2 my-3 text-white  text-uppercase fontsize">Guru Govind Boy's Hostel</h1>
+                        <h6 class="text-uppercase  text-white fontsize1">IGNTU AMARKANTAK</h6>
                         
                     </div>
                 </div>
@@ -283,9 +283,9 @@
   <div class="underline"></div>
 <div class="row g-2" style="margin-left: 20%;margin-right:20%" >
 
-        <div class="row" style="margin-left: 2%;margin-right:10%" >
-            <div class="col">
-            <div class="card shadow" style="width: 13rem; height:12rem;">
+        <div class="row" >
+            <div class="col  mt-3">
+            <div class="card shadow " style="width: 13rem; height:12rem;">
             <img src="./images/reading.png" class="card-img-top ms-4"  style="width: 9rem; height:9rem">
                     <div class="card-body">
                     <a href="#"><h5 class="card-title text-center myhover">READING ROOM</h5></a>           
@@ -293,7 +293,7 @@
             </div>
             </div>    
 
-            <div class="col">
+            <div class="col mt-3">
             <div class="card shadow" style="width: 13rem; height:12rem;">
                     <img src="./images/cycle.png" class="card-img-top ms-4" style="width: 9rem; height:9rem"/>
                     <div class="card-body">
@@ -303,7 +303,7 @@
             </div>
 
 
-            <div class="col">
+            <div class="col  mt-3">
             <div class="card shadow"  style="width:13rem; height:12rem;">
                     <img src="./images/common.png" class="card-img-top ms-4" style="width: 9rem; height:7rem"/>
                     <div class="card-body">
@@ -313,7 +313,7 @@
             </div>
 
 
-            <div class="col">
+            <div class="col  mt-3">
                 <div class="card shadow" style="width:13rem; height:12rem;">
                     <img src="./images/play.png" class="card-img-top ms-4" style="width: 9rem; height:9rem" />
                     <div class="card-body">
@@ -322,10 +322,9 @@
                 </div>
             </div>
         </div>
-    <br>
 
- <div class="row" style="margin-left: 2%;margin-right:10%">
-        <div class="col" >
+ <div class="row mb-4" >
+        <div class="col mt-3" >
         <div class="card shadow" style="width: 13rem; height:12rem;">
             <img src="./images/dining.png" class="card-img-top ms-4" style="width: 9rem; height:9rem" />
             <div class="card-body">
@@ -334,7 +333,7 @@
         </div>
         </div>
 
-        <div class="col">
+        <div class="col  mt-3">
         <div class="card shadow"  style="width:13rem; height:12rem;">
             <img src="./images/watercooler.png" class="card-img-top ms-4"style="width: 9rem; height:9rem" />
             <div class="card-body">   
@@ -343,7 +342,7 @@
         </div>
         </div>
 
-        <div class="col">
+        <div class="col  mt-3">
             <div class="card shadow" style="width: 13rem; height:12rem;">
                 <img src="./images/gym.png" class="card-img-top ms-4 "style="width: 9rem; height:9rem"/>
                 <div class="card-body">
@@ -352,7 +351,7 @@
             </div>
         </div>
 
-        <div class="col">
+        <div class="col  mt-3">
             <div class="card shadow" style="width: 13rem; height:12rem;">
                 <img src="./images/wifi.png" class="card-img-top ms-4" style="width: 9rem; height:9rem"/>
                 <div class="card-body">

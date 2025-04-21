@@ -130,7 +130,8 @@ img
 }
 /* slider */
 .custom-height {
-    height: 900px; /* or any value you prefer */
+    height: 800px; /* or any value you prefer */
+    
 }
 .slide1
 {   
@@ -325,7 +326,8 @@ img
 }
 
   /* MEDIA QUERY FOR SMALL DEVICES */
-  @media (max-width: 768px) {
+  @media (max-width: 768px) 
+  {
     .team .member {
       flex-direction: column;
       align-items: center;
@@ -353,6 +355,32 @@ img
         height: 100px;
         margin: 0;
       }
+      .custom-height {
+        height: 300px; /* or any value you prefer */
+        width: 100%;
+        
+    }
+     .btn-brand
+     {
+        align-items: center;
+        font-size: 1px;
+        margin-bottom: 20px;
+     }
+     .fontsize
+     {
+        font-size: 20px;
+     }
+     .fontsize1
+     {
+        font-size: 10px;
+     }
+     .social-links
+     {
+        padding-left: 110px;
+        
+     }
+
+
     
   }
 
