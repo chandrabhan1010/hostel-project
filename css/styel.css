@@ -363,7 +363,7 @@ img
      .btn-brand
      {
         align-items: center;
-        font-size: 1px;
+        font-size: 10px;
         margin-bottom: 20px;
      }
      .fontsize
@@ -379,10 +379,7 @@ img
         padding-left: 110px;
         
      }
-    #brochure
-     {
-    
-     }
+
     
   }
 
