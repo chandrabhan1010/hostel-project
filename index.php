@@ -91,17 +91,21 @@
                 </li>
             </ul>
             <div class="d-flex">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>
-            </div>
 
+            <button type="button" class="btn btn-brand shadow-none me-lg-3 me-2 "   data-bs-toggle="modal" data-bs-target="#usermodal">
+            User
+           </button>
+
+           <button type="button" class="btn btn-brand shadow-none me-lg-2 me-2 "   data-bs-toggle="modal" data-bs-target="#adminmodal">
+            Admin
+           </button>
+            </div>
         </div>
+    </div>
 </nav>
 
 <!-- Slider -->
 <div class="slider-wrapper owl-carousel owl-theme" id="hero-slider">
-
         <div class="slide1 custom-height bg-cover d-flex align-items-center ">
             <div class="container">
                 <div class="row">
@@ -164,7 +168,7 @@
              </div>
          </div>
 
-       
+
     </div>
 
 
@@ -278,86 +282,55 @@
 <!-- Information Brochure-->
  <h2 class="text-center mt-5" style="font-size: 40px;">Information Brochure</h2>
   <div class="underline"></div>
-  <div class="row g-2 " id="brochure" style="margin-left: 25%;margin-right:25%;" >
 
-        <div class="row" >
-            <div class="col  mt-3">
-            <div class="card shadow " style="width: 13rem; height:12rem;">
-            <img src="./images/reading.png" class="card-img-top ms-4"  style="width: 9rem; height:9rem">
-                    <div class="card-body">
-                    <a href="#"><h5 class="card-title text-center myhover">READING ROOM</h5></a>           
-                    </div>
-            </div>
-            </div>    
+  <div class="container">
 
-            <div class="col mt-3">
-            <div class="card shadow" style="width: 13rem; height:12rem;">
-                    <img src="./images/cycle.png" class="card-img-top ms-4" style="width: 9rem; height:9rem"/>
-                    <div class="card-body">
-                    <a href="#"><h5 class="card-title text-center myhover">CYCLE CLUB</h5></a>   
-                    </div>
-            </div>
-            </div>
-
-
-            <div class="col  mt-3">
-            <div class="card shadow"  style="width:13rem; height:12rem;">
-                    <img src="./images/common.png" class="card-img-top ms-4" style="width: 9rem; height:7rem"/>
-                    <div class="card-body">
-                    <a href="#"><h5 class="card-title text-center myhover mt-4">COMMON ROOM</h5></a>   
-                    </div>
-            </div>
-            </div>
-
-
-            <div class="col  mt-3">
-                <div class="card shadow" style="width:13rem; height:12rem;">
-                    <img src="./images/play.png" class="card-img-top ms-4" style="width: 9rem; height:9rem" />
-                    <div class="card-body">
-                    <a href="#"><h5 class="card-title text-center myhover">PLAY GROUND</h5></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
- <div class="row mb-4" >
-        <div class="col mt-3" >
-        <div class="card shadow" style="width: 13rem; height:12rem;">
-            <img src="./images/dining.png" class="card-img-top ms-4" style="width: 9rem; height:9rem" />
-            <div class="card-body">
-            <a href="#"><h5 class="card-title text-center myhover">DINNING HALL</h5></a>  
-            </div>
-        </div>
-        </div>
-
-        <div class="col  mt-3">
-        <div class="card shadow"  style="width:13rem; height:12rem;">
-            <img src="./images/watercooler.png" class="card-img-top ms-4"style="width: 9rem; height:9rem" />
-            <div class="card-body">   
-            <a href="#"><h5 class="card-title text-center myhover">WATER COOLER</h5></a>  
-            </div>
-        </div>
-        </div>
-
-        <div class="col  mt-3">
-            <div class="card shadow" style="width: 13rem; height:12rem;">
-                <img src="./images/gym.png" class="card-img-top ms-4 "style="width: 9rem; height:9rem"/>
-                <div class="card-body">
-                <a href="#"><h5 class="card-title text-center myhover">MODERN GYM</h5></a> 
-                </div>
-            </div>
-        </div>
-
-        <div class="col  mt-3">
-            <div class="card shadow" style="width: 13rem; height:12rem;">
-                <img src="./images/wifi.png" class="card-img-top ms-4" style="width: 9rem; height:9rem"/>
-                <div class="card-body">
-                <a href="#"><h5 class="card-title text-center myhover">WIFI</h5></a>  
-                </div>
-            </div>
-        </div>
+  <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/reading.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">READING ROOM</h5></a>   
     </div>
- </div>  
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/cycle.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">CYCLE CLUB</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/common.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">COMMON ROOM</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/play.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">PLAY GROUND</h5></a>   
+    </div>
+  </div>
+
+  <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/dining.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">DINNING HALL</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/watercooler.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">WATER COOLER</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/gym.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">MODERN GYM</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/wifi.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">WIFI</h5></a>   
+    </div>
+  </div>
+  </div>
+
+  
 
  <div class="text-center mt-5 ">
  <a href="#" class="clickhere">Click here </a><span  style="font-size: 22px;">to see the Information Brochure.</span>
@@ -489,8 +462,8 @@
             <div class="sec link">
             <h2>Other Links:</h2>
             <ul>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Admin Login</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Student Login</a></li>
+                <li  data-bs-toggle="modal" data-bs-target="#adminmodal"><a href="#"><i class="fa-solid fa-angles-right"></i> Admin Login</a></li>
+                <li  data-bs-toggle="modal" data-bs-target="#usermodal"><a href="#"><i class="fa-solid fa-angles-right"></i> Student Login</a></li>
                 <li><a href="#"><i class="fa-solid fa-angles-right"></i> Online Fee  Payment</a></li>
                 <li><a href="#"><i class="fa-solid fa-angles-right"></i> Hostel Fee Receipt</a></li>
                 <li><a href="#"><i class="fa-solid fa-angles-right"></i> Application Receipt</a></li>
@@ -499,15 +472,20 @@
 
             <div class="sec contact">
              <h2>Contact Us </h2>
-             <ul class="info">
+             <ul class="info d-flex align-items-center">
                 <li>
-                <span><i class="fa-solid fa-phone"></i></span><p><a href="tel:+123-500-5689"> +123-500-5689</a></p>
+                <i class='bx bxs-phone-call text-white fs-4 me-2 '></i><a href="tel:+123-500-5689" style="margin-left: 30px;"> +123-500-5689</a>
                 </li>
 
                 <li>
-                    <span><i class="fa-solid fa-envelope"></i></span><p><a href="mailto:ggbhostel@igntu.ac.in"> ggbhostel@igntu.ac.in</a></p>
+                <i class='bx bxs-envelope text-white fs-3 me-2'></i><a href="mailto:ggbhostel@igntu.ac.in" style="margin-left: 35px;"> ggbhostel@igntu.ac.in</a>
                 </li>
+
             </ul>
+            <div class="container col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 ms-4 me-4">
+   
+            <iframe class="rounded map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.92983076685!2d81.75546487357704!3d22.805063805591246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3987bdecafcc1481%3A0x533307a060967692!2sGovind%20Guru%20Boys%20Hostel%2C%20Igntu%20Amarkantak!5e0!3m2!1sen!2sin!4v1733406027027!5m2!1sen!2sin" width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             </div>
         </div>
 </footer>
@@ -517,24 +495,73 @@
         <p>Designed by Chandrabhan Parachhi</p>
  
  <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="usermodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
+
+        <form >
+            <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center" >
+                <img src="./images/usericon.png" class="fs-4 me-2 " style="height: 2rem; width:2rem;"> User Login</h5>
+            <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            <div class="mb-3 text-start">
+            <label class="form-label text-dark">Email address</label>
+            <input type="email" class="form-control shadow-none">
+            </div>
+
+            <div class="mb-3 text-start">
+            <label class="form-label text-dark">Passowrd</label>
+            <input type="email" class="form-control shadow-none">
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between md-4">
+                <button type="submit" class="btn btn-brand">LOGIN</button>
+                <a href="javascript:void(0)" class="text-secondary"> Forgot Passowrd?</a>
+            </div>
+
+            </div>
+        </form>
+
     </div>
   </div>
 </div>
 
+<div class="modal fade" id="adminmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+        <form >
+            <div class="modal-header">
+            <h5 class="modal-title d-flex align-items-center" >
+            <img src="./images/igntulogo.png" class="fs-4 me-2 " style="height: 2rem; width:2rem;">Admin Login</h5>
+            <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            <div class="mb-3 text-start">
+            <label class="form-label text-dark">Email address</label>
+            <input type="email" class="form-control shadow-none">
+            </div>
+
+            <div class="mb-3 text-start">
+            <label class="form-label text-dark">Passowrd</label>
+            <input type="email" class="form-control shadow-none">
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between md-4">
+                <button type="submit" class="btn btn-brand">LOGIN</button>
+                <a href="javascript:void(0)" class="text-secondary"> Forgot Passowrd?</a>
+            </div>
+
+            </div>
+        </form>
+
+    </div>
+  </div>
+</div>
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/owl.carousel.min.js"></script>

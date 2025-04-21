@@ -187,6 +187,7 @@ footer .box .contact .info li a:hover
         font-size: 16px;
     }
 
+
 }
 @media screen and (max-width:425px)
 {
@@ -235,6 +236,7 @@ footer .box .contact .info li a:hover
     nav ul li a{
         font-size: 16px;
     }
+
 }
 @media (max-width:991px)
 {
