@@ -91,9 +91,9 @@
                 </li>
             </ul>
             <div class="d-flex">
-            <button type="button" class="btn   me-lg-2 me-3" style="background:#ff4d29;color:white" data-bs-toggle="modal" data-bs-target="#userlogin">
-            Login
-            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
             </div>
 
         </div>
@@ -278,7 +278,7 @@
 <!-- Information Brochure-->
  <h2 class="text-center mt-5" style="font-size: 40px;">Information Brochure</h2>
   <div class="underline"></div>
-  <div class="row g-2" style="margin-left: 20%;margin-right:20%" >
+  <div class="row g-2 " id="brochure" style="margin-left: 25%;margin-right:25%;" >
 
         <div class="row" >
             <div class="col  mt-3">
@@ -514,19 +514,17 @@
 
 <div class="copyrightText">
         <p>© Copyright 2025 - Guru Govind Boys Hostel , IGNTU Amarkantak</p>
-        <p>Designed by C
+        <p>Designed by -----
  
-        
-<!-- Modal -->
-<div class="modal fade" id="userlogin" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+ <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">
-        <i class='bx bxs-user-circle'></i>User Login</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body text-dark">
+      <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
