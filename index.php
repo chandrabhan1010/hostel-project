@@ -514,7 +514,7 @@
 
 <div class="copyrightText">
         <p>© Copyright 2025 - Guru Govind Boys Hostel , IGNTU Amarkantak</p>
-        <p>Designed by -----
+        <p>Designed by Chandrabhan Parachhi</p>
  
  <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
