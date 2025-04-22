@@ -37,13 +37,13 @@
                 <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+                <a class="nav-link" href="about_us.php">About us</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Admission</a>
+                <a class="nav-link" href="admission.php">Admission</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Rules</a>
+                <a class="nav-link" href="rules.php">Rules</a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="infrastructure.php">Infrastructure</a>
@@ -53,9 +53,9 @@
                     <a  id="btnGroupDrop1"  type="button" class="nav-link dropdown-toggle"data-bs-toggle="dropdown">Portal</a>
                   
                     <ul class="dropdown-menu" >
-                            <li><a class="dropdown-item" href="#">Submit Hostel Fee </a></li>
-                            <li><a class="dropdown-item" href="#">Download Hostel Fee Recicpt</a></li>
-                            <li><a class="dropdown-item" href="#">Download Application Recicpt</a></li>
+                            <li><a class="dropdown-item" href="hostelfee.php">Submit Hostel Fee </a></li>
+                            <li><a class="dropdown-item" href="fee_receipt.php">Download Hostel Fee Recicpt</a></li>
+                            <li><a class="dropdown-item" href="hostel_receipt.php">Download Application Recicpt</a></li>
                     </ul>
                 </div>
                 </li>
@@ -63,13 +63,16 @@
                 <div class="btn-group" role="group">
                     <a  id="btnGroupDrop1"  type="button" class="nav-link dropdown-toggle"data-bs-toggle="dropdown">Registration form</a>
                     <ul class="dropdown-menu" >
-                        <li><a class="dropdown-item " href="#">UG Registration </a></li>
-                        <li><a class="dropdown-item " href="#">PG registration</a></li>
+                        <li><a class="dropdown-item " href="ug_register.php">UG Registration </a></li>
+                        <li><a class="dropdown-item " href="pg_register.php">PG registration</a></li>
                     </ul>
                 </div>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Notice</a>
+                <a class="nav-link" href="notice.php">Notice</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="contact_us.php">Contact us</a>
                 </li>
             </ul>
             <div class="d-flex">

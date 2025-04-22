@@ -35,20 +35,15 @@
 
             <div class="sec contact">
              <h2>Contact Us </h2>
-             <ul class="info d-flex align-items-center">
-                <li>
-                <i class='bx bxs-phone-call text-white fs-4 me-2 '></i><a href="tel:+123-500-5689" style="margin-left: 30px;"> +123-500-5689</a>
-                </li>
+             <div class="info  md-4">
+                 <a href="tel: +123-500-5689" class="d-inline-block text-decoration-none text-white mb-2"> 
+                 <i class='bx bxs-phone-call text-white'></i> + 123-500-5689
+                </a>
+                 <br>
+                <a href="mailto:ggbhostel@igntu.ac.in" class="d-inline-block  text-decoration-none text-white "> 
+                <i class='bx bxs-envelope text-white'></i> ggbhostel@igntu.ac.in</a>
+                
 
-                <li>
-                <i class='bx bxs-envelope text-white fs-3 me-2'></i><a href="mailto:ggbhostel@igntu.ac.in" style="margin-left: 35px;"> ggbhostel@igntu.ac.in</a>
-                </li>
-
-            </ul>
-            <div class="container col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 ms-4 me-4">
-   
-            <iframe class="rounded map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.92983076685!2d81.75546487357704!3d22.805063805591246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3987bdecafcc1481%3A0x533307a060967692!2sGovind%20Guru%20Boys%20Hostel%2C%20Igntu%20Amarkantak!5e0!3m2!1sen!2sin!4v1733406027027!5m2!1sen!2sin" width="450" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
             </div>
         </div>
 </footer>

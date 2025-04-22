@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <?php require('./includes/links.php')?>
 
-    <title>Admission</title>
+    <title>PG Registration</title>
 
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">

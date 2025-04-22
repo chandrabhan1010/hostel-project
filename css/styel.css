@@ -384,7 +384,8 @@ img
 
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 576px) 
+  {
     .team {
       padding: 20px 10px;
     }
@@ -399,5 +400,5 @@ img
     }
   
   }
-  
+
   
