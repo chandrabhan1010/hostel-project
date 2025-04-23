@@ -15,7 +15,7 @@
 
 <div class="wrapper">
     <div class="container1">
-        <div class="title">
+        <div class="title text-dark">
             PG Student Registration Form
         </div>
         <form action="../includes/pgregistration_process.php" method="post" enctype="multipart/form-data" autocomplete="off">

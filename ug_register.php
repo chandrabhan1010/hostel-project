@@ -15,8 +15,7 @@
 
 <div class="wrapper">
     <div class="container1 form-group">
-        <div class="title">
-            UG Student Registration Form
+        <div class="title text-dark"> UG Student Registration Form
         </div>
         <form action="../includes/registration_process.php" method="post" enctype="multipart/form-data" autocomplete="off" onsubmit="return validation()">
         <div class="form">
