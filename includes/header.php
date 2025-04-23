@@ -78,11 +78,11 @@
             <div class="d-flex">
 
             <button type="button" class="btn btn-brand shadow-none me-lg-3 me-2 "   data-bs-toggle="modal" data-bs-target="#usermodal">
-            User
+            <img src="./images/usericon.png" class="fs-4 me-2 " style="height: 1rem; width:1rem;">User Login
            </button>
 
            <button type="button" class="btn btn-brand shadow-none me-lg-2 me-2 "   data-bs-toggle="modal" data-bs-target="#adminmodal">
-            Admin
+           <img src="./images/igntulogo.png" class="fs-4 me-2 " style="height: 1rem; width:1rem;">Admin Login
            </button>
             </div>
         </div>

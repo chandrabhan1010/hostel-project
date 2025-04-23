@@ -85,7 +85,15 @@
 
 
  <div class="wellc">
-    <p>&nbsp</p>
+    
+        <marquee direction="start" scrollamount="8">
+            <span class="text-white" style="font-size: 20px;">
+            <img src="./images/new1.gif" style="width: 40px;">
+             Admission Open for new session 2025-26
+            <img src="./images/new1.gif" style="width: 40px;">
+            </span> 
+        </marquee>
+    
 </div>
 
 <!-- Recent Event -->
@@ -93,7 +101,7 @@
 
     <div class="col-sm-4">
         <div class="card m-3 p-2 shadow  mt-5  mb-3 " style="max-width: 30rem;">
-            <h2 class="card-header heading  text-white text-center" style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%)">Recent Event</h2>
+            <h2 class="card-header heading  text-white text-center" style="background:#3c8dbc;">Recent Event</h2>
             <div class="card-body  ">
                     <div class="card-text">
                             <marquee direction="up" scrollamount="7" style="height:340px">
@@ -112,7 +120,7 @@
         </div>
 
         <div class="card m-3 p-2 shadow mt-5  mb-3  " style="max-width: 30rem;">
-            <h2 class="card-header heading  text-white text-center" style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%)">Notice Board</h2>
+            <h2 class="card-header heading  text-white text-center" style="background:#3c8dbc">Notice Board</h2>
             <div class="card-body  ">
                 <img src="./images/new.gif" style="width: 50px;"><h5 class="card-title">List of provisionally eligible students for the Hostels</h5>
                 <h6 class="card-subtitle mb-2 text-muted">15 Nov 2024 : List of provisionally eligible students for the Hostels</h6>
@@ -128,7 +136,7 @@
 
     <div class="col-sm-8">
          <div class="card    mt-5 m-3 p-2 shadow" style="max-width: 77rem; ">
-            <h2 class="card-header heading text-white text-center" style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%)">
+            <h2 class="card-header heading text-white text-center" style="background:#3c8dbc">
             What's Happening @ Guru Govind Boys  Hostel for Boys <br>(Post Graduate & Under Graduate)
             </h2>
             <div class="card-body">
@@ -141,21 +149,21 @@
                         <div class="card  m-3 p-2 shadow">
                             <img src="./images/no1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title text-center text-white " style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%); font-size:20px;">Hostel Front View</h5>   
+                            <h5 class="card-title text-center text-white" style="background:#3c8dbc; font-size:20px;">Hostel Front View</h5>   
                             </div>
                         </div>
 
                         <div class="card m-3 p-2 shadow">
                             <img src="./images/innerview.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title text-center text-white"style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%); font-size:20px;">Hostel Inner View</h5>
+                            <h5 class="card-title text-center text-white"style="background:#3c8dbc; font-size:20px;">Hostel Inner View</h5>
                             </div>
                         </div>
 
                         <div class="card m-3 p-2 shadow">
                             <img src="./images/mess.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title text-center text-white" style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%); font-size:20px;">Hostel Mess</h5>
+                            <h5 class="card-title text-center text-white" style="background:#3c8dbc; font-size:20px;">Hostel Mess</h5>
 
                             </div>
                         </div>

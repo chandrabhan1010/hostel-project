@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="./images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <?php require('./includes/links.php')?>
 
     <title>Infrastructure</title>
     <?php require('./includes/header.php')?>
     <style>
         .pop:hover{
-            border-top-color: #ff4d29 !important ;
+            border-top-color:#3c8dbc !important ;
             transform: scale(1.03);
             transition: all 0.3s ;
         }
@@ -141,7 +139,7 @@
 
         <div class="col-lg-12 col-md-6 mb-5 px-4 mt-5">
          <table class="table table-bordered   text-center">
-            <thead class="bg-danger text-white">
+            <thead class=" text-white" style="background:#3c8dbc">
                 <tr>
                     <th>Floor No.</th>
                     <th>Floor Name </th>
