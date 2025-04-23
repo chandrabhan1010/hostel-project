@@ -109,7 +109,7 @@
 
             <div class="mb-3 text-start">
             <label class="form-label text-dark">Passowrd</label>
-            <input type="email" class="form-control shadow-none">
+            <input type="password" class="form-control shadow-none">
             </div>
 
             <div class="d-flex align-items-center justify-content-between md-4">
