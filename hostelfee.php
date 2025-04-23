@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="./images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
     <?php require('./includes/links.php')?>
 
     <title>Submit Hostel Fee</title>
+    <?php require('./includes/header.php')?>
 
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
-
-<?php require('./includes/header.php')?>
 
 
 
