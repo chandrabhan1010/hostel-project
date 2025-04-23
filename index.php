@@ -4,104 +4,19 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="./images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/boxicons.min.css">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="./css/styel.css">
-    <link rel="stylesheet" href="./css/footer.css">
+    <?php require('./includes/links.php')?>
 
     <title>Home</title>
 
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
 
-<!--Navbar  -->
-<nav class="top-nav " id="home">
-    <div class="container-fluid">
-        <div class="row justify-content-between">
-            <div class="col-auto">
-               <p>
-                <i class='bx bxs-envelope' ></i>
-                <span>ggbhostel@igntu.ac.in</span>
-                </p>
-                <p>
-                <i class='bx bxs-phone-call' ></i>
-                <span>(219) 555-0114</span>
-                </p>
-            </div>
-            <div class="col-auto fs-5 socialicons">
-                <div class="social-links">
-                    <a href="#"><i class='bx bxl-facebook' ></i></a>
-                    <a href="#"><i class='bx bxl-twitter' ></i></a>
-                    <a href="#"><i class='bx bxl-google' ></i></a>
-                    <a href="#"><i class='bx bxl-youtube' ></i></a> 
-                </div>
-            </div>
-        </div>
-    </div>
- </nav>    
- <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-ly-2 shadow-sm sticky-top">
-        <div class="container-fluid">
-           <a href="index.php"> <img src="./images/hostellogo.png" class="logo"></a>
-            <a class="navbar-brand me-4 fw-bold fs-3 h-font" href="index.php">GGBH HOSTEL<span>.</span></a>
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="about.php">About us</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#home">Admission</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#home">Rules</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#home">Infrastructure</a>
-                </li>
-                <li class="nav-item">
-                <div class="btn-group" role="group">
-                    <a  id="btnGroupDrop1"  type="button" class="nav-link dropdown-toggle"data-bs-toggle="dropdown">Portal</a>
-                  
-                    <ul class="dropdown-menu" >
-                            <li><a class="dropdown-item" href="#">Submit Hostel Fee </a></li>
-                            <li><a class="dropdown-item" href="#">Download Hostel Fee Recicpt</a></li>
-                            <li><a class="dropdown-item" href="#">Download Application Recicpt</a></li>
-                    </ul>
-                </div>
-                </li>
-                <li class="nav-item">
-                <div class="btn-group" role="group">
-                    <a  id="btnGroupDrop1"  type="button" class="nav-link dropdown-toggle"data-bs-toggle="dropdown">Registration form</a>
-                    <ul class="dropdown-menu" >
-                        <li><a class="dropdown-item " href="#">UG Registration </a></li>
-                        <li><a class="dropdown-item " href="#">PG registration</a></li>
-                    </ul>
-                </div>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#home">Notice</a>
-                </li>
-            </ul>
-            <div class="d-flex">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
-</button>
-            </div>
-
-        </div>
-</nav>
+<?php require('./includes/header.php')?>
 
 <!-- Slider -->
 <div class="slider-wrapper owl-carousel owl-theme" id="hero-slider">
-
         <div class="slide1 custom-height bg-cover d-flex align-items-center ">
             <div class="container">
                 <div class="row">
@@ -164,13 +79,21 @@
              </div>
          </div>
 
-       
+
     </div>
 
 
 
  <div class="wellc">
-    <p>&nbsp</p>
+    
+        <marquee direction="start" scrollamount="8">
+            <span class="text-white" style="font-size: 20px;">
+            <img src="./images/new1.gif" style="width: 40px;">
+             Admission Open for new session 2025-26
+            <img src="./images/new1.gif" style="width: 40px;">
+            </span> 
+        </marquee>
+    
 </div>
 
 <!-- Recent Event -->
@@ -178,7 +101,7 @@
 
     <div class="col-sm-4">
         <div class="card m-3 p-2 shadow  mt-5  mb-3 " style="max-width: 30rem;">
-            <h2 class="card-header heading  text-white text-center" style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%)">Recent Event</h2>
+            <h2 class="card-header heading  text-white text-center" style="background:#3c8dbc;">Recent Event</h2>
             <div class="card-body  ">
                     <div class="card-text">
                             <marquee direction="up" scrollamount="7" style="height:340px">
@@ -197,7 +120,7 @@
         </div>
 
         <div class="card m-3 p-2 shadow mt-5  mb-3  " style="max-width: 30rem;">
-            <h2 class="card-header heading  text-white text-center" style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%)">Notice Board</h2>
+            <h2 class="card-header heading  text-white text-center" style="background:#3c8dbc">Notice Board</h2>
             <div class="card-body  ">
                 <img src="./images/new.gif" style="width: 50px;"><h5 class="card-title">List of provisionally eligible students for the Hostels</h5>
                 <h6 class="card-subtitle mb-2 text-muted">15 Nov 2024 : List of provisionally eligible students for the Hostels</h6>
@@ -213,7 +136,7 @@
 
     <div class="col-sm-8">
          <div class="card    mt-5 m-3 p-2 shadow" style="max-width: 77rem; ">
-            <h2 class="card-header heading text-white text-center" style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%)">
+            <h2 class="card-header heading text-white text-center" style="background:#3c8dbc">
             What's Happening @ Guru Govind Boys  Hostel for Boys <br>(Post Graduate & Under Graduate)
             </h2>
             <div class="card-body">
@@ -226,21 +149,21 @@
                         <div class="card  m-3 p-2 shadow">
                             <img src="./images/no1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title text-center text-white " style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%); font-size:20px;">Hostel Front View</h5>   
+                            <h5 class="card-title text-center text-white" style="background:#3c8dbc; font-size:20px;">Hostel Front View</h5>   
                             </div>
                         </div>
 
                         <div class="card m-3 p-2 shadow">
                             <img src="./images/innerview.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title text-center text-white"style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%); font-size:20px;">Hostel Inner View</h5>
+                            <h5 class="card-title text-center text-white"style="background:#3c8dbc; font-size:20px;">Hostel Inner View</h5>
                             </div>
                         </div>
 
                         <div class="card m-3 p-2 shadow">
                             <img src="./images/mess.png" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title text-center text-white" style="background:linear-gradient(to right, #294a70 0%, #111e5c 100%); font-size:20px;">Hostel Mess</h5>
+                            <h5 class="card-title text-center text-white" style="background:#3c8dbc; font-size:20px;">Hostel Mess</h5>
 
                             </div>
                         </div>
@@ -278,86 +201,55 @@
 <!-- Information Brochure-->
  <h2 class="text-center mt-5" style="font-size: 40px;">Information Brochure</h2>
   <div class="underline"></div>
-  <div class="row g-2 " id="brochure" style="margin-left: 25%;margin-right:25%;" >
 
-        <div class="row" >
-            <div class="col  mt-3">
-            <div class="card shadow " style="width: 13rem; height:12rem;">
-            <img src="./images/reading.png" class="card-img-top ms-4"  style="width: 9rem; height:9rem">
-                    <div class="card-body">
-                    <a href="#"><h5 class="card-title text-center myhover">READING ROOM</h5></a>           
-                    </div>
-            </div>
-            </div>    
+  <div class="container">
 
-            <div class="col mt-3">
-            <div class="card shadow" style="width: 13rem; height:12rem;">
-                    <img src="./images/cycle.png" class="card-img-top ms-4" style="width: 9rem; height:9rem"/>
-                    <div class="card-body">
-                    <a href="#"><h5 class="card-title text-center myhover">CYCLE CLUB</h5></a>   
-                    </div>
-            </div>
-            </div>
-
-
-            <div class="col  mt-3">
-            <div class="card shadow"  style="width:13rem; height:12rem;">
-                    <img src="./images/common.png" class="card-img-top ms-4" style="width: 9rem; height:7rem"/>
-                    <div class="card-body">
-                    <a href="#"><h5 class="card-title text-center myhover mt-4">COMMON ROOM</h5></a>   
-                    </div>
-            </div>
-            </div>
-
-
-            <div class="col  mt-3">
-                <div class="card shadow" style="width:13rem; height:12rem;">
-                    <img src="./images/play.png" class="card-img-top ms-4" style="width: 9rem; height:9rem" />
-                    <div class="card-body">
-                    <a href="#"><h5 class="card-title text-center myhover">PLAY GROUND</h5></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
- <div class="row mb-4" >
-        <div class="col mt-3" >
-        <div class="card shadow" style="width: 13rem; height:12rem;">
-            <img src="./images/dining.png" class="card-img-top ms-4" style="width: 9rem; height:9rem" />
-            <div class="card-body">
-            <a href="#"><h5 class="card-title text-center myhover">DINNING HALL</h5></a>  
-            </div>
-        </div>
-        </div>
-
-        <div class="col  mt-3">
-        <div class="card shadow"  style="width:13rem; height:12rem;">
-            <img src="./images/watercooler.png" class="card-img-top ms-4"style="width: 9rem; height:9rem" />
-            <div class="card-body">   
-            <a href="#"><h5 class="card-title text-center myhover">WATER COOLER</h5></a>  
-            </div>
-        </div>
-        </div>
-
-        <div class="col  mt-3">
-            <div class="card shadow" style="width: 13rem; height:12rem;">
-                <img src="./images/gym.png" class="card-img-top ms-4 "style="width: 9rem; height:9rem"/>
-                <div class="card-body">
-                <a href="#"><h5 class="card-title text-center myhover">MODERN GYM</h5></a> 
-                </div>
-            </div>
-        </div>
-
-        <div class="col  mt-3">
-            <div class="card shadow" style="width: 13rem; height:12rem;">
-                <img src="./images/wifi.png" class="card-img-top ms-4" style="width: 9rem; height:9rem"/>
-                <div class="card-body">
-                <a href="#"><h5 class="card-title text-center myhover">WIFI</h5></a>  
-                </div>
-            </div>
-        </div>
+  <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/reading.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">READING ROOM</h5></a>   
     </div>
- </div>  
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/cycle.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">CYCLE CLUB</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/common.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">COMMON ROOM</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/play.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">PLAY GROUND</h5></a>   
+    </div>
+  </div>
+
+  <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/dining.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">DINNING HALL</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/watercooler.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">WATER COOLER</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/gym.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">MODERN GYM</h5></a>   
+    </div>
+
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <img src="./images/wifi.png" width="80px">
+    <a href="#"><h5 class="mt-3 myhover">WIFI</h5></a>   
+    </div>
+  </div>
+  </div>
+
+  
 
  <div class="text-center mt-5 ">
  <a href="#" class="clickhere">Click here </a><span  style="font-size: 22px;">to see the Information Brochure.</span>
@@ -461,84 +353,14 @@
     </div>
 <div class="underline"></div>
  
-<!-- footer -->
-<footer>
-        <div class="box">
-            <div class="sec admission">
-             <h2>Admission</h2>
-             <ul>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Admission Procedure</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Admission Eligibility</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Seats Distribution</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Re-Admission</a></li>
-             </ul>
-            </div>
 
-            <div class="sec rules">
-             <h2>Rules & Regulations</h2>
-             <ul>
-                 <li><a href="#"><i class="fa-solid fa-angles-right"></i> Hostel Fee</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Hostel Timings</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Timings of Mess & Dining Hall</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Guests & Visitor</a></li>
-             </ul>
-
-            </div>
-            
-
-            <div class="sec link">
-            <h2>Other Links:</h2>
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Admin Login</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Student Login</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Online Fee  Payment</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Hostel Fee Receipt</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Application Receipt</a></li>
-            </ul>
-            </div>
-
-            <div class="sec contact">
-             <h2>Contact Us </h2>
-             <ul class="info">
-                <li>
-                <span><i class="fa-solid fa-phone"></i></span><p><a href="tel:+123-500-5689"> +123-500-5689</a></p>
-                </li>
-
-                <li>
-                    <span><i class="fa-solid fa-envelope"></i></span><p><a href="mailto:ggbhostel@igntu.ac.in"> ggbhostel@igntu.ac.in</a></p>
-                </li>
-            </ul>
-            </div>
-        </div>
-</footer>
-
-<div class="copyrightText">
-        <p>© Copyright 2025 - Guru Govind Boys Hostel , IGNTU Amarkantak</p>
-        <p>Designed by Chandrabhan Parachhi</p>
- 
- <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
+<?php require('./includes/footer.php')?>
 
 
 <script src="./js/jquery.min.js"></script>
 <script src="./js/owl.carousel.min.js"></script>
 <script src="./js/app.js"></script>
-<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
 </body>
 </html>
