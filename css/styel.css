@@ -393,11 +393,11 @@ img
     .member {
       margin-bottom: 15px;
     }
-        .team .member {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
+.team .member {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
   
   }
 

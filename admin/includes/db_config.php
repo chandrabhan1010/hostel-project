@@ -13,10 +13,10 @@
     {
         foreach($data as $key => $value) 
         {
-        // trim()
-        // stripslashes()
-        // htmlspecialchars()
-        // strip_tags()
+        // trim() - remove extra spaces
+        // stripslashes() - remove backword slashes
+        // htmlspecialchars() - convert html tag into html entity
+        // strip_tags()- remove html tag
         $data[$key] = trim($value);
         $data[$key] = stripslashes($value);
         $data[$key] = htmlspecialchars($value);
@@ -25,26 +25,27 @@
         return $data;
     
     }
-     function select($query, $values, $datatype)
+     function select($query, $values, $datatypes)
      {
         $con =$GLOBALS['con'];
-        if($stmt =mysqli_prepare(($con),$query))
+        if($stmt =mysqli_prepare($con,$query))
         {
-           mysqli_stmt_bind_param($stmt, $datatype, ...$values); //splate operator
+           mysqli_stmt_bind_param($stmt, $datatypes, ...$values); //splate operator
            if(mysqli_stmt_execute($stmt))
            {
             $res= mysqli_stmt_get_result($stmt);
+            mysqli_stmt_close($stmt);
             return $res;
            }
            else
            {
             mysqli_stmt_close($stmt);
-            die("Query cannot be execute - select");
+            die("Query cannot be execute - Select");
            }
       
         }
         else{
-            die("Query cannot be prepared -select  ");
+            die("Query cannot be prepared -Select ");
         }
      }
     ?>
