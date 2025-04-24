@@ -66,10 +66,10 @@
     <hr>
     <form>
       <div class="mb-3">
-        <input type="text" class="form-control shadow-none" placeholder="Enter Registration Number">
+        <input type="text" class="form-control shadow-none text-center" placeholder="Enter Registration Number">
       </div>
       <div class="mb-3">
-        <select class="form-select shadow-none" aria-label="Default select example" required="required">
+        <select class="form-select shadow-none text-center" aria-label="Default select example" required="required">
           <option selected>Select Year</option>
             <option value="UG">UG</option>
             <option value="PG">PG</option>

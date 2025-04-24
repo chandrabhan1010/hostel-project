@@ -24,14 +24,14 @@
 <div class="col-sm-8 align-self-center mx-auto mt-5">
 <div class="card  mt-5 m-3 p-2 shadow">
 <h2 class="card-header heading text-white text-center" style="background:#3c8dbc">
-ABOUT US
+About  Guru Govind Boys  Hostel
 </h2>
 <!-- image slider -->
 <div class="container px-4 mt-5">
 <div class="swiper mySwiper">
     <div class="swiper-wrapper mb-5 ">
       <div class="swiper-slide bg-white overflow-hidden rounded shadow">
-        <img src="./images/no1.jpg" style="width: 100%; height:295px"  alt="">
+        <img src="./images/no1.jpg" style="width: 100%; height:295px" alt="">
       </div>
       <div class="swiper-slide bg-white overflow-hidden rounded shadow">
         <img src="./images/no2.jpg" style="width: 100%; height:295px" alt="">
