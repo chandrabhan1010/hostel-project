@@ -1,6 +1,5 @@
-<?php require('./includes/db_config.php');
-      require('./includes/essentials.php');
-
+<?php require('includes/db_config.php');
+      require('includes/essentials.php');
       session_start();
      
       if((isset($_SESSION['adminLogin'])&& $_SESSION['adminLogin']==true))
@@ -16,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Admin Login Panel</title>
-    <?php require('./includes/links.php')?>
+    <?php require('includes/links.php')?>
     <style>
         div.login-form {
             position: absolute;
@@ -66,17 +65,13 @@ if(isset($_POST['login']))
     $_SESSION['adminLogin']= true;
     $_SESSION['adminId'] = $row['sr_no'];
     redirect('dashboard.php');
-    
     }
     else
     {
         alert('error','Login failed -Invalied Credentials !');
-
     }
-
 }
 ?>
-   
 <?php require('./includes/scripts.php')?>
 </body>
 </html>

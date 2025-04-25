@@ -111,6 +111,9 @@ transition: all 0.5s ease;
     align-items: center;
     justify-content: space-between;
     transition: all 0.5s ease;
+    top: 0;
+    z-index: 1000;
+    
 }
 .sidebar.active ~ .home-section nav
 {
@@ -242,13 +245,12 @@ nav .profile-details i
 .sub-menu {
     display: none;
     padding-left: 20px;
-    margin-top: 2px;
-    
-
 }
 .sub-menu li a
 {
     color: #fff;
+    text-decoration: none;
+
 }
 
 .complaints-dropdown.active .sub-menu {
@@ -256,7 +258,7 @@ nav .profile-details i
 }
 
 .arrow {
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .complaints-dropdown.active .arrow {
@@ -267,7 +269,7 @@ nav .profile-details i
 
 .complaints-dropdown.active ~ li:nth-child(10) {
     margin-top: 150px; /* Adjust this value as needed */
-    transition: all 0.5s ease;
+    transition: margin-top 0.5s ease;
 }
 
 

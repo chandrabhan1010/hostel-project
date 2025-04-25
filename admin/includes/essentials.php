@@ -1,5 +1,4 @@
 <?php
-
 function adminLogin()
 {
     session_start();
