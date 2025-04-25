@@ -34,7 +34,7 @@ session_regenerate_id(true);
     <ul class="nav-links">
         <li>
             <a href="#" >
-            <i class='bx bx-grid-alt' ></i>
+            <i class='bx bx-grid-alt togle'  ></i>
             <span class="link_name">Dashboard</span> 
             </a>
         </li>
@@ -47,8 +47,8 @@ session_regenerate_id(true);
 
         <li>
             <a href="#">
-            <i class="bi bi-speedometer2"></i>
-            <span class="link_name">Manage Student</span> 
+            <i class='bx bxs-building-house'></i>
+            <span class="link_name">Manage Rooms</span> 
             </a>
         </li>
 
@@ -87,51 +87,64 @@ session_regenerate_id(true);
             </a>
         </li>
 
-        <li>
-            <a href="#">
-            <i class="bi bi-card-checklist"></i>
-            <span class="link_name">Complaints</span> 
+        <li class="complaints-dropdown">
+            <a href="#" onclick="toggleDropdown(event)">
+                <i class="bi bi-card-checklist"></i>
+                <span class="link_name">Complaints</span>
+                <i class="bx bx-chevron-down arrow"></i> 
             </a>
+            <!-- Dropdown submenu -->
+            <ul class="sub-menu">
+                <li><a href="#">New </a></li>
+                <li><a href="#">In Progress</a></li>
+                <li><a href="#">Close</a></li>
+                <li><a href="#">All</a></li>
+            </ul>
         </li>
 
-        <li>
-            <a href="#">
+        <li class="complaints-dropdown">
+            <a href="#" onclick="toggleDropdown(event)">
             <i class="bi bi-newspaper"></i>
-            <span class="link_name">Applications</span> 
+                <span class="link_name">Applications</span> 
+            <i class="bx bx-chevron-down arrow"></i> 
             </a>
+            <!-- Dropdown submenu -->
+            <ul class="sub-menu">
+                <li><a href="#">UG</a></li>
+                <li><a href="#">PG</a></li>
+                <li><a href="#">Alloted</a></li>
+            </ul>
         </li>
+   
 
-        <li>
-            <a href="#">
-            <i class="bi bi-gear-fill"></i>
-            <span class="link_name" >Setting</span> 
-            </a>
-        </li>
 
-        <li>
-            <a href="#">
-            <i class='bx bx-log-out'></i>
-            <span class="link_name">Log out</span> 
-            </a>    
-        </li>
     </ul>
 </div>
 
-<!-- home content -->
+<!-- home section -->
  <section class="home-section">
  <nav>
     <div class="sidebar-button">
     <i class='bx bx-menu sidebarBtn'></i>
     <span class="dashboard">Dashboard</span>
     </div>
-    <div class="search-box">
-        <input type="text" placeholder="Search ....">
-        <i class='bx bx-search'></i>
-    </div>
+
+
     <div class="profile-details">
-        <img src="./img/Admin-Profile.png" alt="">
-         <span class="admin_name">Shiv kumar</span>
-         <li class="bx bx-chevron-down"></li>
+        <!-- <img src="./img/Admin-Profile.png" alt=""> -->
+         <!-- <span class="admin_name">Shiv kumar</span> -->
+
+         <div class="dropdown">
+         <img src="./img/Admin-Profile.png" alt="">
+            <a class="btn  dropdown-toggle shadow-none admin_name" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Admin_Name
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Update Profile</a></li>
+                <li><a class="dropdown-item" href="#">Change Password</a></li>
+                <a class="dropdown-item" href="logout.php"><span>Logout</span><i class='bx bx-log-in'></i></a>
+            </ul>
+        </div>
     </div>
  </nav>
 
@@ -140,17 +153,76 @@ session_regenerate_id(true);
     <div class="overview-boxes">
         <div class="box">
            <div class="left-side">
-            <div class="box_topic">Order List</div>
-            <div class="number">40,876</div>
+            <div class="box_topic">Total Student</div>
+            <div class="number">500</div>
             <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text"> Up from yesterday</span>
+            <i class='bx bx-right-arrow-alt'></i>
+            <span class="text">View all deta</span>
             </div>
            </div>
+           <i class='bx bxs-user-detail cart' ></i>
         </div>
-    </div>
+        <div class="box">
+           <div class="left-side">
+            <div class="box_topic">PG Student</div>
+            <div class="number">120</div>
+            <div class="indicator">
+            <i class='bx bx-right-arrow-alt'></i>
+            <span class="text"> View all details</span>
+            </div>
+           </div>
+           <i class='bx bxs-group cart'></i>
+        </div>
+
+        <div class="box">
+           <div class="left-side">
+            <div class="box_topic">UG Student</div>
+            <div class="number">280</div>
+            <div class="indicator">
+            <i class='bx bx-right-arrow-alt'></i>
+            <span class="text">View all details</span>
+            </div>
+           </div>
+           <i class='bx bxs-group cart'></i>
+        </div>
+ 
+        <div class="box">
+           <div class="left-side">
+            <div class="box_topic">Total Rooms</div>
+            <div class="number">248</div>
+            <div class="indicator">
+            <i class='bx bx-right-arrow-alt'></i>
+            <span class="text">View all details</span>
+            </div>
+           </div>
+           <i class='bx bxs-building-house cart' ></i>
+        </div>
+
+        <div class="box">
+           <div class="left-side">
+            <div class="box_topic">Alloted Rooms</div>
+            <div class="number">200</div>
+            <div class="indicator">
+            <i class='bx bx-right-arrow-alt'></i>
+            <span class="text">View all details</span>
+            </div>
+           </div>
+           <i class='bx bxs-bed cart' ></i>
+        </div>
+        <div class="box">
+           <div class="left-side">
+            <div class="box_topic">Empty Rooms</div>
+            <div class="number">48</div>
+            <div class="indicator">
+            <i class='bx bx-right-arrow-alt'></i>
+            <span class="text">View all details</span>
+            </div>
+           </div>
+           <i class='bx bx-bed cart' ></i>
+        </div>
+        </div>
   </div>
- </section>
+</section>
 
 <?php require('./includes/scripts.php')?>
 </body>

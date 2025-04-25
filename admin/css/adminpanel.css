@@ -80,8 +80,11 @@ body{
     color: #fff;
     font-size: 15px;
     font-weight: 400;
+    white-space: nowrap;
     
 }
+/* home section css */
+
 .home-section
 {
 background: #f5f5f5;
@@ -89,25 +92,25 @@ position: relative;
 min-height: 100vh;
 width: calc(100% - 240px);
 left: 240px;
-transition: all 0.6s ease;
+transition: all 0.5s ease;
 }
 .sidebar.active ~ .home-section
 {
-    width: calc(100% - 60px);
+    width: calc(100% - 80px);
     left: 80px;  
 }
 .home-section nav
 {
     position: fixed;
     width: calc(100% - 240px);
-    left: 240;
+    left: 240px;
     height: 80px;
     background: #fff;
     padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: all 0.5s ease !important;
+    transition: all 0.5s ease;
 }
 .sidebar.active ~ .home-section nav
 {
@@ -126,42 +129,6 @@ transition: all 0.6s ease;
     font-size: 35px;
     margin-right: 10px;
 
-}
-.home-section nav .search-box
-{
- 
- height: 50px;
- width:550px;
- margin: 0 20px;
- position: relative;
- 
-}
-nav .search-box input
-{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-    padding: 0 15px;
-    font-size: 17px;
-    background-color: #F5F6FA;
-    border: 2px solid #EFEEF1;
-    outline:none;
-}
-nav .search-box .bx-search
-{
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 40px;
-    width: 40px;
-    background:#2697FF ;
-    border-radius: 6px;
-    color: #fff;
-    font-size: 22px;
-    line-height: 40px;
-    text-align: center;
 }
 
  .home-section nav .profile-details
@@ -189,7 +156,6 @@ nav .profile-details .admin_name
     font-size: 15px;
     font-weight: 500;
     color: #333;
-    margin: 0 10px;
     white-space: nowrap;
 }
 nav .profile-details i
@@ -198,35 +164,52 @@ nav .profile-details i
     font-size: 25px;
 
 }
+/* home content css */
+
 .home-section .home-content
 {
-    position: relative;
     padding-top: 100px;
 
 }
-.home-content .overview-boxes .box
-{
-    padding: 15px 14px;
-    background-color: #fff;
-}
 .home-content .overview-boxes .box_topic
 {
-font-size: 20px;
-font-weight: 500;
+    font-size: 20px;
+    font-weight: 500;
+}
+.home-content .overview-boxes{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+ .home-content .overview-boxes .box
+{
+    width: calc(100% / 6 - 15px);
+    display: flex;
+    align-items: center;  
+    padding: 15px 14px;
+    background-color: #fff;
+    border-radius: 12px;
+    justify-content: center;
+    box-shadow: 0  5px 10px rgba(0,0,0,0.1);
+
 }
 .home-content .overview-boxes .number
 {
     font-size: 35px;
     font-weight: 500;
-    margin-top: 5px;
+    margin-top: -5px;
     display: inline-block;
-    margin-top: -5;
+
     
 }
 .overview-boxes .indicator{
     display: flex;
     align-items: center;
-}
+    
+} 
 .overview-boxes .indicator i{
     height: 20px;
     width: 20px;
@@ -238,5 +221,120 @@ font-weight: 500;
 }
 .overview-boxes .indicator .text
 {
-    font-size: 12px;
+    font-size: 15px;
+    color: black;
 }
+.overview-boxes .box .cart
+{
+    font-size: 32px;
+    font-weight: 500;
+    height: 50px;
+    width: 50px;
+    background-color: #cce5ff;
+    color: #66b0ff;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+/* complaint drop down css code  */
+
+.sub-menu {
+    display: none;
+    padding-left: 20px;
+    margin-top: 2px;
+    
+
+}
+.sub-menu li a
+{
+    color: #fff;
+}
+
+.complaints-dropdown.active .sub-menu {
+    display: block;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.complaints-dropdown.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Shift Applications & Settings down */
+
+.complaints-dropdown.active ~ li:nth-child(10) {
+    margin-top: 150px; /* Adjust this value as needed */
+    transition: all 0.5s ease;
+}
+
+
+@media(max-width: 1216px){
+
+    .sidebar{
+    width: 80px;
+    }
+    .sidebar.active
+    {
+    width: 240px;
+    }
+    .home-section
+    {
+    width: calc(100% - 80px);
+    left: 80px;
+    }
+    .home-section nav
+    {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+    .sidebar.active ~ .home-section
+    {
+        width: calc(100% - 240px);
+        left: 240px; 
+    }
+
+    .sidebar.active ~ .home-section nav
+    {
+        width: calc(100% - 240px);
+        left: 240px;
+    }
+}  
+@media(max-width :1018px)
+{
+    .home-content .overview-boxes .box
+    {
+        width: calc(100% / 2 - 15px);
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .home-section nav {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .home-section nav .sidebar-button {
+      margin-bottom: 10px;
+      width: 100%;
+      justify-content: flex-start;
+    }
+    .home-section nav .profile-details {
+      margin-top: 10px;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  
+    .home-content .overview-boxes {
+      flex-direction: column;
+      padding: 0 10px;
+    }
+  
+    .home-content .overview-boxes .box {
+      width: 100%;
+    }
+  }
+  
