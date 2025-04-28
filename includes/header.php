@@ -1,3 +1,9 @@
+<?php
+ require('db_config.php');
+ require('essentials.php');
+ session_start();
+?>
+
 <!--Navbar  -->
 <nav class="top-nav " id="home">
     <div class="container-fluid">
@@ -89,7 +95,7 @@
     </div>
 </nav>
 
-<!-- modal1 -->
+<!-- modal1 User Login -->
   
 <div class="modal fade" id="usermodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -103,17 +109,17 @@
             <div class="modal-body">
 
             <div class="mb-3 text-start">
-            <label class="form-label text-dark">Email address</label>
-            <input type="email" class="form-control shadow-none">
+            <label class="form-label text-dark">Username</label>
+            <input name="admin_name" type="text" required class="form-control shadow-none">
             </div>
 
             <div class="mb-3 text-start">
             <label class="form-label text-dark">Passowrd</label>
-            <input type="email" class="form-control shadow-none">
+            <input name="admin_pass"  type="password" required class="form-control shadow-none">
             </div>
 
             <div class="d-flex align-items-center justify-content-between md-4">
-                <button type="submit" class="btn btn-brand">LOGIN</button>
+                <button name="login" type="submit" class="btn btn-brand">LOGIN</button>
                 <a href="javascript:void(0)" class="text-secondary"> Forgot Passowrd?</a>
             </div>
             </div>
@@ -121,6 +127,7 @@
     </div>
   </div>
 </div>
+
 
 <!-- Modal2 -->
 <div class="modal fade" id="adminmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -135,17 +142,17 @@
             <div class="modal-body">
 
             <div class="mb-3 text-start">
-            <label class="form-label text-dark">Email address</label>
-            <input type="email" class="form-control shadow-none">
+            <label class="form-label text-dark">Username</label>
+            <input name="admin_name" type="text" required  class="form-control shadow-none">
             </div>
 
             <div class="mb-3 text-start">
             <label class="form-label text-dark">Passowrd</label>
-            <input type="email" class="form-control shadow-none">
+            <input name="admin_pass"  type="password" required class="form-control shadow-none">
             </div>
 
             <div class="d-flex align-items-center justify-content-between md-4">
-                <button type="submit" class="btn btn-brand">LOGIN</button>
+                <button name="login" type="submit" class="btn btn-brand">LOGIN</button>
                 <a href="javascript:void(0)" class="text-secondary"> Forgot Passowrd?</a>
             </div>
             </div>
@@ -153,3 +160,29 @@
     </div>
   </div>
 </div>
+
+<?php
+if(isset($_POST['login'])) 
+{
+    $frm_data = filteration($_POST);
+    $query ="SELECT * FROM `admin_cred` WHERE `admin_name` = ? AND `admin_pass` = ?";
+
+    $values = [$frm_data['admin_name'], $frm_data['admin_pass']];
+
+    $datatypes = "ss";
+
+    $res = select($query, $values, $datatypes);
+
+    if($res->num_rows==1)
+    {
+    $row = mysqli_fetch_assoc($res);
+    $_SESSION['adminLogin']= true;
+    $_SESSION['adminId'] = $row['sr_no'];
+    redirect('dashboard.php');
+    }
+    else
+    {
+        alert('error','Login failed -Invalied Credentials !');
+    }
+}
+?>

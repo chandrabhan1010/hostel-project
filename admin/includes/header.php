@@ -93,7 +93,7 @@ session_regenerate_id(true);
             </ul>
         </li>
 
-        <li class="complaints-dropdown">
+        <li class="application-dropdown">
             <a href="#" onclick="toggleDropdown(event)">
             <i class="bi bi-newspaper"></i>
                 <span class="link_name">Applications</span> 
@@ -106,8 +106,14 @@ session_regenerate_id(true);
                 <li><a href="#">Alloted</a></li>
             </ul>
         </li>
-   
 
+        <li>
+            <a href="#">
+            <i class='bx bxs-cog'></i>
+            <span class="link_name">Setting</span> 
+            </a>
+        </li>
+   
 
     </ul>
 </div>

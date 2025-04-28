@@ -1,3 +1,7 @@
+<?php 
+ require('./includes/db_config.php');
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +30,7 @@
         margin-bottom: 20px;
         }
         .form-control, .form-select {
-        border: 2px solid green;
+        border: 2px solid #3c8dbc;
         border-radius: 6px;
         }
         .btn-download {
@@ -64,24 +68,21 @@
 <div class="receipt-box shadow ">
     <h4>Download Application Receipt</h4>
     <hr>
-    <form>
+    <form method="POST" action="../HostelProject/report-generate/viewreceipt.php">
       <div class="mb-3">
-        <input type="text" class="form-control shadow-none text-center" placeholder="Enter Registration Number">
+        <input type="number" class="form-control shadow-none text-center" name="regno" placeholder="Enter Registration Number" required >
       </div>
       <div class="mb-3">
-        <select class="form-select shadow-none text-center" aria-label="Default select example" required="required">
-          <option selected>Select Year</option>
+        <select class="form-select shadow-none text-center" name="program"  required="required">
+           <option  value="">Select Program</option>
             <option value="UG">UG</option>
             <option value="PG">PG</option>
             <option value="DIPLOMA">DIPLOMA</option>
- 
         </select>
       </div>
-      <button type="submit" class="btn btn-download w-100">Download</button>
+      <button type="submit" class="btn btn-download w-100" name="download">Download</button>
     </form>
 </div>
-
-
 
 
 <?php require('./includes/footer.php')?>

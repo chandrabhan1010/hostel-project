@@ -6,32 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/formstyle.css">
     <?php require('./includes/links.php')?>
-
     <title>UG Registration</title>
     <?php require('./includes/header.php')?>
 
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
-
 <div class="wrapper">
     <div class="container1 form-group">
-        <div class="title text-dark"> UG Student Registration Form
+        <div class="title text-light bg-dark rounded "> UG Student Registration Form
         </div>
-        <form action="../includes/registration_process.php" method="post" enctype="multipart/form-data" autocomplete="off" onsubmit="return validation()">
+
+        <form action="../HostelProject/data/crud.php" method="POST" enctype="multipart/form-data" autocomplete="off" onsubmit="return validation()">
         <div class="form">
-           
             <div class="input-field">
                 <label>Cuet Form No</label>
                 <input type="number" id="cuetno" name="cuetno" required>
                 <span id="CUETNO"></span>
             </div>
-
-            <div class="input-field">
-                <label>Upload Image</label>
-                <input type="file" name="uploadfile" class="upload">
-                
-            </div>
-
             <div class="input-field">
             <label>Student Name</label>
             <input type="text"   name="sname" id="sname" required>
@@ -56,7 +47,7 @@
             
             <div class="input-field">
             <label>Gender</label>
-             <select class="selectbox" name="gender"  required>
+            <select class="selectbox" name="gender"  required>
                 <option value="">Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -67,7 +58,7 @@
 
             <div class="input-field">
             <label>Category</label>
-             <select class="selectbox" name="category"  required>
+            <select class="selectbox" name="category"  required>
                 <option value="">Select Category</option>
                 <option value="General">General</option>
                 <option value="OBC">OBC</option>
@@ -173,9 +164,6 @@
             </select>
             </div>
 
-
-
-
             <div class="input-field">
             <label>Mobile No.</label>
             <input type="number" name="phone" id="mobile"  required>  
@@ -196,7 +184,7 @@
 
             <div class="input-field">
             <label>State</label>
-           <select class="selectbox" name="state"  required>
+            <select class="selectbox" name="state"  required>
                 <option value="">Select State</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -234,8 +222,13 @@
             </div>
 
             <div class="input-field">
+                <label>Upload Image</label>
+                <input type="file" name="image" class="upload" accept=".jpg,.png,.svg,.avif,.jpeg">
+            </div>
+
+            <div class="input-field">
                 <label>Upload Aadhar in pdf format</label>
-                <input type="file" name="uploadpdf" class="pdfupload">
+                <input type="file" name="uploadpdf" class="upload" accept=".pdf">
             </div>
 
             <div class="input-field">
@@ -246,13 +239,13 @@
             </div>
 
             <div class="input-field">
-            <button type="submit" class ="btn" id="btn" name="submit">Submit</button>
+            <button type="submit" class ="btn" id="btn" name="submit_ug">Submit</button>
             </div>
         </div>
       </form>         
    </div> 
 </div>
-
+<!-- validation code -->
 <script type="text/javascript">
         function validation()
         {
