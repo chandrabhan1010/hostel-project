@@ -100,309 +100,327 @@
             }
         }
 
-
     </style>
 </head>
 
 <body>
     <?php
+
+if (isset($_SESSION['cuetnumber']))
+{
+  $cuetno = $_SESSION['cuetnumber'];
+  if($cuetno)
+  {  
+          $query = "select * from ugregistration where cuet_no=$cuetno";
+
+          $result = mysqli_query($con, $query);
+
+          $fetch_src = FETCH_SRC;
+
+          if (!$result) {
+              die("connection failed" . mysqli_error($con));
+          } else {
+              while ($row = mysqli_fetch_assoc($result)) {
+              ?>
+                  <div class="print">
+                      <a href="printapplication.php?cuetno=<?php echo $row['cuet_no'] ?> &program_type=<?php echo $row['program_type'] ?> "> <i class='bx bxs-printer text-center'></i></a>
+                  </div>
+
+                  <div class="container mb-5 box" style="margin-top: 100px; width:100%;">
+                      <div class="panel panel-default">
+
+                          <div class="panel-body">
+
+                              <table class="table table-bordered rounded" border="1">
+
+                                  <tbody>
+
+                                      <tr>
+                                          <td colspan="6" style="text-align:center;color:blue;">
+                                              <h4>Registraion Details Of Applicant</h4>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td colspan="6">
+
+                                              <?php echo "<img  style='width:100px; float:right; ' src='" . $fetch_src . $row['std_img'] . "' height='100px' width='100px'>";
+                                              ?>
+                                          </td>
+                                      </tr>
+
+                                      <tr>
+                                          <th>Registration Number :</th>
+                                          <td><?php echo $row['registration_no'] ?></td>
+
+                                          <td><b>Cuet Number:</b></td>
+                                          <td><?php echo $row['cuet_no']; ?></td>
+
+                                          <th>Apply Date :</th>
+                                          <td><?php $wop = $row['apply_date'];
+                                              print date("d-m-Y", strtotime($wop)) ?></td>
+                                      </tr>
+
+
+                                      <tr>
+
+
+                                          <td><b>Programme Type :</b></td>
+                                          <td><?php echo $row['program_type'] ?></td>
+
+                                          <td><b>Course :</b></td>
+                                          <td colspan="3"><?php echo $row['course'] ?></td>
+
+                                      </tr>
+
+                                      <tr>
+                                          <td colspan="6" style="color:red">
+                                              <h3>Personal Info</h3>
+                                          </td>
+                                      </tr>
+
+                                      <tr>
+                                          <td><b>Application Number :</b></td>
+                                          <td><?php echo $row['Registration_no'] ?></td>
+
+                                          <td><b>Full Name :</b></td>
+                                          <td><?php echo $row['sname'] ?></td>
+
+                                          <td><b>Email :</b></td>
+                                          <td><?php echo $row['email_id'] ?></td>
+                                      </tr>
+
+
+                                      <tr>
+                                          <td><b>Father Name. :</b></td>
+                                          <td><?php echo $row['father_name'] ?></td>
+
+                                          <td><b>Mother Name :</b></td>
+                                          <td><?php echo $row['mother_name'] ?></td>
+
+                                          <td><b>Date Of Birth :</b></td>
+                                          <td><?php echo $row['date_of_birth'] ?></td>
+                                      </tr>
+
+
+                                      <tr>
+                                          <td><b>Gender:</b></td>
+                                          <td><?php echo $row['gender'] ?></td>
+
+                                          <td><b>Category :</b></td>
+                                          <td><?php echo $row['category'] ?></td>
+
+                                          <td><b>Religion :</b></td>
+                                          <td><?php echo $row['religion'] ?></td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Contact No. :</b></td>
+                                          <td colspan="2"><?php echo $row['phone_no'] ?></td>
+
+                                          <td><b>Docoment :</b></td>
+                                          <td colspan="4"><?php echo "<a style='text-decoration:none;color:red'; href='" .$fetch_src.$row['aadhar_pdf'] . "' target=''>view</a>" ?></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td colspan="6" style="color:blue">
+                                              <h3>Addresses</h3>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td><b>Address according to the ID Proof :</b></td>
+                                          <td colspan="5"><?php echo $row['address'] ?></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td><b>State :</b></td>
+                                          <td colspan="5"><?php echo $row['state'] ?></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td><b>Distance from Home Town to University Campus in KM :</b></td>
+                                          <td colspan="5"><?php echo $row['distance'] ?> km</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              <?php
+                      }
+                  }
+  } 
+  else 
+  {
+      echo "<hr>";
+      echo "<h3 style='color:red;text-align:center;'>Application Receipt Not Found</h3>";
+  }
+      ?>
+      </div>
+
+      </div>
+  <?php 
+
+}?>
+<?php
         
-    if (isset($_SESSION['cuetnumber']) && ($_SESSION['program']))
+if (isset($_SESSION['cuetnumber']) && isset($_SESSION['program']))
+{
+    $cuetno = $_SESSION['cuetnumber'];
+    $program = $_SESSION['program'];
+
+
+
+    if($program =='PG' || $program =='DIPLOMA')
     {
-        $cuetno = $_SESSION['cuetnumber'];
-        $program = $_SESSION['program'];
+        
+            $query = "select * from pgregistration where cuet_no=$cuetno";
 
-        if($program =='UG')
-        {  
-                $query = "select * from ugregistration where cuet_no=$cuetno";
+            $result = mysqli_query($con, $query);
 
-                $result = mysqli_query($con, $query);
+            $fetch_src = FETCH_SRC;
 
-                $fetch_src = FETCH_SRC;
+            if (!$result) {
+                die("connection failed" . mysqli_error($con));
+            } else {
+                while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                    <div class="print">
+                        <a href="printapplication.php?cuetno=<?php echo $row['cuet_no'] ?> &program_type=<?php echo $row['program_type'] ?> "> <i class='bx bxs-printer text-center'></i></a>
+                    </div>
 
-                if (!$result) {
-                    die("connection failed" . mysqli_error($conn));
-                } else {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                        <div class="print">
-                            <a href="printapplication.php?cuetno=<?php echo $row['cuet_no'] ?> &program_type=<?php echo $row['program_type'] ?> "> <i class='bx bxs-printer text-center'></i></a>
-                        </div>
+                    <div class="container mb-5 box" style="margin-top: 100px; width:100%;">
+                        <div class="panel panel-default">
 
-                        <div class="container mb-5 box" style="margin-top: 100px; width:100%;">
-                            <div class="panel panel-default">
+                            <div class="panel-body">
 
-                                <div class="panel-body">
+                                <table class="table table-bordered rounded" border="1">
 
-                                    <table class="table table-bordered rounded" border="1">
+                                    <tbody>
 
-                                        <tbody>
+                                        <tr>
+                                            <td colspan="6" style="text-align:center;color:blue;">
+                                                <h4>Registraion Details Of Applicant</h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="6">
 
-                                            <tr>
-                                                <td colspan="6" style="text-align:center;color:blue;">
-                                                    <h4>Registraion Details Of Applicant</h4>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="6">
+                                                <?php echo "<img  style='width:100px; float:right; ' src='" . $fetch_src . $row['std_img'] . "' height='100px' width='100px'>";
+                                                ?>
+                                            </td>
+                                        </tr>
 
-                                                    <?php echo "<img  style='width:100px; float:right; ' src='" . $fetch_src . $row['std_img'] . "' height='100px' width='100px'>";
-                                                    ?>
-                                                </td>
-                                            </tr>
+                                        <tr>
+                                            <th>Registration Number :</th>
+                                            <td><?php echo $row['registration_no'] ?></td>
 
-                                            <tr>
-                                                <th>Registration Number :</th>
-                                                <td><?php echo $row['registration_no'] ?></td>
+                                            <td><b>Cuet Number:</b></td>
+                                            <td><?php echo $row['cuet_no']; ?></td>
 
-                                                <td><b>Cuet Number:</b></td>
-                                                <td><?php echo $row['cuet_no']; ?></td>
-
-                                                <th>Apply Date :</th>
-                                                <td><?php $wop = $row['apply_date'];
-                                                    print date("d-m-Y", strtotime($wop)) ?></td>
-                                            </tr>
+                                            <th>Apply Date :</th>
+                                            <td><?php $wop = $row['apply_date'];
+                                                print date("d-m-Y", strtotime($wop)) ?></td>
+                                        </tr>
 
 
-                                            <tr>
+                                        <tr>
 
 
-                                                <td><b>Programme Type :</b></td>
-                                                <td><?php echo $row['program_type'] ?></td>
+                                            <td><b>Programme Type :</b></td>
+                                            <td><?php echo $row['program_type'] ?></td>
 
-                                                <td><b>Course :</b></td>
-                                                <td colspan="3"><?php echo $row['course'] ?></td>
+                                            <td><b>Course :</b></td>
+                                            <td colspan="3"><?php echo $row['course'] ?></td>
 
-                                            </tr>
+                                        </tr>
 
-                                            <tr>
-                                                <td colspan="6" style="color:red">
-                                                    <h3>Personal Info</h3>
-                                                </td>
-                                            </tr>
+                                        <tr>
+                                            <td colspan="6" style="color:red">
+                                                <h3>Personal Info</h3>
+                                            </td>
+                                        </tr>
 
-                                            <tr>
-                                                <td><b>Application Number :</b></td>
-                                                <td><?php echo $row['Registration_no'] ?></td>
+                                        <tr>
+                                            <td><b>Application Number :</b></td>
+                                            <td><?php echo $row['Registration_no'] ?></td>
 
-                                                <td><b>Full Name :</b></td>
-                                                <td><?php echo $row['sname'] ?></td>
+                                            <td><b>Full Name :</b></td>
+                                            <td><?php echo $row['sname'] ?></td>
 
-                                                <td><b>Email :</b></td>
-                                                <td><?php echo $row['email_id'] ?></td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td><b>Father Name. :</b></td>
-                                                <td><?php echo $row['father_name'] ?></td>
-
-                                                <td><b>Mother Name :</b></td>
-                                                <td><?php echo $row['mother_name'] ?></td>
-
-                                                <td><b>Date Of Birth :</b></td>
-                                                <td><?php echo $row['date_of_birth'] ?></td>
-                                            </tr>
+                                            <td><b>Email :</b></td>
+                                            <td><?php echo $row['email_id'] ?></td>
+                                        </tr>
 
 
-                                            <tr>
-                                                <td><b>Gender:</b></td>
-                                                <td><?php echo $row['gender'] ?></td>
+                                        <tr>
+                                            <td><b>Father Name. :</b></td>
+                                            <td><?php echo $row['father_name'] ?></td>
 
-                                                <td><b>Category :</b></td>
-                                                <td><?php echo $row['category'] ?></td>
+                                            <td><b>Mother Name :</b></td>
+                                            <td><?php echo $row['mother_name'] ?></td>
 
-                                                <td><b>Religion :</b></td>
-                                                <td><?php echo $row['religion'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Contact No. :</b></td>
-                                                <td colspan="2"><?php echo $row['phone_no'] ?></td>
+                                            <td><b>Date Of Birth :</b></td>
+                                            <td><?php echo $row['date_of_birth'] ?></td>
+                                        </tr>
 
-                                                <td><b>Docoment :</b></td>
-                                                <td colspan="4"><?php echo "<a style='text-decoration:none;color:red'; href='" .$fetch_src.$row['aadhar_pdf'] . "' target=''>view</a>" ?></td>
-                                            </tr>
 
-                                            <tr>
-                                                <td colspan="6" style="color:blue">
-                                                    <h3>Addresses</h3>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Address according to the ID Proof :</b></td>
-                                                <td colspan="5"><?php echo $row['address'] ?></td>
-                                            </tr>
+                                        <tr>
+                                            <td><b>Gender:</b></td>
+                                            <td><?php echo $row['gender'] ?></td>
 
-                                            <tr>
-                                                <td><b>State :</b></td>
-                                                <td colspan="5"><?php echo $row['state'] ?></td>
-                                            </tr>
+                                            <td><b>Category :</b></td>
+                                            <td><?php echo $row['category'] ?></td>
 
-                                            <tr>
-                                                <td><b>Distance from Home Town to University Campus in KM :</b></td>
-                                                <td colspan="5"><?php echo $row['distance'] ?> km</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                            <td><b>Religion :</b></td>
+                                            <td><?php echo $row['religion'] ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Contact No. :</b></td>
+                                            <td colspan="2"><?php echo $row['phone_no'] ?></td>
+
+                                            <td><b>Docoment :</b></td>
+                                            <td colspan="4"><?php echo "<a style='text-decoration:none;color:red'; href='" .$fetch_src.$row['aadhar_pdf'] . "' target=''>view</a>" ?></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="6" style="color:blue">
+                                                <h3>Addresses</h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Address according to the ID Proof :</b></td>
+                                            <td colspan="5"><?php echo $row['address'] ?></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>State :</b></td>
+                                            <td colspan="5"><?php echo $row['state'] ?></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><b>Distance from Home Town to University Campus in KM :</b></td>
+                                            <td colspan="5"><?php echo $row['distance'] ?> km</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    <?php
-                            }
+                    </div>
+                <?php
                         }
-        } 
-        if($program =='PG' || $program =='DIPLOMA')
-        {
-            
-                $query = "select * from pgregistration where cuet_no=$cuetno";
+                    }
+    } 
+    else 
+    {
+        echo "<hr>";
+        echo "<h3 style='color:red;text-align:center;'>Application Receipt Not Found</h3>";
+    }
+        ?>
+        </div>
 
-                $result = mysqli_query($con, $query);
+        </div>
+    <?php 
 
-                $fetch_src = FETCH_SRC;
-
-                if (!$result) {
-                    die("connection failed" . mysqli_error($conn));
-                } else {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                        <div class="print">
-                            <a href="printapplication.php?cuetno=<?php echo $row['cuet_no'] ?> &program_type=<?php echo $row['program_type'] ?> "> <i class='bx bxs-printer text-center'></i></a>
-                        </div>
-
-                        <div class="container mb-5 box" style="margin-top: 100px; width:100%;">
-                            <div class="panel panel-default">
-
-                                <div class="panel-body">
-
-                                    <table class="table table-bordered rounded" border="1">
-
-                                        <tbody>
-
-                                            <tr>
-                                                <td colspan="6" style="text-align:center;color:blue;">
-                                                    <h4>Registraion Details Of Applicant</h4>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="6">
-
-                                                    <?php echo "<img  style='width:100px; float:right; ' src='" . $fetch_src . $row['std_img'] . "' height='100px' width='100px'>";
-                                                    ?>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <th>Registration Number :</th>
-                                                <td><?php echo $row['registration_no'] ?></td>
-
-                                                <td><b>Cuet Number:</b></td>
-                                                <td><?php echo $row['cuet_no']; ?></td>
-
-                                                <th>Apply Date :</th>
-                                                <td><?php $wop = $row['apply_date'];
-                                                    print date("d-m-Y", strtotime($wop)) ?></td>
-                                            </tr>
-
-
-                                            <tr>
-
-
-                                                <td><b>Programme Type :</b></td>
-                                                <td><?php echo $row['program_type'] ?></td>
-
-                                                <td><b>Course :</b></td>
-                                                <td colspan="3"><?php echo $row['course'] ?></td>
-
-                                            </tr>
-
-                                            <tr>
-                                                <td colspan="6" style="color:red">
-                                                    <h3>Personal Info</h3>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><b>Application Number :</b></td>
-                                                <td><?php echo $row['Registration_no'] ?></td>
-
-                                                <td><b>Full Name :</b></td>
-                                                <td><?php echo $row['sname'] ?></td>
-
-                                                <td><b>Email :</b></td>
-                                                <td><?php echo $row['email_id'] ?></td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td><b>Father Name. :</b></td>
-                                                <td><?php echo $row['father_name'] ?></td>
-
-                                                <td><b>Mother Name :</b></td>
-                                                <td><?php echo $row['mother_name'] ?></td>
-
-                                                <td><b>Date Of Birth :</b></td>
-                                                <td><?php echo $row['date_of_birth'] ?></td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td><b>Gender:</b></td>
-                                                <td><?php echo $row['gender'] ?></td>
-
-                                                <td><b>Category :</b></td>
-                                                <td><?php echo $row['category'] ?></td>
-
-                                                <td><b>Religion :</b></td>
-                                                <td><?php echo $row['religion'] ?></td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Contact No. :</b></td>
-                                                <td colspan="2"><?php echo $row['phone_no'] ?></td>
-
-                                                <td><b>Docoment :</b></td>
-                                                <td colspan="4"><?php echo "<a style='text-decoration:none;color:red'; href='" .$fetch_src.$row['aadhar_pdf'] . "' target=''>view</a>" ?></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td colspan="6" style="color:blue">
-                                                    <h3>Addresses</h3>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Address according to the ID Proof :</b></td>
-                                                <td colspan="5"><?php echo $row['address'] ?></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><b>State :</b></td>
-                                                <td colspan="5"><?php echo $row['state'] ?></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td><b>Distance from Home Town to University Campus in KM :</b></td>
-                                                <td colspan="5"><?php echo $row['distance'] ?> km</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    <?php
-                            }
-                        }
-        } 
-        else 
-        {
-            echo "<hr>";
-            echo "<h3 style='color:red;text-align:center;'>Application Receipt Not Found</h3>";
-        }
-            ?>
-            </div>
-
-            </div>
-        <?php 
-
-    }?>
+}?>
 
 
     <?php require('./includes/footer.php') ?>

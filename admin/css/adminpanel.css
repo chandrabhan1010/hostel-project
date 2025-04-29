@@ -285,7 +285,7 @@ nav .profile-details i
 }
 
 .application-dropdown.active ~ li:nth-child(11) {
-    margin-top: 150px; /* Adjust this value as needed */
+    margin-top: 200px; /* Adjust this value as needed */
     transition: margin-top 0.5s ease;
 }
 

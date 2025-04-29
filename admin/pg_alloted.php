@@ -5,27 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/room_register.css">
-    <title>PG New Application</title>
-    <style>
-        @media (max-width: 768px) 
+    <title>Room Registration</title>
+<style>
+    .print
+    {
+        font-size: 35px;
+    }
+       @media (max-width: 768px) 
+       {
+        .home-content h3
         {
-            .home-content h3
-            {
-            font-size: 10px;
-            text-align: center;
-            }
-            .table th 
-            {
-                font-size: 5px;
-            }
-            .table td
-            {
-                font-size: 3px;
-            }
+           font-size: 10px;
+           text-align: center;
         }
-    </style>
-   
-     
+       }
+</style>
+      
 </head>
 <body>
 <?php require('./includes/header.php')?>
@@ -35,11 +30,15 @@
         <div class="col-lg-11  p-0 ms-3 ">
             <!-- Design Form -->    
                 <div class="home-content"  style="padding-left: 0; margin-left: 0;">
-                    <h3 class="mt-5">#PG STUDENTS NEW APPLICATION</h3>
+                    <h3 class="mt-5">#UG ALLOTED NEW STUDENT LIST</h3>
                     <hr>
+                    <div class="print">
+                    <a href="../report-generate/printpglist.php"><i class='bx bxs-printer text-center'></i></a>
+                    </div>
+       
                     <?php
                     include('includes/db_config.php');
-                    $query = "SELECT * FROM pgregistration WHERE hostel_status='No'";
+                    $query = "SELECT * FROM pgregistration WHERE hostel_status='Yes'";
                     $result = mysqli_query($con, $query);
                     $total = mysqli_num_rows($result);
                     $fetch_src = FETCH_SRC;
@@ -53,7 +52,7 @@
                             echo '<div class="table-responsive">';
                             echo '<table class="table table-bordered table-striped table-hover">';
                             echo '<thead class="thead-dark">
-                                    <tr class="table1">
+                                    <tr>
                                         <th>Sr No.</th>
                                         <th>Cuet No.</th>
                                         <th>Student Name</th>
@@ -80,15 +79,9 @@
                         <td><?= $row['state'] ?></td>
                         <td><?= $row['distance'] ?></td>
                         <td>
-                            <div class="d-flex flex-row flex-nowrap gap-2 justify-content-centerd-flex flex-wrap gap-2 justify-content-center">
+                            <div class="d-flex flex-wrap gap-2 justify-content-center">
                                 <a href="pgapplicationdata.php?id=<?= $row['cuet_no'] ?>" class="btn btn-primary btn-sm">View</a>
-
-                                <a href="pgapproved.php?regno=<?php echo $row['registration_no']?> &image=<?php echo $row['std_img']?>  &sname=<?php echo $row['sname']?>  &fname=<?php echo $row['father_name']?> &mname=<?php echo $row['mother_name']?>  &dob=<?php echo $row['date_of_birth']?> &category=<?php echo $row['category']?> &religion=<?php echo $row['religion']?> &programtype=<?php echo $row['program_type']?> &course=<?php echo $row['course']?> &mobile=<?php echo $row['phone_no']?> &email=<?php echo $row['email_id']?> &address=<?php echo $row['address']?> &state=<?php echo $row['state']?> &distance=<?php echo $row['distance']?> &document=<?php echo $row['aadhar_pdf']?>" class="btn btn-success btn-sm ">Approve</a>
-
-
-                                <a href="rejectapplication.php?id=<?= $row['email_id'] ?>&program=<?= $row['program_type'] ?>" 
-                                   onclick="return checkdelete()" 
-                                   class="btn btn-danger btn-sm">Reject</a>
+                                
                             </div>
                         </td>
                     </tr>

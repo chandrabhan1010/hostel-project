@@ -101,9 +101,10 @@ session_regenerate_id(true);
             </a>
             <!-- Dropdown submenu -->
             <ul class="sub-menu">
-                <li><a href="upapplication.php">UG</a></li>
-                <li><a href="#">PG</a></li>
-                <li><a href="#">Alloted</a></li>
+                <li><a href="ugapplication.php">UG</a></li>
+                <li><a href="pgapplication.php">PG</a></li>
+                <li><a href="ug_alloted.php">UG Alloted List</a></li>
+                <li><a href="pg_alloted.php">PG Alloted List</a></li>
             </ul>
         </li>
 

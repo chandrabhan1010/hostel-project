@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/room_register.css">
-    <title>PG New Application</title>
+    <title>UG New Application</title>
     <style>
         @media (max-width: 768px) 
         {
@@ -24,8 +24,7 @@
             }
         }
     </style>
-   
-     
+        
 </head>
 <body>
 <?php require('./includes/header.php')?>
@@ -35,11 +34,11 @@
         <div class="col-lg-11  p-0 ms-3 ">
             <!-- Design Form -->    
                 <div class="home-content"  style="padding-left: 0; margin-left: 0;">
-                    <h3 class="mt-5">#PG STUDENTS NEW APPLICATION</h3>
+                    <h3 class="mt-5">#UG STUDENTS NEW APPLICATION</h3>
                     <hr>
                     <?php
                     include('includes/db_config.php');
-                    $query = "SELECT * FROM pgregistration WHERE hostel_status='No'";
+                    $query = "SELECT * FROM ugregistration WHERE hostel_status='No'";
                     $result = mysqli_query($con, $query);
                     $total = mysqli_num_rows($result);
                     $fetch_src = FETCH_SRC;
@@ -53,7 +52,7 @@
                             echo '<div class="table-responsive">';
                             echo '<table class="table table-bordered table-striped table-hover">';
                             echo '<thead class="thead-dark">
-                                    <tr class="table1">
+                                    <tr>
                                         <th>Sr No.</th>
                                         <th>Cuet No.</th>
                                         <th>Student Name</th>
@@ -62,7 +61,7 @@
                                         <th>Course</th>
                                         <th>State</th>
                                         <th>Distance (km)</th>
-                                        <th class="text-center">Actions</th>
+                                        <th class="text-center action">Actions</th>
                                     </tr>
                                   </thead>';
                             echo '<tbody>';
@@ -80,11 +79,10 @@
                         <td><?= $row['state'] ?></td>
                         <td><?= $row['distance'] ?></td>
                         <td>
-                            <div class="d-flex flex-row flex-nowrap gap-2 justify-content-centerd-flex flex-wrap gap-2 justify-content-center">
-                                <a href="pgapplicationdata.php?id=<?= $row['cuet_no'] ?>" class="btn btn-primary btn-sm">View</a>
-
-                                <a href="pgapproved.php?regno=<?php echo $row['registration_no']?> &image=<?php echo $row['std_img']?>  &sname=<?php echo $row['sname']?>  &fname=<?php echo $row['father_name']?> &mname=<?php echo $row['mother_name']?>  &dob=<?php echo $row['date_of_birth']?> &category=<?php echo $row['category']?> &religion=<?php echo $row['religion']?> &programtype=<?php echo $row['program_type']?> &course=<?php echo $row['course']?> &mobile=<?php echo $row['phone_no']?> &email=<?php echo $row['email_id']?> &address=<?php echo $row['address']?> &state=<?php echo $row['state']?> &distance=<?php echo $row['distance']?> &document=<?php echo $row['aadhar_pdf']?>" class="btn btn-success btn-sm ">Approve</a>
-
+                            <div class="d-flex flex-row flex-nowrap gap-2 justify-content-center">
+                                <a href="ugapplicationdata.php?id=<?= $row['cuet_no'] ?>" class="btn btn-primary btn-sm">View</a>
+                                
+                                <a href="ugapproved.php?regno=<?php echo $row['registration_no']?> &image=<?php echo $row['std_img']?>  &sname=<?php echo $row['sname']?>  &fname=<?php echo $row['father_name']?> &mname=<?php echo $row['mother_name']?>  &dob=<?php echo $row['date_of_birth']?> &category=<?php echo $row['category']?> &religion=<?php echo $row['religion']?> &programtype=<?php echo $row['program_type']?> &course=<?php echo $row['course']?> &mobile=<?php echo $row['phone_no']?> &email=<?php echo $row['email_id']?> &address=<?php echo $row['address']?> &state=<?php echo $row['state']?> &distance=<?php echo $row['distance']?> &document=<?php echo $row['aadhar_pdf']?>" class="btn btn-success btn-sm ">Approve</a>
 
                                 <a href="rejectapplication.php?id=<?= $row['email_id'] ?>&program=<?= $row['program_type'] ?>" 
                                    onclick="return checkdelete()" 
