@@ -101,7 +101,7 @@ session_regenerate_id(true);
             </a>
             <!-- Dropdown submenu -->
             <ul class="sub-menu">
-                <li><a href="#">UG</a></li>
+                <li><a href="upapplication.php">UG</a></li>
                 <li><a href="#">PG</a></li>
                 <li><a href="#">Alloted</a></li>
             </ul>

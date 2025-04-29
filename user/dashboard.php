@@ -48,9 +48,7 @@
             </div>
            </div>
            <i class='bx bxs-lock cart'></i>
-        </div>
-
-        
+        </div> 
    </div>
 </div>
 <?php require('./includes/footer.php')?>

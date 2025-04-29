@@ -215,6 +215,7 @@ nav .profile-details i
     border-radius: 50%;
     margin-right: 5px;
 }
+
 .overview-boxes .indicator .text
 {
     font-size: 15px;
@@ -222,8 +223,8 @@ nav .profile-details i
 }
 .overview-boxes .box .cart
 {
-    font-size: 32px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 200;
     height: 60px;
     width: 60px;
     background-color: #cce5ff;
@@ -264,8 +265,8 @@ nav .profile-details i
 
 /* Shift Applications & Settings down */
 
-.complaints-dropdown.active ~ li:nth-child(10) {
-    margin-top: 150px; /* Adjust this value as needed */
+.complaints-dropdown.active ~ li:nth-child(6) {
+    margin-top: 100px; /* Adjust this value as needed */
     transition: margin-top 0.5s ease;
 }
 

@@ -207,44 +207,44 @@
   <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/reading.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">READING ROOM</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">READING ROOM</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/cycle.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">CYCLE CLUB</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">CYCLE CLUB</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/common.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">COMMON ROOM</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">COMMON ROOM</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/play.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">PLAY GROUND</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">PLAY GROUND</h5></a>   
     </div>
   </div>
 
   <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/dining.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">DINNING HALL</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">DINNING HALL</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/watercooler.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">WATER COOLER</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">WATER COOLER</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/gym.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">MODERN GYM</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">MODERN GYM</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/wifi.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">WIFI</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">WIFI</h5></a>   
     </div>
   </div>
   </div>
@@ -252,7 +252,7 @@
   
 
  <div class="text-center mt-5 ">
- <a href="#" class="clickhere">Click here </a><span  style="font-size: 22px;">to see the Information Brochure.</span>
+ <a href="infrastructure.php" class="clickhere">Click here </a><span  style="font-size: 22px;">to see the Information Brochure.</span>
  </div>
 <div class="underline"></div>
 

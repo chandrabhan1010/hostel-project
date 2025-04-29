@@ -50,13 +50,6 @@ session_regenerate_id(true);
             </a>
         </li>
 
-        <li>
-            <a href="#">
-            <i class="bi bi-clipboard2-data"></i>
-            <span class="link_name">Change Password</span> 
-            </a>
-        </li>
-
         <li class="complaints-dropdown">
             <a href="#" onclick="toggleDropdown(event)">
                 <i class="bi bi-card-checklist"></i>
@@ -69,6 +62,13 @@ session_regenerate_id(true);
                 <li><a href="#">View Complaint Status</a></li>
  
             </ul>
+        </li>
+
+        <li>
+            <a href="#">
+            <i class="bi bi-clipboard2-data"></i>
+            <span class="link_name">Change Password</span> 
+            </a>
         </li>
 
     </ul>

@@ -120,46 +120,20 @@
 <div class="login-form text-center rounded bg-white shadow overflow-hidden ">
 
     <form method="POST">
-        <h4 class="bg-dark text-white py-3">ADMIN LOGIN </h4>
+        <h4 class="bg-dark text-white py-3">FORGET PASSWORD </h4>
         <div class="p-4">
             <div class="mb-3">
-                <input name="admin_name" required type="text" class="form-control shadow-none text-center" placeholder="Username">
+                <input name="admin_name" required type="text" class="form-control shadow-none text-center" placeholder="Enter Email">
+
+                 <a href="index.php" style="color:#3c8dbc">Login ?</a>
             </div>
 
-            <div class="mb-4">
-                 <input name="admin_pass" required type="password" class="form-control shadow-none text-center" placeholder="Password">
-                 <a href="forget_pass.php" style="color:#3c8dbc">Forget Password ?</a>
-                </div>
-
-            <button name="login" type="submit "class="btn text-white btn-brand shadow-none">LOGIN</button>
+            <button name="login" type="submit "class="btn text-white btn-brand shadow-none">SEND</button>
         </div>
     </form>
 </div>
 
 <?php
-if(isset($_POST['login'])) 
-{
-    $frm_data = filteration($_POST);
-    $query ="SELECT * FROM `admin_cred` WHERE `admin_name` = ? AND `admin_pass` = ?";
-
-    $values = [$frm_data['admin_name'], $frm_data['admin_pass']];
-
-    $datatypes = "ss";
-
-    $res = select($query, $values, $datatypes);
-
-    if($res->num_rows==1)
-    {
-    $row = mysqli_fetch_assoc($res);
-    $_SESSION['adminLogin']= true;
-    $_SESSION['adminId'] = $row['sr_no'];
-    redirect('dashboard.php');
-    }
-    else
-    {
-        alert('error','Login failed -Invalied Credentials !');
-    }
-}
 
 
 ?>

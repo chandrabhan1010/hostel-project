@@ -120,18 +120,15 @@
 <div class="login-form text-center rounded bg-white shadow overflow-hidden ">
 
     <form method="POST">
-        <h4 class="bg-dark text-white py-3">ADMIN LOGIN </h4>
+        <h4 class="bg-dark text-white py-3">FORGET PASSWORD </h4>
         <div class="p-4">
             <div class="mb-3">
-                <input name="admin_name" required type="text" class="form-control shadow-none text-center" placeholder="Username">
+                <input name="admin_name" required type="text" class="form-control shadow-none text-center" placeholder="Enter Email">
+
+                 <a href="index.php" style="color:#3c8dbc">Login ?</a>
             </div>
 
-            <div class="mb-4">
-                 <input name="admin_pass" required type="password" class="form-control shadow-none text-center" placeholder="Password">
-                 <a href="forget_pass.php" style="color:#3c8dbc">Forget Password ?</a>
-                </div>
-
-            <button name="login" type="submit "class="btn text-white btn-brand shadow-none">LOGIN</button>
+            <button name="login" type="submit "class="btn text-white btn-brand shadow-none">SEND</button>
         </div>
     </form>
 </div>

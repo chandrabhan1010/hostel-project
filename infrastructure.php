@@ -46,7 +46,7 @@
                 <div class="d-flex align-items-center mb-3 ">
                 <img src="./images/reading_room.jpg" class="rounded " style="height: 198px;">
                 </div>
-                <h5 class="m-0 ms-3 text-center">Study Room Facility</h5>
+                <h5 class="m-0 ms-3 text-center">Reading Room</h5>
                 <div class="text-center mt-3 text-dark " style="font-size: 20px;;">
                     <p>A separate, quiet study room is available for all students to support focused learning and academic work.</p>
                 </div>
@@ -58,7 +58,7 @@
                 <div class="d-flex align-items-center mb-3 ">
                 <img src="./images/watercolor.jpg" class="rounded " style="height: 198px;" >
                 </div>
-                <h5 class="m-0 ms-3 text-center">RO Water Coolers</h5>
+                <h5 class="m-0 ms-3 text-center">Water Coolers</h5>
                 <div class="text-center mt-3 text-dark " style="font-size: 20px;">
                     <p>Every floor of the hostel is equipped with RO water coolers to ensure clean and safe drinking water for all students.</p>
                 </div>
@@ -133,6 +133,42 @@
                 <h5 class="m-0 ms-3 text-center">Hostel Mess</h5>
                 <div class="text-center mt-3 text-dark " style="font-size: 20px;">
                     <p>The hostel features a dedicated mess facility that remains open for students, offering breakfast, Lunch and Dinner </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-5 px-4">
+            <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                <div class="d-flex align-items-center mb-3 ">
+                <img src="./images/cycle.jpg" class="rounded "style="height: 198px;"  >
+                </div>
+                <h5 class="m-0 ms-3 text-center">Cycle Club</h5>
+                <div class="text-center mt-3 text-dark " style="font-size: 20px;">
+                    <p>Hostel provide cycle and bike parking facility  for students , students allowed to keep personal bicycles(two-wheelers)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-5 px-4">
+            <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                <div class="d-flex align-items-center mb-3 ">
+                <img src="./images/play.jpg" class="rounded "style="height: 198px;"  >
+                </div>
+                <h5 class="m-0 ms-3 text-center">Play Ground</h5>
+                <div class="text-center mt-3 text-dark " style="font-size: 20px;">
+                    <p>The hostel provides facilities for outdoor games like the Badminton, Cricket, Football, Table Tenis etc.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-5 px-4">
+            <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop">
+                <div class="d-flex align-items-center mb-3 ">
+                <img src="./images/hostelgym.jpeg" class="rounded "style="height: 198px;"  >
+                </div>
+                <h5 class="m-0 ms-3 text-center">Modern GYM</h5>
+                <div class="text-center mt-3 text-dark " style="font-size: 20px;">
+                    <p>The hostel provides access to a well-equipped gym to support your health and fitness goals.</p>
                 </div>
             </div>
         </div>

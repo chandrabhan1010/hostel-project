@@ -156,6 +156,9 @@ About  Guru Govind Boys  Hostel
             <img src="./images/naresh_sonkar.jpg"  style="width: 200px; height:200px;">
         </div>
     </div>
+    
+    <hr>
+    <br>
 
     <div class="row justify-content-between align-items-center">
         <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
@@ -170,6 +173,9 @@ About  Guru Govind Boys  Hostel
             <img src="./images/nk_sharma.jpg"  style="width: 200px; height:200px;">
         </div>
     </div>
+    
+    <hr>
+    <br>
 
     <div class="row justify-content-between align-items-center">
         <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
@@ -184,6 +190,9 @@ About  Guru Govind Boys  Hostel
             <img src="./images/sudesh_kumar.jpg"  style="width: 200px; height:200px;">
         </div>
     </div>
+    
+    <hr>
+    <br>
 
     <div class="row justify-content-between align-items-center">
         <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
@@ -198,6 +207,8 @@ About  Guru Govind Boys  Hostel
             <img src="./images/shivaji.jpg"  style="width: 200px; height:200px;">
         </div>
     </div>
+    <hr>
+    <br>
 </div>
 </div>
 
