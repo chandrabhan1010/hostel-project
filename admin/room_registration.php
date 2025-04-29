@@ -165,15 +165,20 @@
                     </select>
                     </div>
 
-
                     <div class="input-field">
                     <label>Email ID</label>
                     <input type="email"  name="email"  required>   
                     </div>
 
+
+                    <div class="input-field">
+                    <label>Create Username</label>
+                    <input type="text"  name="user_name"  required>   
+                    </div>
+
                     <div class="input-field">
                     <label>Create login Password</label>
-                    <input type="text"  name="pass"  required>   
+                    <input type="text"  name="user_pass"  required>   
                     </div>
 
                     <div class="input-field">
@@ -343,8 +348,8 @@
                 </div>
             </div>   
 
-            <!-- javascript validation query -->
-            <!-- <script>
+<!-- javascript validation query -->
+            <script>
                 function populate(s1,s2)
                 {
                     var s1=document.getElementById(s1);
@@ -475,12 +480,10 @@
                     s2.options.add(newoption);
                 }
              }
-            </script> -->
+            </script>
         </div>
     </div>
 </div>
-
-
 
 </body>
 </html>
@@ -491,47 +494,47 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 include('./includes/vendor/autoload.php');
 
-include('./includes/db_config.php');
+include('includes/db_config.php');
+
 
 if(isset($_POST['submit']))
 {
     //  uploade image
-
     $filename=$_FILES["uploadfile"]["name"];
     $tempname=$_FILES["uploadfile"]["tmp_name"];
-    $folder="../student_img/".$filename;
+    $folder="../upload_img/".$filename;
     move_uploaded_file($tempname,$folder);
 
     
     // upload sem_fee_receipt
     $filename2=$_FILES["uploadsemfee"]["name"];
     $tempname2=$_FILES["uploadsemfee"]["tmp_name"];
-    $folder2="../document_pdf/".$filename2;
+    $folder2="../upload_document_pdf/".$filename2;
     move_uploaded_file($tempname2,$folder2);
 
     // upload cast certificate
     $filename3=$_FILES["uploadcast"]["name"];
     $tempname3=$_FILES["uploadcast"]["tmp_name"];
-    $folder3="../document_pdf/".$filename3;
+    $folder3="../upload_document_pdf/".$filename3;
     move_uploaded_file($tempname3,$folder3);
 
     // upload Domicile certificate
     $filename4=$_FILES["uploaddomicile"]["name"];
     $tempname4=$_FILES["uploaddomicile"]["tmp_name"];
-    $folder4="../document_pdf/".$filename4;
+    $folder4="../upload_document_pdf/".$filename4;
     move_uploaded_file($tempname4,$folder4);
 
     // upload Hostel fee receipt
    
     $filename5=$_FILES["uploadhostelfee"]["name"];
     $tempname5=$_FILES["uploadhostelfee"]["tmp_name"];
-    $folder5="../document_pdf/".$filename5;
+    $folder5="../upload_document_pdf/".$filename5;
     move_uploaded_file($tempname5,$folder5);
 
     // upload  student aadhar
     $filename1=$_FILES["uploadaadhar"]["name"];
     $tempname1=$_FILES["uploadaadhar"]["tmp_name"];
-    $folder1="../document_pdf/".$filename1;
+    $folder1="../upload_document_pdf/".$filename1;
     move_uploaded_file($tempname1,$folder1);
 
 
@@ -550,7 +553,8 @@ if(isset($_POST['submit']))
     $blood =$_POST['blood'];
     $physical_dis =$_POST['physical_dis'];
     $email =$_POST['email'];
-    $password =$_POST['pass'];
+    $user_name =$_POST['user_name'];
+    $user_pass =$_POST['user_pass'];
     $mob =$_POST['phone'];
     $aadhar =$_POST['aadhar'];
     $emergency_no =$_POST['emgno'];
@@ -572,12 +576,12 @@ if(isset($_POST['submit']))
         $mail->SMTPAuth   = true;     
         
         //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send throug                         //Enable SMTP authentication
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP 
         $mail->Username   ='shivamthakur13092003@gmail.com';                     //SMTP username
-        $mail->Password   = 'hpbn unzk ldtm vzit';
+        $mail->Password   = 'kkui okna zuoj tlpz';
         
         //SMTP password
-        $mail->SMTPSecure ='tls';            //Enable implicit TLS encryption
+        $mail->SMTPSecure ='TLS';            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
@@ -592,8 +596,8 @@ if(isset($_POST['submit']))
         $mail->Body  = "Dear $sname,<br> 
                         Your hostel room allotement form has been submitted Successfully.<br>
                         Your username  and password  Details are given below.<br>
-                        Username  - $email <br> 
-                        Password - $password <br>
+                        Username  - $user_name <br> 
+                        Password - $user_pass <br>
                         <br>
                         Thank you <br>
                         <br>
@@ -619,22 +623,22 @@ if(isset($_POST['submit']))
         // student registration
         $query1="UPDATE studentregistration set room_no='$room_no',stay_from='$stayfrom',duration='$duration',std_img='$folder',program_type='$programtype',course='$course',semester='$semester',name='$sname',fname='$fname',dob='$dob',category='$category',religion='$religion',blood_group='$blood',physical_disable='$physical_dis',contact_no='$mob',email_id='$email',aadhar_no='$aadhar',emergency_no='$emergency_no',guardian_name='$guardian_name',guardian_relation='$guardian_rel',guardian_contact_no='$guardian_no',address='$address',city='$city',state='$state',pincode='$pincode',distance='$distance' where registration_no='$regno'";
 
-        $result1=mysqli_query($conn,$query1);
+        $result1=mysqli_query($con,$query1);
  
         //user details
-        $query2="INSERT INTO userdetails(id,sname,email,password)  VALUES('$regno','$sname','$email','$password')";
-        $result2=mysqli_query($conn,$query2);
+        $query2="INSERT INTO user_cred(reg_no,sname,user_name,user_pass,email)  VALUES('$regno','$sname','$user_name','$user_pass','$email')";
+        $result2=mysqli_query($con,$query2);
   
         // documents
-        $query3="INSERT INTO documents(regno,sname,cast_certificate,domicile_certificate,hostel_fee_receipt,semester_fee_receipt,aadhar)
+        $query3="INSERT INTO documents (regno,sname,cast_certificate,domicile_certificate,hostel_fee_receipt,semester_fee_receipt,aadhar)
         VALUES('$regno','$sname','$folder3',' $folder4','$folder5','$folder2','$folder1')";
-        $result3=mysqli_query($conn,$query3);
+        $result3=mysqli_query($con,$query3);
         echo $squry3;
 
         // update rooms 
         $query4="select * from rooms where room_no='$room_no'";
 
-        $result4=mysqli_query($conn,$query4);
+        $result4=mysqli_query($con,$query4);
         $total4=mysqli_num_rows($result4);
         if($total4)
         {
@@ -645,7 +649,7 @@ if(isset($_POST['submit']))
               if($empty>=1)
               {
                 $query="UPDATE rooms set allot_seat=$allot+1,empty_seat=$empty-1,allot_status='Yes' where room_no='$room_no'";
-                mysqli_query($conn,$query);
+                mysqli_query($con,$query);
               }
               else
               {
@@ -662,7 +666,7 @@ if(isset($_POST['submit']))
     {
         echo "<script>alert('Data Insert Successfully');</script>";
         ?>
-        <meta http-equiv = "refresh" content = "0; url =http://localhost:8080/universityhostel/includes/admindashboard.php" />
+        <meta http-equiv = "refresh" content = "0; url =http://localhost:8080/HostelProject/admin/room_registration.php" />
         <?php
     }
     else

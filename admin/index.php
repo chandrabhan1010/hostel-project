@@ -157,7 +157,7 @@ if(isset($_POST['login']))
     }
     else
     {
-        alert('error','Login failed -Invalied Credentials !');
+        echo "<script>alert('Invalid Login Credential!');</script>";
     }
 }
 
