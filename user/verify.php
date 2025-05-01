@@ -1,16 +1,22 @@
 <?php require('includes/db_config.php');
+      require('includes/essentials.php');
       session_start();
+     
+      if((isset($_SESSION['userLogin'])&& $_SESSION['userLogin']==true))
+      {
+         redirect('dashboard.php');
+      }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>User Login</title>
     <?php require('includes/links.php')?>
-    <title>Forget Password</title>
-
     <style>
         div.login-form {
         position: absolute;
@@ -18,18 +24,18 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 400px;
-        }
+    }
 
-        @media (max-width: 576px) {
-            div.login-form {
-                width: 90%;
-                padding: 5px;
-                margin-top: 100px;
-            }
+    @media (max-width: 576px) {
+        div.login-form {
+            width: 90%;
+            padding: 5px;
+            margin-top: 100px;
         }
+    }
     </style>
 </head>
-<body class="bg-light" data-bs-target=".navbar">
+<body class="bg-light">
 
 <!-- navbar -->
 <nav class="top-nav " id="home">
@@ -121,39 +127,34 @@
     </div>
 </nav>
 
-
-<?php if(isset($_SESSION['status'])):?>
+<?php
+if(isset($_SESSION['status']))
+{
+    ?>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <?php  echo $_SESSION['status']; ?>
+    <strong>Hey!</strong><?php  echo $_SESSION['status']; ?>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <?php endif;?>
-    <?php unset($_SESSION['status']);?>
+    <?php
+    unset($_SESSION['status']);
+}
+?>
 
 <div class="login-form text-center rounded bg-white shadow overflow-hidden ">
 
-    <form action="password-reset-code.php" method="POST">
-        <h4 class="bg-dark text-white py-3">Reset Password </h4>
+    <form method="POST" action="login.php">
+        <h4 class="bg-dark text-white py-3">User Authentication </h4>
         <div class="p-4">
             <div class="mb-3">
-                <input name="user_email" required type="text" class="form-control shadow-none text-center" placeholder="Email Address">
-
-                 <a href="index.php" style="color:#3c8dbc">Login ?</a>
+                <input name="user_otp" required type="number" class="form-control shadow-none text-center" placeholder="5 Digit OTP">
             </div>
+            
+            <button type="submit "class="btn text-white btn-brand shadow-none">Verify OTP</button>
 
-            <button name="password_reset_link" type="submit "class="btn text-white btn-brand shadow-none">Send Password Reset Link</button>
         </div>
     </form>
 </div>
 
-<script>
-    setTimeout(function(){
-    let alert =document.querySelector(".alert");
-        alert.remove();
-    },3000);
-</script>
-
 <?php require('./includes/scripts.php')?>
-
 </body>
 </html>

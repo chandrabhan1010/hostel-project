@@ -1,30 +1,33 @@
-<?php require('includes/db_config.php');
-      require('includes/essentials.php');
-      session_start();
-     
-      if((isset($_SESSION['userLogin'])&& $_SESSION['userLogin']==true))
-      {
-         redirect('dashboard.php');
-      }
+<?php
+require('includes/db_config.php');
+session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     
     <title>User Login</title>
     <?php require('includes/links.php')?>
     <style>
         div.login-form {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
         }
+
+        @media (max-width: 576px) {
+            div.login-form {
+                width: 90%;
+                padding: 5px;
+                margin-top: 100px;
+            }
+        }
+
     </style>
 </head>
 <body class="bg-light">
@@ -119,9 +122,24 @@
     </div>
 </nav>
 
+
+<?php
+if(isset($_SESSION['status']))
+{
+    ?>
+    <div class="alert alert-warning alert-dismissible fade show custom-alert" role="alert">
+    <strong>Hey!</strong><?php  echo $_SESSION['status']; ?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php
+    unset($_SESSION['status']);
+}
+?>
+  </div>
+
 <div class="login-form text-center rounded bg-white shadow overflow-hidden ">
 
-    <form method="POST">
+    <form method="POST" action="send_otp.php">
         <h4 class="bg-dark text-white py-3">USER LOGIN </h4>
         <div class="p-4">
             <div class="mb-3">
@@ -134,38 +152,18 @@
                  <a href="forget_pass.php" style="color:#3c8dbc">Forget Password ?</a>
                 </div>
             
-            <button name="login" type="submit "class="btn text-white btn-brand shadow-none">LOGIN</button>
-
+            <button name="login" type="submit "class="btn text-white btn-brand shadow-none">Login</button>
         </div>
     </form>
 </div>
 
-<?php
-if(isset($_POST['login'])) 
-{
-    
-    $frm_data = filteration($_POST);
-    $query ="SELECT * FROM `user_cred` WHERE `user_name` = ? AND `user_pass` = ?";
+<script>
+    setTimeout(function(){
+    let alert =document.querySelector(".alert");
+        alert.remove();
+    },3000);
+</script>
 
-    $values = [$frm_data['user_name'], $frm_data['user_pass']];
-
-    $datatypes = "ss";
-
-    $res = select($query, $values, $datatypes);
-
-    if($res->num_rows==1)
-    {
-    $row = mysqli_fetch_assoc($res);
-    $_SESSION['userLogin']= true;
-    $_SESSION['userId'] = $row['sr_no'];
-    redirect('dashboard.php');
-    }
-    else
-    {
-        echo "<script>alert('Invalid Login Credential!');</script>";
-    }
-}
-?>
 <?php require('./includes/scripts.php')?>
 </body>
 </html>

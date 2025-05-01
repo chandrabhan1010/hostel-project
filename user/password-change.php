@@ -13,18 +13,19 @@
 
     <style>
         div.login-form {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
         }
 
         @media (max-width: 576px) {
             div.login-form {
-                width: 90%;
+                width: 80%;
+                height: 65%;
                 padding: 5px;
-                margin-top: 100px;
+                margin-top: 110px;
             }
         }
     </style>
@@ -121,7 +122,6 @@
     </div>
 </nav>
 
-
 <?php if(isset($_SESSION['status'])):?>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <?php  echo $_SESSION['status']; ?>
@@ -133,18 +133,31 @@
 <div class="login-form text-center rounded bg-white shadow overflow-hidden ">
 
     <form action="password-reset-code.php" method="POST">
-        <h4 class="bg-dark text-white py-3">Reset Password </h4>
+        <input type="hidden" name="password_token" value="<?php if(isset($_GET['token'])){echo $_GET['token'];}?>">
+        <h4 class="bg-dark text-white py-3">Change Password </h4>
         <div class="p-4">
-            <div class="mb-3">
-                <input name="user_email" required type="text" class="form-control shadow-none text-center" placeholder="Email Address">
 
-                 <a href="index.php" style="color:#3c8dbc">Login ?</a>
+            <div class="mb-3">
+                <label style="float: left; font-size:20px;" class="text-dark mb-2">Email Address</label>
+                <input name="user_email" value="<?php if(isset($_GET['email'])){echo $_GET['email'];}?>" required type="text" class="form-control shadow-none " placeholder="Enter email address">
             </div>
 
-            <button name="password_reset_link" type="submit "class="btn text-white btn-brand shadow-none">Send Password Reset Link</button>
+            <div class="mb-3">
+                <label style="float: left; font-size:20px;" class="text-dark mb-3">New Password</label>
+                <input name="new_pass" required type="text" class="form-control shadow-none " placeholder="Enter new password">
+            </div>
+            
+            <div class="mb-3">
+                <label style="float: left; font-size:20px;" class="text-dark mb-3">Confirm Password</label>
+                <input name="confirm_pass" required type="text" class="form-control shadow-none " placeholder="Enter confirm password">
+
+            </div>
+
+            <button name="password_update" type="submit "class="btn text-white btn-brand shadow-none">Update Password</button>
         </div>
     </form>
 </div>
+
 
 <script>
     setTimeout(function(){
