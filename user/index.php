@@ -14,7 +14,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Admin Login Panel</title>
+    
+    <title>User Login</title>
     <?php require('includes/links.php')?>
     <style>
         div.login-form {
@@ -124,7 +125,7 @@
         <h4 class="bg-dark text-white py-3">USER LOGIN </h4>
         <div class="p-4">
             <div class="mb-3">
-                <input name="user_name" required type="text" class="form-control shadow-none text-center" placeholder="Username">
+                <input name="user_name" required type="text" class="form-control shadow-none text-center" placeholder="Username/Email">
             </div>
 
             <div class="mb-4">

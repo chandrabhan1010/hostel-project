@@ -621,49 +621,69 @@ if(isset($_POST['submit']))
 
     if($room_no != "" && $regno != "")
     {
-        // student registration
-        $query1="UPDATE studentregistration set room_no='$room_no',stay_from='$stayfrom',duration='$duration',std_img='$folder',program_type='$programtype',course='$course',semester='$semester',name='$sname',fname='$fname',dob='$dob',category='$category',religion='$religion',blood_group='$blood',physical_disable='$physical_dis',contact_no='$mob',email_id='$email',aadhar_no='$aadhar',emergency_no='$emergency_no',guardian_name='$guardian_name',guardian_relation='$guardian_rel',guardian_contact_no='$guardian_no',address='$address',city='$city',state='$state',pincode='$pincode',distance='$distance' where registration_no='$regno'";
+         // check room availability and update rooms 
+         $query4="select * from rooms where room_no='$room_no'";
 
-        $result1=mysqli_query($con,$query1);
- 
-        //user details
-        $query2="INSERT INTO user_cred(reg_no,sname,user_name,user_pass,user_email)  VALUES('$regno','$sname','$user_name','$user_pass','$email')";
-        $result2=mysqli_query($con,$query2);
-  
-        // documents
-        $query3="INSERT INTO documents (regno,sname,cast_certificate,domicile_certificate,hostel_fee_receipt,semester_fee_receipt,aadhar)
-        VALUES('$regno','$sname','$folder3',' $folder4','$folder5','$folder2','$folder1')";
-        $result3=mysqli_query($con,$query3);
-        echo $squry3;
+         $result4=mysqli_query($con,$query4);
+         $total4=mysqli_num_rows($result4);
+         if($total4)
+         {
+             while($row=mysqli_fetch_assoc($result4))
+             {
+                 $allot=$row['allot_seat'];
+                 $empty=$row['empty_seat'];
+               if($empty>=1)
+               {
+                //user details
+                $query2="SELECT * FROM user_cred WHERE user_email='$email' AND user_name='$user_name'";
+            
+                $result2=mysqli_query($con,$query2);
 
-        // update rooms 
-        $query4="select * from rooms where room_no='$room_no'";
+                $total2=mysqli_num_rows($result2);
 
-        $result4=mysqli_query($con,$query4);
-        $total4=mysqli_num_rows($result4);
-        if($total4)
-        {
-            while($row=mysqli_fetch_assoc($result4))
-            {
-                $allot=$row['allot_seat'];
-                $empty=$row['empty_seat'];
-              if($empty>=1)
-              {
-                $query="UPDATE rooms set allot_seat=$allot+1,empty_seat=$empty-1,allot_status='Yes' where room_no='$room_no'";
-                mysqli_query($con,$query);
-              }
-              else
-              {
-                echo "<script>alert('This Room Is  Not Empty');</script>";
-              }
-            }
-        }
-        else
-        {
-            echo "<script>alert('Room Number Not Exists');</script>";
-        }
+                if($total2==1)
+                {
+                    echo "<script>alert('Registration number and Username Already Exist');</script>";
+                    die();
+                }
+                else
+                {   
+                    // student registration
+                    $query1="UPDATE studentregistration set room_no='$room_no',stay_from='$stayfrom',duration='$duration',std_img='$folder',program_type='$programtype',course='$course',semester='$semester',name='$sname',fname='$fname',dob='$dob',category='$category',religion='$religion',blood_group='$blood',physical_disable='$physical_dis',contact_no='$mob',email_id='$email',aadhar_no='$aadhar',emergency_no='$emergency_no',guardian_name='$guardian_name',guardian_relation='$guardian_rel',guardian_contact_no='$guardian_no',address='$address',city='$city',state='$state',pincode='$pincode',distance='$distance' where registration_no='$regno'";
 
-    if($result1 && $result2 && $result3)
+                    $result1=mysqli_query($con,$query1);
+
+                    // insert userlogin details
+                    $query2="INSERT INTO user_cred(sname,user_name,user_pass,user_email)  VALUES('$sname','$user_name','$user_pass','$email')";
+                    
+                    $result2=mysqli_query($con,$query2);
+
+                    // update room details
+                    $query3="UPDATE rooms set allot_seat=$allot+1,empty_seat=$empty-1,allot_status='Yes' where room_no='$room_no'";
+                    mysqli_query($con,$query3);
+
+                    // documents
+                    $query4="INSERT INTO documents (regno,sname,cast_certificate,domicile_certificate,hostel_fee_receipt,semester_fee_receipt,aadhar)
+                    VALUES('$regno','$sname','$folder3',' $folder4','$folder5','$folder2','$folder1')";
+                    $result3=mysqli_query($con,$query4);
+                    echo $squry3;
+                }
+
+               }
+               else
+               {
+                 echo "<script>alert('This Room Is  Not Empty');</script>";
+                 die();
+               }
+             }
+         }
+         else
+         {
+             echo "<script>alert('Room Number Not Exists');</script>";
+             die();
+         }
+
+    if($result1 && $result2 && $result3 && $result4)
     {
         echo "<script>alert('Data Insert Successfully');</script>";
         ?>
@@ -673,12 +693,13 @@ if(isset($_POST['submit']))
     else
     {
         echo "<script>alert('Data Not Inserted');</script>";
+        die();
     }
-        }
-        else
-        {
-            echo "<script>alert('Please fill the form first');</script>";
-        } 
+    }
+    else
+    {
+        echo "<script>alert('Please fill the form first');</script>";
+    } 
 }
 
 ?>
