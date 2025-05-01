@@ -626,7 +626,7 @@ if(isset($_POST['submit']))
         $result1=mysqli_query($con,$query1);
  
         //user details
-        $query2="INSERT INTO user_cred(reg_no,sname,user_name,user_pass,email)  VALUES('$regno','$sname','$user_name','$user_pass','$email')";
+        $query2="INSERT INTO user_cred(reg_no,sname,user_name,user_pass,user_email)  VALUES('$regno','$sname','$user_name','$user_pass','$email')";
         $result2=mysqli_query($con,$query2);
   
         // documents

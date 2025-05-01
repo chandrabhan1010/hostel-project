@@ -31,7 +31,7 @@ if(isset($_GET['id']) && isset($_GET['program']))
         $query1="delete from pgregistration where email_id='$email'";
         $result1=mysqli_query($con,$query1);
     
-        $query2="delete from user_cred where email='$email'";
+        $query2="delete from user_cred where user_email='$email'";
         $result2=mysqli_query($con,$query2);
     
         if($result1 !=1 && $result2 !=1)

@@ -146,14 +146,14 @@ About  Guru Govind Boys  Hostel
     <div class="row justify-content-between align-items-center">
         <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
         <h4>Administrative Warden (GGBH)</h4>
-        <h5>Dr. Naresh Kumar Sonkar</h5>
-        <h6>Associate Professor (Department of Sociology & Social Anthropology)</h6>
-        <i class='bx bxs-envelope mt-4'></i><a href="mailto:naresh.sonkar@igntu.ac.in" class="ms-2 text-primary">naresh.sonkar@igntu.ac.in</a>
+        <h5>Dr. Sudesh Kumar</h5>
+        <h6>Assistant Professor (Department Of Computer Science)</h6>
+        <i class='bx bxs-envelope mt-4'></i><a href="" class="ms-2 text-primary">sudesh.kumar@igntu.ac.in</a>
         <br>
-        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 9424127462</a>
+        <i class='bx bxs-phonesudesh.kumar@igntu.ac.in'></i><a class="ms-2 text-dark">+91 7869171069</a>
         </div>
         <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-            <img src="./images/naresh_sonkar.jpg"  style="width: 200px; height:200px;">
+            <img src="./images/sudesh_kumar.jpg" class="shadow border rounded" style="width: 200px; height:200px;">
         </div>
     </div>
     
@@ -163,14 +163,14 @@ About  Guru Govind Boys  Hostel
     <div class="row justify-content-between align-items-center">
         <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
         <h4>Chief Warden (GGBH)</h4>
-        <h5>Prof. Naveen Kumar Sharma</h5>
-        <h6>Professor & Head (Department Of <br> Botany)</h6>
-        <i class='bx bxs-envelope mt-4'></i><a href="mailto:naveen.sharma@igntu.ac.in" class="ms-2 text-primary">naveen.sharma@igntu.ac.in</a>
+        <h5>Prof. Vikash Singh</h5>
+        <h6>Professor, Head & Dean (Department of Vocational Education and Skill Training)</h6>
+        <i class='bx bxs-envelope mt-4'></i><a href="mailto:vikash.singh@igntu.ac.in" class="ms-2 text-primary">vikash.singh@igntu.ac.in</a>
         <br>
-        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 9406215277</a>
+        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 7587169076</a>
         </div>
         <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-            <img src="./images/nk_sharma.jpg"  style="width: 200px; height:200px;">
+            <img src="./images/DrVikash.jpg" class="shadow border rounded"  style="width: 200px; height:200px;">
         </div>
     </div>
     
@@ -180,14 +180,14 @@ About  Guru Govind Boys  Hostel
     <div class="row justify-content-between align-items-center">
         <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
         <h4>Warden (GGBH)</h4>
-        <h5>Dr. Sudesh Kumar </h5>
-        <h6>Assistant Professor (Department Of Computer Science)</h6>
-        <i class='bx bxs-envelope mt-4'></i><a href="mailto:sudesh.kumar@igntu.ac.in" class="ms-2 text-primary">sudesh.kumar@igntu.ac.in</a>
+        <h5>Dr. Janki Prasad </h5>
+        <h6>Assistant Professor ( Department of Geography and Regional Development)</h6>
+        <i class='bx bxs-envelope mt-4'></i><a href="mailto:janki.prasad@igntu.ac.in" class="ms-2 text-primary">janki.prasad@igntu.ac.in</a>
         <br>
-        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 7869171069</a>
+        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 9407359251</a>
         </div>
         <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-            <img src="./images/sudesh_kumar.jpg"  style="width: 200px; height:200px;">
+            <img src="./images/janki_prasad.jpg" class="shadow border rounded"  style="width: 200px; height:200px;">
         </div>
     </div>
     
@@ -204,7 +204,7 @@ About  Guru Govind Boys  Hostel
         <i class='bx bxs-phone'></i><a class="ms-2 text-dark" >+91 9436093471</a>
         </div>
         <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-            <img src="./images/shivaji.jpg"  style="width: 200px; height:200px;">
+            <img src="./images/shivaji.jpg" class="shadow border rounded" style="width: 200px; height:200px;">
         </div>
     </div>
     <hr>
