@@ -30,7 +30,7 @@
         <div class="col-lg-11  p-0 ms-3 ">
             <!-- Design Form -->    
                 <div class="home-content"  style="padding-left: 0; margin-left: 0;">
-                    <h3 class="mt-5">#UG ALLOTED NEW STUDENT LIST</h3>
+                    <h3 class="mt-5">#PG ALLOTED NEW STUDENT LIST</h3>
                     <hr>
                     <div class="print">
                     <a href="../report-generate/printpglist.php"><i class='bx bxs-printer text-center'></i></a>

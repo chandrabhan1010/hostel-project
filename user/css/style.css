@@ -402,9 +402,9 @@ img
   }
   .custom-alert
   {
-    position: fixed;
-    top:25px;
-    right: 25px;
+    position: fixed !important;  
+    top:150px !important;
+    right: 50px !important;
   }
 
   

@@ -1,27 +1,31 @@
 <?php require('includes/db_config.php');
-      require('includes/essentials.php');
       session_start();
-      if((isset($_SESSION['adminLogin'])&& $_SESSION['adminLogin']==true))
-      {
-         redirect('dashboard.php');
-      }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require('includes/links.php')?>
-    <title>Admin Login Panel</title>
+    <title>Forget Password</title>
 
     <style>
         div.login-form {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        }
+
+        @media (max-width: 576px) {
+            div.login-form {
+                width: 90%;
+                padding: 5px;
+                margin-top: 100px;
+            }
         }
     </style>
 </head>
@@ -117,26 +121,38 @@
     </div>
 </nav>
 
+
+<?php if(isset($_SESSION['status'])):?>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <?php  echo $_SESSION['status']; ?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif;?>
+    <?php unset($_SESSION['status']);?>
+
 <div class="login-form text-center rounded bg-white shadow overflow-hidden ">
 
-    <form method="POST">
-        <h4 class="bg-dark text-white py-3">FORGET PASSWORD </h4>
+    <form action="password-reset-code.php" method="POST">
+        <h4 class="bg-dark text-white py-3">Reset Password </h4>
         <div class="p-4">
             <div class="mb-3">
-                <input name="admin_name" required type="text" class="form-control shadow-none text-center" placeholder="Enter Email">
+                <input name="user_email" required type="text" class="form-control shadow-none text-center" placeholder="Email Address">
 
                  <a href="index.php" style="color:#3c8dbc">Login ?</a>
             </div>
 
-            <button name="login" type="submit "class="btn text-white btn-brand shadow-none">SEND</button>
+            <button name="password_reset_link" type="submit "class="btn text-white btn-brand shadow-none">Send Password Reset Link</button>
         </div>
     </form>
 </div>
 
-<?php
+<script>
+    setTimeout(function(){
+    let alert =document.querySelector(".alert");
+        alert.remove();
+    },3000);
+</script>
 
-
-?>
 <?php require('./includes/scripts.php')?>
 
 </body>

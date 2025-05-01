@@ -57,7 +57,7 @@ if(isset($_POST['submit_pg']))
         $data1 = mysqli_query($con, $query1);
         $total1 = mysqli_num_rows($data1);
 
-        $query2 = "Select * from user_cred where email='$email'";
+        $query2 = "Select * from user_cred where user_email='$email'";
         $data2 = mysqli_query($con, $query2);
         $total2 = mysqli_num_rows($data2);
 
@@ -78,6 +78,7 @@ if(isset($_POST['submit_pg']))
             if($result)
             {
                 $_SESSION['cuetnumber'] = $cuetno;
+                $_SESSION['program'] = $program;
 
                 echo "<script>alert('Hostel Registration Successfull');</script>";
 
@@ -155,7 +156,7 @@ if(isset($_POST['submit_pg']))
             if($result)
             {
                 $_SESSION['cuetnumber'] = $cuetno;
-                $_SESSION['program'] = $program;
+            
 
                 echo "<script>alert('Hostel Registration Successfull');</script>";
 
