@@ -490,7 +490,6 @@
 
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 include('./includes/vendor/autoload.php');
 
@@ -590,14 +589,18 @@ if(isset($_POST['submit']))
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Hostel Notification'; 
+        $mail->Subject = 'Congratulations on Your Hostel Allotment'; 
         
 
         $mail->Body  = "Dear $sname,<br> 
-                        Your hostel room allotement form has been submitted Successfully.<br>
-                        Your username  and password  Details are given below.<br>
-                        Username  - $user_name <br> 
-                        Password - $user_pass <br>
+                        Congratulations! <br>
+                        We are pleased to inform you that your application has been successfully submitted.<br>
+                        and a room has been alloted to you.<br>
+                        Your alloted hostel details are as follows :<br>
+                        <br>
+                        Username :   - $user_name <br> 
+                        Password :   - $user_pass <br>
+                        Room Number : - $room_no <br> 
                         <br>
                         Thank you <br>
                         <br>
@@ -609,8 +612,6 @@ if(isset($_POST['submit']))
                         query,please visit the hostel warden office.
                          
                         ";
-
-    
         $mail->send();
     
     } catch (Exception $e) {
