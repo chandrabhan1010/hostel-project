@@ -7,7 +7,7 @@
     <?php require('./includes/links.php')?>
 
     <title>Admission</title>
-    <?php require('./includes/header.php')?>
+    <?php require('includes/header.php')?>
     <style>
         .pop:hover{
         transform: scale(1.03);

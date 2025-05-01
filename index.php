@@ -207,44 +207,44 @@
   <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/reading.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">READING ROOM</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">READING ROOM</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/cycle.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">CYCLE CLUB</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">CYCLE CLUB</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/common.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">COMMON ROOM</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">COMMON ROOM</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/play.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">PLAY GROUND</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">PLAY GROUND</h5></a>   
     </div>
   </div>
 
   <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/dining.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">DINNING HALL</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">DINNING HALL</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/watercooler.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">WATER COOLER</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">WATER COOLER</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/gym.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">MODERN GYM</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">MODERN GYM</h5></a>   
     </div>
 
     <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
     <img src="./images/wifi.png" width="80px">
-    <a href="#"><h5 class="mt-3 myhover">WIFI</h5></a>   
+    <a href="infrastructure.php"><h5 class="mt-3 myhover">WIFI</h5></a>   
     </div>
   </div>
   </div>
@@ -252,7 +252,7 @@
   
 
  <div class="text-center mt-5 ">
- <a href="#" class="clickhere">Click here </a><span  style="font-size: 22px;">to see the Information Brochure.</span>
+ <a href="infrastructure.php" class="clickhere">Click here </a><span  style="font-size: 22px;">to see the Information Brochure.</span>
  </div>
 <div class="underline"></div>
 
@@ -275,19 +275,20 @@
  <div class="team">
     <div class="container">
         <div class="row mt-5">
+            
                 <!-- Warden1 -->
             <div class="col-lg-6  ">
                 <div class="member d-flex align-items-start">
                     <div class="teampic">
-                        <img src="./images/naresh_sonkar.png" class="img-circle  team-img" alt="team1">
+                        <img src="./images/sudesh_kumar.jpg" class="img-circle  shadow border  team-img" alt="team1">
                     </div>
                     <div class="member-info">
-                        <h4>Dr. Naresh Kumar Sonkar</h4>
+                        <h4>Dr. Sudesh Kumar</h4>
                         <span>Administrative Warden (GGBH)</span>
-                        <p>Associate Professor (Department of Sociology & Social Anthropology)</p>
-                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:naresh.sonkar@igntu.ac.in" class="ms-2 text-primary">naresh.sonkar@igntu.ac.in</a>
+                        <p>Assistant Professor (Department Of Computer Science)</p>
+                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:sudesh.kumar@igntu.ac.in" class="ms-2 text-primary">sudesh.kumar@igntu.ac.in</a>
                         <br>
-                        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 9424127462</a>
+                        <i class='bx bxs-phone'></i><a href="tel:+91 7869171069" class="ms-2 text-dark">+91 7869171069</a>
                     </div>
                 </div>
             </div>
@@ -296,15 +297,15 @@
             <div class=" col-lg-6  ">
                 <div class=" member d-flex align-items-start">
                     <div class="teampic">
-                        <img src="./images/nk_sharma.png"class="img-circle  team-img"  alt="team1">
+                        <img src="./images/DrVikash.jpg"class="img-circle  shadow border  team-img"  alt="team1">
                     </div>
                     <div class="member-info">
-                        <h4>Prof. Naveen Kumar Sharma</h4>
+                        <h4>Prof. Vikash Singh</h4>
                         <span>Chief Warden (GGBH)</span>
-                        <p>Professor & Head (Department Of <br> Botany)</p>
-                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:naveen.sharma@igntu.ac.in" class="ms-2 text-primary">naveen.sharma@igntu.ac.in</a>
+                        <p>Professor, Head & Dean (Department of Vocational Education and Skill Training)</p>
+                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:vikash.singh@igntu.ac.in" class="ms-2 text-primary">vikash.singh@igntu.ac.in</a>
                         <br>
-                        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 9406215277</a>
+                        <i class='bx bxs-phone'></i><a  href="tel:+91 7587169076" class="ms-2 text-dark">+91 7587169076</a>
                     </div>
                 </div>  
             </div>
@@ -313,15 +314,15 @@
             <div class="col-lg-6 mt-3 ">
                 <div class=" member d-flex align-items-start">
                     <div class="teampic">
-                        <img src="./images/sudesh_kumar.png" class="img-circle  team-img"  alt="team1">
+                        <img src="./images/janki_prasad.jpg" class="img-circle shadow border  team-img"  alt="team1">
                     </div>
                     <div class=" member-info">
-                        <h4>Dr. Sudesh Kumar</h4>
+                        <h4>Dr. Janki Prasad </h4>
                         <span>Warden (GGBH)</span>
-                        <p>Assistant Professor (Department Of Computer Science)</p>
-                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:sudesh.kumar@igntu.ac.in" class="ms-2 text-primary">sudesh.kumar@igntu.ac.in</a>
+                        <p>Assistant Professor ( Department of Geography and Regional Development)</p>
+                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:janki.prasad@igntu.ac.in" class="ms-2 text-primary">janki.prasad@igntu.ac.in</a>
                         <br>
-                        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 7869171069</a>
+                        <i class='bx bxs-phone'></i><a href="tel:+91 9407359251" class="ms-2 text-dark">+91 9407359251</a>
                     </div>
 
                     
@@ -332,7 +333,7 @@
             <div class="col-lg-6 mt-3">
                 <div class=" member d-flex align-items-start">
                     <div class="teampic">
-                        <img src="./images/shivaji.png" class="img-circle  team-img"  alt="team1">
+                        <img src="./images/shivaji.png" class="img-circle  shadow border  team-img"  alt="team1">
                     </div>
                     <div class="member-info">
                         <h4>Dr. Shivaji Chaudhary</h4>
@@ -340,7 +341,7 @@
                         <p>Professor & Head (Department Of Environmental Science)</p>
                         <i class='bx bxs-envelope mt-4'></i><a href="mailto:shivaji.chaudhari@igntu.ac.in" class="ms-2 text-primary">shivaji.chaudhari@igntu.ac.in</a>
                         <br>
-                        <i class='bx bxs-phone'></i><a class="ms-2 text-dark" >+91 9436093471</a>
+                        <i class='bx bxs-phone'></i><a href="tel:+91 9436093471" class="ms-2 text-dark" >+91 9436093471</a>
                     </div>
                 </div>  
             </div>

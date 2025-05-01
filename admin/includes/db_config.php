@@ -48,4 +48,6 @@
             die("Query cannot be prepared -Select ");
         }
      }
-    ?>
+define("UPLOAD_SRC",$_SERVER['DOCUMENT_ROOT']."/HostelProject/data/upload/");
+define("FETCH_SRC","http://localhost:8080/HostelProject/data/upload/");
+?>

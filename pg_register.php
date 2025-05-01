@@ -15,10 +15,10 @@
 
 <div class="wrapper">
     <div class="container1">
-        <div class="title text-dark">
+        <div class="title text-light bg-dark rounded ">
             PG Student Registration Form
         </div>
-        <form action="../includes/pgregistration_process.php" method="post" enctype="multipart/form-data" autocomplete="off">
+        <form action="../HostelProject/data/crud.php" method="post" enctype="multipart/form-data" autocomplete="off">
         <div class="form">
            
             <div class="input-field">
@@ -26,10 +26,6 @@
                 <input type="number"  name="cuetno" required>
             </div>
 
-            <div class="input-field">
-                <label>Upload Image</label>
-                <input type="file" name="uploadfile" class="upload">
-            </div>
 
             <div class="input-field">
             <label>Student Name</label>
@@ -54,44 +50,44 @@
             
             <div class="input-field">
             <label>Gender</label>
-             <select class="selectbox" name="gender"  required>
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
+                <select class="selectbox" name="gender"  required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
          
             </select>   
             </div>
 
             <div class="input-field">
             <label>Category</label>
-             <select class="selectbox" name="category"  required>
-            <option value="">Select Category</option>
-            <option value="General">General</option>
-            <option value="OBC">OBC</option>
-            <option value="SC">SC</option>
-            <option value="ST">ST</option>
-            <option value="EWS">EWS</option>
-            <option value="TRANSGENDER">TRANSGENDER</option>
-            </select>   
+                <select class="selectbox" name="category"  required>
+                    <option value="">Select Category</option>
+                    <option value="General">General</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                    <option value="EWS">EWS</option>
+                    <option value="TRANSGENDER">TRANSGENDER</option>
+                </select>   
             </div>
 
             <div class="input-field">
             <label>Religion</label>
-             <select class="selectbox" name="religion"  required>
-            <option value="">Select religion</option>
-            <option value="Hindu">Hindu</option>
-            <option value="Muslim">Muslim</option>
-            <option value="Buddhism">Buddhism</option>
-            <option value="Jain">Jain</option>
-            <option value="Sikkh">Sikkh</option>
-            <option value="Christian">Christian</option>
-            <option value="Other">Other</option>
-            </select>   
+                <select class="selectbox" name="religion"  required>
+                    <option value="">Select religion</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Muslim">Muslim</option>
+                    <option value="Buddhism">Buddhism</option>
+                    <option value="Jain">Jain</option>
+                    <option value="Sikkh">Sikkh</option>
+                    <option value="Christian">Christian</option>
+                    <option value="Other">Other</option>
+                </select>   
             </div>
 
             <div class="input-field">
-                <label for="">Select Course Type</label>
+            <label for="">Select Course Type</label>
                 <select class="selectbox" name="select1" id="select1" onchange="populate(this.id,'select2')" required> 
                 <option value="">Course Type</option>
                 <option value="DIPLOMA">Diploma</option>
@@ -124,36 +120,36 @@
 
             <div class="input-field">
             <label>State</label>
-           <select class="selectbox" name="state"  required>
-            <option value="">Select State</option>
-            <option value="Andhra Pradesh">Andhra Pradesh</option>
-            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-            <option value="Assam">Assam</option>
-            <option value="Bihar">Bihar</option>
-            <option value="Chhattisgarh">Chhattisgarh</option>
-            <option value="Goa">Goa</option>
-            <option value="Gujrat">Gujrat</option>
-            <option value="Hariyana">Hariyana</option>
-            <option value="Himachal Pradesh">Himachal Pradesh</option>
-            <option value="Jharkhand">Jharkhand</option>
-            <option value="Karnataka">Karnataka</option>
-            <option value="Kerala">Kerala</option>
-            <option value="Madhya Pradesh">Madhya pradesh</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="Manipur">Manipur</option>
-            <option value="Meghalaya">Meghalaya</option>
-            <option value="Mizoram">Mizoram</option>
-            <option value="Nagaland">Nagaland</option>
-            <option value="Odisha">Odisha</option>
-            <option value="Punjab">Punjab</option>
-            <option value="Rajasthan">Rajasthan</option>
-            <option value="Sikkim">Sikkim</option>
-            <option value="Tamil Nadu">Tamil Nadu</option>
-            <option value="Telangana">Telangana</option>
-            <option value="Uttar Pradesh">Uttar Pradesh</option>
-            <option value="Uttarakhand">Uttarakhand</option>
-            <option value="West Bengal">Wesh Bengal</option>
-            </select>   
+                <select class="selectbox" name="state"  required>
+                    <option value="">Select State</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujrat">Gujrat</option>
+                    <option value="Hariyana">Hariyana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">Wesh Bengal</option>
+                </select>   
             </div>
 
             <div class="input-field">
@@ -162,8 +158,13 @@
             </div>
 
             <div class="input-field">
+                <label>Upload Image</label>
+                <input type="file" name="image" class="upload" accept=".jpg,.png,.svg,.avif,.jpeg">
+            </div>
+
+            <div class="input-field">
                 <label>Upload Aadhar in pdf format</label>
-                <input type="file" name="uploadpdf" class="pdfupload">
+                <input type="file" name="uploadpdf" class="upload" accept=".pdf">
             </div>
 
 
@@ -176,7 +177,7 @@
 
             <div class="input-field">
            
-            <button type="submit" class ="btn" name="submit">Submit</button>
+            <button type="submit" class ="btn" name="submit_pg">Submit</button>
             </div>
         
         </div>
@@ -184,6 +185,7 @@
     </div>
 </div>
 
+<!-- form  validation code  -->
 <script>
         function populate(s1,s2)
         {
@@ -265,7 +267,7 @@
     }
 </script>
 
-    
+<!-- Backend code   -->
 
 <?php require('./includes/footer.php')?>
 

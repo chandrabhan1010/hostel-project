@@ -1,3 +1,9 @@
+<?php
+ require('db_config.php');
+ require('essentials.php');
+ session_start();
+?>
+
 <!--Navbar  -->
 <nav class="top-nav " id="home">
     <div class="container-fluid">
@@ -77,79 +83,14 @@
             </ul>
             <div class="d-flex">
 
-            <button type="button" class="btn btn-brand shadow-none me-lg-3 me-2 "   data-bs-toggle="modal" data-bs-target="#usermodal">
+            <a href="http://localhost:8080/HostelProject/user" type="button" class="btn btn-brand shadow-none me-lg-3 me-2 "  >
             <img src="./images/usericon.png" class="fs-4 me-2 " style="height: 1rem; width:1rem;">User Login
-           </button>
+</a>
 
-           <button type="button" class="btn btn-brand shadow-none me-lg-2 me-2 "   data-bs-toggle="modal" data-bs-target="#adminmodal">
+           <a href="http://localhost:8080/HostelProject/admin" type="button" class="btn btn-brand shadow-none me-lg-2 me-2 " >
            <img src="./images/igntulogo.png" class="fs-4 me-2 " style="height: 1rem; width:1rem;">Admin Login
-           </button>
+</a>
             </div>
         </div>
     </div>
 </nav>
-
-<!-- modal1 -->
-  
-<div class="modal fade" id="usermodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <form >
-            <div class="modal-header">
-            <h5 class="modal-title d-flex align-items-center" >
-                <img src="./images/usericon.png" class="fs-4 me-2 " style="height: 2rem; width:2rem;"> User Login</h5>
-            <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-            <div class="mb-3 text-start">
-            <label class="form-label text-dark">Email address</label>
-            <input type="email" class="form-control shadow-none">
-            </div>
-
-            <div class="mb-3 text-start">
-            <label class="form-label text-dark">Passowrd</label>
-            <input type="email" class="form-control shadow-none">
-            </div>
-
-            <div class="d-flex align-items-center justify-content-between md-4">
-                <button type="submit" class="btn btn-brand">LOGIN</button>
-                <a href="javascript:void(0)" class="text-secondary"> Forgot Passowrd?</a>
-            </div>
-            </div>
-        </form>
-    </div>
-  </div>
-</div>
-
-<!-- Modal2 -->
-<div class="modal fade" id="adminmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <form >
-            <div class="modal-header">
-            <h5 class="modal-title d-flex align-items-center" >
-            <img src="./images/igntulogo.png" class="fs-4 me-2 " style="height: 2rem; width:2rem;">Admin Login</h5>
-            <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-            <div class="mb-3 text-start">
-            <label class="form-label text-dark">Email address</label>
-            <input type="email" class="form-control shadow-none">
-            </div>
-
-            <div class="mb-3 text-start">
-            <label class="form-label text-dark">Passowrd</label>
-            <input type="email" class="form-control shadow-none">
-            </div>
-
-            <div class="d-flex align-items-center justify-content-between md-4">
-                <button type="submit" class="btn btn-brand">LOGIN</button>
-                <a href="javascript:void(0)" class="text-secondary"> Forgot Passowrd?</a>
-            </div>
-            </div>
-        </form>
-    </div>
-  </div>
-</div>

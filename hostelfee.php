@@ -9,40 +9,41 @@
 
     <title>Submit Hostel Fee</title>
     <?php require('./includes/header.php')?>
+    
     <style>
          
-    .form-section-title {
-      font-weight: bold;
-      font-size: 20px;
-      color: blue;
-      margin-bottom: 20px;
-    }
-    .form-header {
-      background-color:#3c8dbc;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .form-container {
-      border: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 5px;
-      background-color: white;
-      max-width: 1000px;
-      margin: 40px auto;
-    }
-    label {
-      font-weight: 500;
-    }
+      .form-section-title {
+        font-weight: bold;
+        font-size: 20px;
+        color: blue;
+        margin-bottom: 20px;
+      }
+      .form-header {
+        background-color:#3c8dbc;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .form-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: white;
+        max-width: 1000px;
+        margin: 40px auto;
+      }
+      label {
+        font-weight: 500;
+      }
   </style>
     
 
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
 
-<div class="form-container shadow">
+<div class="form-container shadow ">
   <div class="form-header">ONLINE HOSTEL FEE PAYMENT</div>
   <div class="form-section-title">Personal Details</div>
   <form>
