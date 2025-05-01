@@ -267,8 +267,6 @@ if (isset($_SESSION['cuetnumber']) && isset($_SESSION['program']))
     $cuetno = $_SESSION['cuetnumber'];
     $program = $_SESSION['program'];
 
-
-
     if($program =='PG' || $program =='DIPLOMA')
     {
         
@@ -341,7 +339,7 @@ if (isset($_SESSION['cuetnumber']) && isset($_SESSION['program']))
 
                                         <tr>
                                             <td><b>Application Number :</b></td>
-                                            <td><?php echo $row['Registration_no'] ?></td>
+                                            <td><?php echo $row['registration_no'] ?></td>
 
                                             <td><b>Full Name :</b></td>
                                             <td><?php echo $row['sname'] ?></td>
