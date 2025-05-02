@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/room_register.css">
-    <title>Show users</title>
+    <title>Manage Id Card</title>
     <style>
         @media (max-width: 768px) 
         {
@@ -87,73 +87,69 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-11 col-12  p-0 ms-3 ">
+        <div class="col-lg-11 col-12  p-0 ms-5 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
-    <h3 class="mt-5">Show Users</h3>
+    <h3 class="mt-5">Manage ID Card</h3>
     <hr>
-    
-        <?php
-        include('includes/db_config.php');
+    <div class="row">
+        <div class="col-md-10 col-xs-8">
+            <div class="table table-responsive">
+            <table class="table table-bordered table-hover " >
+                <thead class="text-dark">
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Complaint Number</th>
+                        <th >Complaint Type</th>
+                        <th >Room Number</th>
+                        <th>Complaint Status</th>
+                        <th >Complaint Reg. Date</th>
+                        <th >Action</th> 
+                    </tr>
+                </thead>
+                <tbody>
+            <?php
+            include('includes/db_config.php');
+            $query="select * from complaint";
+            $data=mysqli_query($con,$query);
+            $result = mysqli_fetch_assoc($data);
+            $status= $result['complaint_status'];
 
-        $query = "SELECT * FROM user_cred";
-
-        $result = mysqli_query($con, $query);
-
-        $total=mysqli_num_rows($result);
-
-        if (!$result) 
-        {
-            die("connection failed" . mysqli_error($con));
-        } 
-        else{
-
-            if(!$result)
-                { 
-                    die("connection failed".mysqli_error($conn));
-                }
-                else
+            if($status!='New'&& $status!='Closed')
+            { 
+                $query1="select * from complaint";
+                $data1=mysqli_query($con,$query1);
+                $sr=1;
+                while($row=mysqli_fetch_assoc($data1))
                 {
-                    echo <<<HTML
-                            <div class="row">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th class="text-center">Sr. No.</th>
-                                                <th class="text-center">Student Name</th>
-                                                <th class="text-center">Email Id</th>
-                                                <th class="text-center">Username
-                                                <th class="text-center">Password</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                            HTML;
-                        {
-                            $sr=1;
-                            while($row=mysqli_fetch_assoc($result))
-                            {
-                                ?>
-                            <tr> 
-                                <td class="text-center" data-label="Sr. No."><?php echo $sr?></td>      
-                                <td class="text-center" data-label="Student name."><?php echo $row['sname']?></td>
-                                <td class="text-center" data-label="Email Id"><?php echo $row['user_email']?></td>
-                                <td class="text-center" data-label="Username"><?php echo $row['user_name']?></td>
-                                <td class="text-center" data-label="Rooom No"><?php echo $row['user_pass']?></td>
+                 ?>
+                <tr>
+                    <td><?php echo $sr?></td>   
+                    <td><?php echo $row['complaint_no']?></td>
+                    <td><?php echo $row['complaint_type']?></td>
+                    <td><?php echo $row['roomno']?></td>
+                    <td><?php echo $row['complaint_status']?></td>
+                    <td><?php $wop = $row['registration_date']; print date("d-m-Y",strtotime($wop))?></td>
+                    <td><a href="complaintaction.php?id=<?php echo $row['complaint_no']?>" class="btn btn-primary me- px-4 ">VIEW</a>
+                </tr> 
+                <?php $sr++;
+                }
+            }
+            else
+            {
+                echo "<h3 style='color:red';>New Complaints Not Found</h3>";
+            }                  
+            ?>
+                </tbody>
+            </table>
+            </div>
+        </div>
 
-                             </tr>
-
-                            <?php
-                            $sr++;
-                            }
-                            } 
-                }   
-        }
-echo '</tbody>';
-echo '</table>';
-echo '</div>';      
-echo '</div>';
-?>
+</div>
+    </div>
+ </div>
+</div>
+</div>
 
 <script>
      function checkdelete()

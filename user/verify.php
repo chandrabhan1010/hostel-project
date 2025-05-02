@@ -155,6 +155,13 @@ if(isset($_SESSION['status']))
     </form>
 </div>
 
+<script>
+    setTimeout(function(){
+    let alert =document.querySelector(".alert");
+        alert.remove();
+    },3000);
+</script>
+
 <?php require('./includes/scripts.php')?>
 </body>
 </html>

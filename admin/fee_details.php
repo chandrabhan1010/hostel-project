@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/room_register.css">
-    <title>Manage Id Card</title>
+    <title>Fee Details</title>
     <style>
         @media (max-width: 768px) 
         {
@@ -57,7 +57,7 @@
             padding: 0.25rem 0.5rem !important;
         }
        }
-       @media (max-width: 1500px) 
+       @media (max-width: 1440px) 
         {
        td[data-label="Operations"] {
         display: flex !important;
@@ -90,12 +90,12 @@
         <div class="col-lg-11 col-12  p-0 ms-3 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
-    <h3 class="mt-5">Manage ID Card</h3>
+    <h3 class="mt-5">Student Fee Related Information</h3>
     <hr>
         <?php
         include('includes/db_config.php');
 
-        $query = "SELECT * FROM idcard";
+        $query = "SELECT * FROM paymentdetails";
 
         $result = mysqli_query($con, $query);
 
@@ -122,10 +122,12 @@
                                                 <th class="text-center">Sr. No.</th>
                                                 <th class="text-center">Enrollment No.</th>
                                                 <th class="text-center">Student Name</th>
-                                                <th class="text-center">Father Name</th>
-                                                <th class="text-center">Room No.</th>
-                                                <th class="text-center">Course</th>
-                                                <th class="text-center col-4 crud">Operations</th>
+                                                <th class="text-center">Category</th>
+                                                <th class="text-center">Program Type</th>
+                                                <th class="text-center">Pay Year</th>
+                                                <th class="text-center">Amount</th>
+                                                <th class="text-center">Payment Status</th>
+                                                <th class="text-center col-1">Operations</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -137,20 +139,16 @@
                                 ?>
                             <tr> 
                                 <td class="text-center" data-label="Sr. No."><?php echo $sr?></td>      
-                                <td class="text-center" data-label="Enrollment No."><?php echo $row['enroll_no']?></td>
+                                <td class="text-center" data-label="Enrollment No."><?php echo $row['enrollment']?></td>
                                 <td class="text-center" data-label="Student Name"><?php echo $row['name']?></td>
-                                <td class="text-center" data-label="Father Name"><?php echo $row['father_name']?></td>
-                                <td class="text-center" data-label="Room No"><?php echo $row['room_no']?></td>
-                                <td class="text-center" data-label="Course"><?php echo $row['course']?></td>
+                                <td class="text-center" data-label="Category"><?php echo $row['category']?></td>
+                                <td class="text-center" data-label="Program Type"><?php echo $row['course_type']?></td>
+                                <td class="text-center" data-label="Pay Year"><?php echo $row['pay_year']?></td>
+                                <td class="text-center" data-label="Amount"><?php echo $row['amount']?></td>
+                                <td class="text-center" data-label="Payment Status"><?php echo $row['payment_status']?></td>
 
                                
-                                <td class="text-center" data-label="Operations">
-                                    <div class="d-flex flex-wrap justify-content-center gap-2">
-                                        <a href="viewroom.php?id=<?php echo $row['room_no']?>" class="btn btn-primary me-3 px-5">View</a>
-                                        <a href="updateroom.php?room_no=<?php echo $row['room_no']?>" class="btn btn-success me-3 px-5">Update</a>
-                                        <a href="deleteroom.php?room_no=<?php echo $row['room_no']?>" onclick='return checkdelete()' class="btn btn-danger me-3 px-5">Delete</a>
-                                    </div>
-                                 </td>
+                                <td><a href="viewpaymentdetails.php?enroll=<?php echo $row['enrollment']?>&year=<?php echo $row['pay_year']?>" class="btn btn-primary me-3 px-5  ">View</a>
                              </tr>
 
                             <?php

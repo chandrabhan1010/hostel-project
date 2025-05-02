@@ -7,6 +7,7 @@ session_regenerate_id(true);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/adminpanel.css">
@@ -37,42 +38,42 @@ session_regenerate_id(true);
         </li>
 
         <li>
-            <a href="#">
+            <a href="manage_room.php">
             <i class='bx bxs-building-house'></i>
             <span class="link_name">Manage Rooms</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="manage_student.php">
             <i class="bi bi-people-fill"></i>
             <span class="link_name">Manage Student</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="manage_idcard.php">
             <i class="bi bi-person-vcard"></i>
                     <span class="link_name">Manage Id Card</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="show_user.php">
             <i class="bi bi-people-fill"></i>
             <span class="link_name">Show User</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="fee_details.php">
             <i class='bx bx-rupee'></i>
             <span class="link_name">Fee Details</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="notice_board.php">
             <i class="bi bi-clipboard2-data"></i>
             <span class="link_name">Notice Board</span> 
             </a>
@@ -86,10 +87,10 @@ session_regenerate_id(true);
             </a>
             <!-- Dropdown submenu -->
             <ul class="sub-menu">
-                <li><a href="#">New </a></li>
-                <li><a href="#">In Progress</a></li>
-                <li><a href="#">Close</a></li>
-                <li><a href="#">All</a></li>
+                <li><a href="new-complaint.php">New </a></li>
+                <li><a href="progress-complaint.php">In Progress</a></li>
+                <li><a href="close-complaint.php">Close</a></li>
+                <li><a href="all-complaint.php">All</a></li>
             </ul>
         </li>
 
@@ -109,7 +110,7 @@ session_regenerate_id(true);
         </li>
 
         <li>
-            <a href="#">
+            <a href="setting.php">
             <i class='bx bxs-cog'></i>
             <span class="link_name">Setting</span> 
             </a>

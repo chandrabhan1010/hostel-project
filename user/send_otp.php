@@ -21,7 +21,7 @@ require('email.php');
                 
                 $otp = rand(11111,99999);
 
-                send_otp($email,"PHP OTP LOGIN",$otp);
+                send_otp($email,"HOSTEL OTP LOGIN",$otp);
 
                 $sql = "UPDATE  user_cred SET user_otp='$otp' WHERE user_email='$email'";
                 $res = mysqli_query($con,$sql);

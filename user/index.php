@@ -122,7 +122,6 @@ session_start();
     </div>
 </nav>
 
-
 <?php
 if(isset($_SESSION['status']))
 {

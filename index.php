@@ -10,6 +10,14 @@
 
     <title>Home</title>
 
+    <style>
+            .pop:hover{
+            border-top-color:#3c8dbc !important ;
+            transform: scale(1.03);
+            transition: all 0.3s ;
+        }
+    </style>
+
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
 
@@ -146,21 +154,21 @@
                      <h4 class="text-center"><a href="#">Online Fee Payment</a></h4>
                                         </div>
                     <div class="card-group">
-                        <div class="card  m-3 p-2 shadow">
+                        <div class="card  m-3 p-2 shadow pop">
                             <img src="./images/no1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title text-center text-white" style="background:#3c8dbc; font-size:20px;">Hostel Front View</h5>   
                             </div>
                         </div>
 
-                        <div class="card m-3 p-2 shadow">
+                        <div class="card m-3 p-2 shadow pop">
                             <img src="./images/innerview.png" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title text-center text-white"style="background:#3c8dbc; font-size:20px;">Hostel Inner View</h5>
                             </div>
                         </div>
 
-                        <div class="card m-3 p-2 shadow">
+                        <div class="card m-3 p-2 shadow pop">
                             <img src="./images/mess.png" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title text-center text-white" style="background:#3c8dbc; font-size:20px;">Hostel Mess</h5>
@@ -172,19 +180,19 @@
             <!-- card circle code -->
 
             <div class="info-container">
-                <div class="info-box">
+                <div class="info-box pop">
                 <div class="circle">248</div>
                 <div class="label">ROOMS</div>
                 </div>
-                <div class="info-box">
+                <div class="info-box pop">
                 <div class="circle">3</div>
                 <div class="label">FLOORS </div>
                 </div>
-                <div class="info-box">
+                <div class="info-box pop">
                 <div class="circle">500+</div>
                 <div class="label">STUDENTS</div>
                 </div>
-                <div class="info-box">
+                <div class="info-box pop">
                 <div class="circle">1</div>
                 <div class="label">MESS</div>
                 </div>
@@ -205,44 +213,44 @@
   <div class="container">
 
   <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/reading.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">READING ROOM</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/cycle.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">CYCLE CLUB</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/common.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">COMMON ROOM</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/play.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">PLAY GROUND</h5></a>   
     </div>
   </div>
 
   <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/dining.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">DINNING HALL</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/watercooler.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">WATER COOLER</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/gym.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">MODERN GYM</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/wifi.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">WIFI</h5></a>   
     </div>
@@ -277,7 +285,7 @@
         <div class="row mt-5">
             
                 <!-- Warden1 -->
-            <div class="col-lg-6  ">
+            <div class="col-lg-6  pop ">
                 <div class="member d-flex align-items-start">
                     <div class="teampic">
                         <img src="./images/sudesh_kumar.jpg" class="img-circle  shadow border  team-img" alt="team1">
@@ -294,7 +302,7 @@
             </div>
 
             <!-- Warden2 -->
-            <div class=" col-lg-6  ">
+            <div class=" col-lg-6  pop">
                 <div class=" member d-flex align-items-start">
                     <div class="teampic">
                         <img src="./images/DrVikash.jpg"class="img-circle  shadow border  team-img"  alt="team1">
@@ -311,7 +319,7 @@
             </div>
 
             <!-- Warden3 -->
-            <div class="col-lg-6 mt-3 ">
+            <div class="col-lg-6 mt-3 pop">
                 <div class=" member d-flex align-items-start">
                     <div class="teampic">
                         <img src="./images/janki_prasad.jpg" class="img-circle shadow border  team-img"  alt="team1">
@@ -330,7 +338,7 @@
             </div>
 
             <!-- Warden4 -->
-            <div class="col-lg-6 mt-3">
+            <div class="col-lg-6 mt-3 pop">
                 <div class=" member d-flex align-items-start">
                     <div class="teampic">
                         <img src="./images/shivaji.png" class="img-circle  shadow border  team-img"  alt="team1">
