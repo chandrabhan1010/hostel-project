@@ -90,7 +90,7 @@
         <div class="col-lg-11 col-12  p-0 ms-3 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
-    <h3 class="mt-5">Student Fee Related Information</h3>
+    <h3 class="mt-5" style="font-family: Georgia, 'Times New Roman', Times, serif;">Student Fee Related Information</h3>
     <hr>
         <?php
         include('includes/db_config.php');

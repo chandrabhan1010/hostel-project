@@ -18,7 +18,7 @@
             <!-- design Form -->
             <div class="home-section">     
                <div class="home-content">
-                <h3 class="mt-2">Registration</h3>
+                <h3 class="mt-2" style="font-family: Georgia, 'Times New Roman', Times, serif;">Registration</h3>
                 <hr>
                  <div class="container1">
             

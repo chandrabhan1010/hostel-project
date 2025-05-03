@@ -73,8 +73,6 @@
         <h3>&nbsp;Hostel : Offline Application Form (Only for New students)<a href="./document/HostelAdmFormNewStu.pdf" target="_blank" class="link">Click Here </a></h3>
         </div>
 
-       
-      
       <div class="circle1">
         <p >15 <span>Nov</span></p>      
  

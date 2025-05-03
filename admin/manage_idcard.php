@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/room_register.css">
     <title>Manage Id Card</title>
     <style>
+        .addroom   
+         {
+            float: right !important;
+         } 
         @media (max-width: 768px) 
         {
             .home-content h3
@@ -85,13 +89,16 @@
 <body>
 <?php require('./includes/header.php')?>
 
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-11 col-12  p-0 ms-3 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
-    <h3 class="mt-5">Manage ID Card</h3>
+    <h3 class="mt-5"style="font-family: Georgia, 'Times New Roman', Times, serif;">Manage ID Card</h3>
     <hr>
+
         <?php
         include('includes/db_config.php');
 
@@ -114,7 +121,12 @@
                 else
                 {
                     echo <<<HTML
+
                             <div class="row">
+                            <div>
+                             <a href="addidcard.php" type="button" class="btn btn-success shadow-none mb-3 addroom " ><i class="bi bi-plus-lg"></i> Generate New Id Card</a>
+                             </div> 
+                                
                                 <div class="table-responsive">
                                     <table class="table table-bordered  table-hover">
                                         <thead>
@@ -146,9 +158,14 @@
                                
                                 <td class="text-center" data-label="Operations">
                                     <div class="d-flex flex-wrap justify-content-center gap-2">
-                                        <a href="viewroom.php?id=<?php echo $row['room_no']?>" class="btn btn-primary me-3 px-5">View</a>
-                                        <a href="updateroom.php?room_no=<?php echo $row['room_no']?>" class="btn btn-success me-3 px-5">Update</a>
-                                        <a href="deleteroom.php?room_no=<?php echo $row['room_no']?>" onclick='return checkdelete()' class="btn btn-danger me-3 px-5">Delete</a>
+
+                                        <a href="../report-generate/viewidcard.php?enrollno=<?php echo $row['enroll_no']?>"class="btn btn-primary me-3 px-5">View</a>
+
+                                        
+                                        <a href="updateidcard.php?enrollno=<?php echo $row['enroll_no']?>"class="btn btn-success me-3 px-5">Update</a>
+
+
+                                        <a href="deleteidcard.php?enrollno=<?php echo $row['enroll_no']?>" onclick='return checkdelete()' class="btn btn-danger me-3 px-5">Delete</a>
                                     </div>
                                  </td>
                              </tr>

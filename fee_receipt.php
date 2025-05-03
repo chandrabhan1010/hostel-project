@@ -62,12 +62,12 @@
 <div class="receipt-box shadow ">
     <h4>Download Hostel Fee Receipt</h4>
     <hr>
-    <form>
+    <form action="../HostelProject/report-generate/download_fee_receipt.php" method="post" autocomplete="off">
       <div class="mb-3">
-        <input type="text" class="form-control shadow-none text-center" placeholder="Enter Registration Number">
+        <input type="text"name="enroll" class="form-control shadow-none text-center" placeholder="Enrollment No.">
       </div>
       <div class="mb-3">
-        <select class="form-select shadow-none text-center" aria-label="Default select example" required="required">
+        <select class="form-select shadow-none text-center" name="year" aria-label="Default select example" required="required">
           <option selected>Select Year</option>
           <option value="1st Year">1st Year</option>
             <option value="2nd Year">2nd Year</option>
@@ -76,7 +76,7 @@
             <option value="5th Year">5th Year</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-download w-100">Download</button>
+      <button type="submit" name="download" class="btn btn-download w-100">Download</button>
     </form>
 </div>
 

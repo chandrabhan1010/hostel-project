@@ -90,7 +90,7 @@
         <div class="col-lg-11 col-12  p-0 ms-5 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
-    <h3 class="mt-5">In Progress Complaints</h3>
+    <h3 class="mt-5" style="font-family: Georgia, 'Times New Roman', Times, serif;">In Progress Complaints</h3>
     <hr>
     <div class="row">
         <div class="col-md-10 col-xs-8">
@@ -115,7 +115,7 @@
             $result = mysqli_fetch_assoc($data);
             $status= $result['complaint_status'];
 
-            if($status!='New'&& $status!='Closed')
+            if($status='In Progress')
             { 
                 $query1="select * from complaint where complaint_status='In Progress'";
                 $data1=mysqli_query($con,$query1);
@@ -137,7 +137,7 @@
             }
             else
             {
-                echo "<h3 style='color:red';>New Complaints Not Found</h3>";
+                echo "<h3 style='color:red';>Complaints Not Found</h3>";
             }                  
             ?>
                 </tbody>

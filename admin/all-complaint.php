@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/room_register.css">
-    <title>Manage Id Card</title>
+    <title>Close Complaints</title>
     <style>
         @media (max-width: 768px) 
         {
@@ -90,7 +90,7 @@
         <div class="col-lg-11 col-12  p-0 ms-5 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
-    <h3 class="mt-5">Manage ID Card</h3>
+    <h3 class="mt-5" style="font-family: Georgia, 'Times New Roman', Times, serif;">Close Complaints</h3>
     <hr>
     <div class="row">
         <div class="col-md-10 col-xs-8">
@@ -112,12 +112,9 @@
             include('includes/db_config.php');
             $query="select * from complaint";
             $data=mysqli_query($con,$query);
-            $result = mysqli_fetch_assoc($data);
-            $status= $result['complaint_status'];
-
-            if($status!='New'&& $status!='Closed')
+            if($data)
             { 
-                $query1="select * from complaint";
+                $query1="select * from complaint ";
                 $data1=mysqli_query($con,$query1);
                 $sr=1;
                 while($row=mysqli_fetch_assoc($data1))
@@ -130,15 +127,42 @@
                     <td><?php echo $row['roomno']?></td>
                     <td><?php echo $row['complaint_status']?></td>
                     <td><?php $wop = $row['registration_date']; print date("d-m-Y",strtotime($wop))?></td>
-                    <td><a href="complaintaction.php?id=<?php echo $row['complaint_no']?>" class="btn btn-primary me- px-4 ">VIEW</a>
+                    <?php
+                    if($row['complaint_status']=='New')
+                    {
+                    ?>
+                        <td style="margin-left:100px;"><a href="complaintaction.php?id=<?php echo $row['complaint_no']?>" class="btn btn-primary me- px-4 ">VIEW</a>
+                   
+                   <?php
+                    }
+                    ?>
+                    <?php
+                    if($row['complaint_status']=='Closed')
+                    {
+                    ?>
+                        <td style="margin-left:100px;"><a href="complaint_details.php?id=<?php echo $row['complaint_no']?>" class="btn btn-primary me- px-4 ">VIEW</a>
+                   
+                   <?php
+                    }
+                    ?>
+                    <?php
+                    if($row['complaint_status']=='In Progress')
+                    {
+                    ?>
+                        <td style="margin-left:100px;"><a href="complaintaction.php?id=<?php echo $row['complaint_no']?>" class="btn btn-primary me- px-4 ">VIEW</a>
+                   
+                   <?php
+                    }
+                    ?>
                 </tr> 
                 <?php $sr++;
                 }
             }
             else
             {
-                echo "<h3 style='color:red';>New Complaints Not Found</h3>";
-            }                  
+                echo "<h3 style='color:red';>Complaints Not Found</h3>";
+            }     
+                              
             ?>
                 </tbody>
             </table>

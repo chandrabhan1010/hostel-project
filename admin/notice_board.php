@@ -10,6 +10,10 @@
 
     
     <style>
+        .addroom   
+         {
+            float: right !important;
+         } 
         @media (max-width: 768px) 
         {
             .home-content h3
@@ -89,10 +93,14 @@
 
 <div class="container-fluid">
     <div class="row">
+
+
+        
         <div class="col-lg-11 col-12  p-0 ms-3 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
-    <h3 class="mt-5">Manage Hostel Notice Board</h3>
+    <h3 class="mt-5" style="font-family: Georgia, 'Times New Roman', Times, serif;">Manage Hostel Notice Board</h3>
+
     <hr>
         <?php
         include('includes/db_config.php');
@@ -117,6 +125,9 @@
                 {
                     echo <<<HTML
                             <div class="row">
+                            <div>
+                            <a href="addnotice.php" type="button" class="btn btn-dark text-white shadow-none mb-3 addroom " ><i class="bi bi-plus-lg"></i>Post New Notice</a>
+                            </div> 
                                 <div class="table-responsive">
                                     <table class="table table-bordered  table-hover">
                                         <thead class="text-dark">
@@ -147,7 +158,9 @@
                                 <td class="text-center" data-label="Operations">
                                     <div class="d-flex flex-wrap justify-content-center gap-2">
                                        <?php echo"<a href='".$row['file']."' class='btn btn-primary me-3 px-5' target='blank' >VIEW</a>" ?>
+
                                        <a href="updatenotice.php?id=<?php echo $row['notice_id']?>" class="btn btn-success me-3 px-5 ">Edit</a>
+
                                         <a href="deletenotice.php?id=<?php echo $row['notice_id']?>" onclick='return checkdelete()' class="btn btn-danger me-3 px-5 ">Delete</a></td> 
                                     </div>
                                  </td>

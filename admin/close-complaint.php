@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>prgress complaints</title>
+    <title>Close Complaints</title>
     <style>
         @media (max-width: 768px) 
         {
@@ -90,7 +90,7 @@
         <div class="col-lg-11 col-12  p-0 ms-5 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
-    <h3 class="mt-5">In Progress Complaints</h3>
+    <h3 class="mt-5" style="font-family: Georgia, 'Times New Roman', Times, serif;">Close Complaints</h3>
     <hr>
     <div class="row">
         <div class="col-md-10 col-xs-8">
@@ -98,24 +98,25 @@
             <table class="table table-bordered table-hover " >
                 <thead class="text-dark">
                     <tr>
-                        <th>Sr No.</th>
-                        <th>Complaint Number</th>
-                        <th >Complaint Type</th>
-                        <th >Room Number</th>
-                        <th>Complaint Status</th>
-                        <th >Complaint Reg. Date</th>
-                        <th >Action</th> 
+                        <th class="text-center">Sr No.</th>
+                        <th class="text-center">Complaint Number</th>
+                        <th class="text-center">Complaint Type</th>
+                        <th class="text-center">Room Number</th>
+                        <th class="text-center">Complaint Status</th>
+                        <th class="text-center" >Complaint Reg. Date</th>
+                        <th class="text-center">Action</th> 
                     </tr>
                 </thead>
                 <tbody>
             <?php
             include('includes/db_config.php');
+
             $query="select * from complaint";
             $data=mysqli_query($con,$query);
             $result = mysqli_fetch_assoc($data);
             $status= $result['complaint_status'];
 
-            if($status!='New'&& $status!='Closed')
+            if($status='Closed')
             { 
                 $query1="select * from complaint where complaint_status='Closed'";
                 $data1=mysqli_query($con,$query1);
@@ -124,20 +125,24 @@
                 {
                  ?>
                 <tr>
-                    <td><?php echo $sr?></td>   
-                    <td><?php echo $row['complaint_no']?></td>
-                    <td><?php echo $row['complaint_type']?></td>
-                    <td><?php echo $row['roomno']?></td>
-                    <td><?php echo $row['complaint_status']?></td>
-                    <td><?php $wop = $row['registration_date']; print date("d-m-Y",strtotime($wop))?></td>
-                    <td><a href="complaintaction.php?id=<?php echo $row['complaint_no']?>" class="btn btn-primary me- px-4 ">VIEW</a>
+                    <td class="text-center"><?php echo $sr?></td>   
+                    <td class="text-center"><?php echo $row['complaint_no']?></td>
+                    <td class="text-center"><?php echo $row['complaint_type']?></td>
+                    <td  class="text-center"class="text-center"><?php echo $row['roomno']?></td>
+                    <td class="text-center"><?php echo $row['complaint_status']?></td>
+                    <td class="text-center"><?php $wop = $row['registration_date']; print date("d-m-Y",strtotime($wop))?></td>
+                    
+                    <td class="text-center" style="margin-left:100px;"><a href="complaint_details.php?id=<?php echo $row['complaint_no']?>" class="btn btn-primary me-3 px-4 ">VIEW</a>
+
+                    <a href="complaint_details.php?id=<?php echo $row['complaint_no']?>" class="btn btn-danger me-3 px-4 ">REMOVE</a></td>
                 </tr> 
                 <?php $sr++;
                 }
             }
+            
             else
             {
-                echo "<h3 style='color:red';>New Complaints Not Found</h3>";
+                echo "<h3 style='color:red';>Complaints Not Found</h3>";
             }                  
             ?>
                 </tbody>
