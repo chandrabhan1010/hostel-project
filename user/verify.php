@@ -13,8 +13,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
     <title>User Login</title>
     <?php require('includes/links.php')?>
     <style>
@@ -24,15 +22,15 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 400px;
-    }
-
-    @media (max-width: 576px) {
-        div.login-form {
-            width: 90%;
-            padding: 5px;
-            margin-top: 100px;
         }
-    }
+
+        @media (max-width: 576px) {
+            div.login-form {
+                width: 90%;
+                padding: 5px;
+                margin-top: 100px;
+            }
+        }
     </style>
 </head>
 <body class="bg-light">

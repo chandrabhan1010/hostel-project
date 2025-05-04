@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/room_register.css">
     <title>Update Details</title>
-     
 </head>
 <body>
 <?php require('./includes/header.php')?>
@@ -2038,6 +2037,11 @@ if(isset($_POST['submit']))
 
     $sname =$_POST['sname'];
     $fname =$_POST['fname'];
+
+    $enroll = $_POST['enroll'];
+    $admission_no=$_POST['admission_no'];
+    $abc_id = $_POST['abc_id'];
+
     $programtype =$_POST['select1'];
     $course=$_POST['select2'];
     $semester=$_POST['semester'];
@@ -2063,7 +2067,8 @@ if(isset($_POST['submit']))
     if($newroom != "" && $regno != "")
     {
         // student registration
-        $query1="UPDATE studentregistration set program_type='$programtype',course='$course',semester='$semester',name='$sname',fname='$fname',dob='$dob',category='$category',religion='$religion',blood_group='$blood',contact_no='$mob',email_id='$email',emergency_no='$emergency_no',guardian_name='$guardian_name',guardian_relation='$guardian_rel',guardian_contact_no='$guardian_no',address='$address',city='$city',state='$state',pincode='$pincode',distance='$distance' where registration_no='$regno'";
+        $query1="UPDATE studentregistration set program_type='$programtype',course='$course',semester='$semester',name='$sname',fname='$fname',dob='$dob',category='$category',religion='$religion',blood_group='$blood',contact_no='$mob',email_id='$email',emergency_no='$emergency_no',guardian_name='$guardian_name',enrollment='$enroll',abc_id='$abc_id',admission_no='$admission_no',
+        guardian_relation='$guardian_rel',guardian_contact_no='$guardian_no',address='$address',city='$city',state='$state',pincode='$pincode',distance='$distance' where registration_no='$regno'";
 
         $result1=mysqli_query($con,$query1);
 

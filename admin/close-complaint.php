@@ -90,6 +90,7 @@
         <div class="col-lg-11 col-12  p-0 ms-5 ">
                 <!-- Design Form -->    
     <div class="home-content align-items-center ">
+    <a href="dashboard.php"><i class='bx bx-arrow-back' style="font-size:40px"></i></a>
     <h3 class="mt-5" style="font-family: Georgia, 'Times New Roman', Times, serif;">Close Complaints</h3>
     <hr>
     <div class="row">
@@ -134,12 +135,11 @@
                     
                     <td class="text-center" style="margin-left:100px;"><a href="complaint_details.php?id=<?php echo $row['complaint_no']?>" class="btn btn-primary me-3 px-4 ">VIEW</a>
 
-                    <a href="complaint_details.php?id=<?php echo $row['complaint_no']?>" class="btn btn-danger me-3 px-4 ">REMOVE</a></td>
+                    <a href="remove-complaint.php?id=<?php echo $row['complaint_no']?>" onclick='return checkdelete()' class="btn btn-danger me-3 px-4 ">REMOVE</a></td>
                 </tr> 
                 <?php $sr++;
                 }
-            }
-            
+            }  
             else
             {
                 echo "<h3 style='color:red';>Complaints Not Found</h3>";

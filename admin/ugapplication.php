@@ -34,6 +34,7 @@
         <div class="col-lg-11  p-0 ms-3 ">
             <!-- Design Form -->    
                 <div class="home-content"  style="padding-left: 0; margin-left: 0;">
+                <a href="dashboard.php"><i class='bx bx-arrow-back' style="font-size:40px"></i></a>
                     <h3 class="mt-5">#UG STUDENTS NEW APPLICATION</h3>
                     <hr>
                     <?php

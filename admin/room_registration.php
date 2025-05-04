@@ -18,6 +18,7 @@
             <!-- design Form -->
             <div class="home-section">     
                <div class="home-content">
+               <a href="dashboard.php"><i class='bx bx-arrow-back' style="font-size:40px"></i></a>
                 <h3 class="mt-2" style="font-family: Georgia, 'Times New Roman', Times, serif;">Registration</h3>
                 <hr>
                  <div class="container1">
