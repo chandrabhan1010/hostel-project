@@ -96,7 +96,7 @@ session_regenerate_id(true);
 
                         
                         <li>
-                            <a href="logout.php">
+                            <a href="logout2.php">
                             <i class='bx bx-log-in'></i>
                             <span class="link_name">Logout</span> 
                             </a>

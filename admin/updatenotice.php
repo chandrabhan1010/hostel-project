@@ -120,7 +120,7 @@ if(isset($_POST['post']))
     {
  
      $query = "UPDATE notice set title='$title',description='$des', link_title='$linktitle' where notice_id='$id'";
-     echo $query;
+     
  
      $data = mysqli_query($con, $query); 
      if($data)

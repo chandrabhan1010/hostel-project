@@ -85,6 +85,58 @@
         </div>
 </div>
 
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+include('./vendor/autoload.php');
+
+if(isset($_POST['submit']))
+{
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $message=$_POST['message'];
+
+    $mail = new PHPMailer(true);
+
+    try {
+        //Server settings
+        //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->isSMTP(); 
+        $mail->SMTPAuth   = true;     
+        
+        //Send using SMTP
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send throug                         //Enable SMTP authentication
+        $mail->Username   ='shivamthakur13092003@gmail.com';                     //SMTP username
+        $mail->Password   = 'kkui okna zuoj tlpz';
+        
+        //SMTP password
+        $mail->SMTPSecure ='tls';            //Enable implicit TLS encryption
+        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    
+        //Recipients
+        $mail->setFrom('shivamthakur13092003@gmail.com','Notification');
+        $mail->addAddress($email);     //Add a recipient
+
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'New Form Submission From Your Website'; 
+        
+
+        $mail->Body    = "Hello,<br> A new form has been submitted on your website. Details below.<br>Sender  Name  - $name <br> Sender Email - $email <br> Message - $message";
+
+    
+        $mail->send();
+        echo "<script>alert('Message has been sent');</script>";
+    } catch (Exception $e) {
+        echo "<script>alert('Message could not be sent');</script>";
+    
+    }
+
+}
+
+?>
 
 
 
