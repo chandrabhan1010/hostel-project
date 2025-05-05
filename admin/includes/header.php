@@ -17,6 +17,7 @@ session_regenerate_id(true);
 </head>
 <body class="bg-light">
 
+
 <!-- Sidebar Design -->
 <div class="sidebar">
     <div class="logo-details">
@@ -121,25 +122,23 @@ session_regenerate_id(true);
 </div>
 
 <!-- home section -->
+
+
+
+
 <section class="home-section">
 <nav>
     <div class="sidebar-button">
     <i class='bx bx-menu sidebarBtn'></i>
     <span class="dashboard">Dashboard</span>
     </div>
+    
 
 
-    <div class="profile-details">
-         <div class="dropdown">
-         <img src="./img/Admin-Profile.png" alt="">
-            <a class="btn  dropdown-toggle shadow-none admin_name" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                Admin_Name
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Update Profile</a></li>
-                <li><a class="dropdown-item" href="#">Change Password</a></li>
-                <a class="dropdown-item" href="logout.php"><span>Logout</span><i class='bx bx-log-in'></i></a>
-            </ul>
-        </div>
-    </div>
+            <div class="profile-details">
+                <div class="">
+                <img src="./img/Admin-Profile.png" alt="">
+                    <a href="logout.php" class="btn" role="button"> Logout <i class='bx bx-exit ms-3 mb-2'></i></a>
+                </div>
+            </div>
 </nav>
