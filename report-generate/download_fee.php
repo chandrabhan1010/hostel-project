@@ -7,15 +7,21 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
-    <?php require('./includes/links.php') ?>
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <?php require('./includes/links.php')?>
 
     <title>Download</title>
     <?php require('./includes/header.php') ?>
 
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:"Poppins",sans-serif;
+        } 
         .print 
         {
             background-color: transparent;
@@ -110,12 +116,16 @@
 error_reporting(0);
 if(isset($_POST['download']))
 {
+    foreach($_POST as $key => $value)
+    {
+        $_POST[$key] = mysqli_real_escape_string($con,$value);
+    }
     
-   echo $enroll = $_POST['enroll'];
-   echo $year = $_POST['year'];
+   $enroll = $_POST['enroll'];
+   $year = $_POST['year'];
 
 
-    echo $sql ="SELECT * FROM paymentdetails WHERE enrollment='$enroll' AND pay_year='$year'";
+    $sql ="SELECT * FROM paymentdetails WHERE enrollment='$enroll' && pay_year='$year'";
 
     $data = mysqli_query($con,$sql);
     $total = mysqli_num_rows($data);
@@ -123,7 +133,7 @@ if(isset($_POST['download']))
 
     if($total)
     {
-        $query ="select * from paymentdetails where transaction_id='$transaction_id'";
+        $query ="select * from paymentdetails WHERE enrollment='$enroll' && pay_year='$year'";
         $result = mysqli_query($con,$query);
         if (!$result) 
         {
@@ -302,13 +312,8 @@ if(isset($_POST['download']))
        echo "<h3 style='color:red;margin-left:850px'>Payment Fee Receipt Not Found</h3>";
     } 
         
-    
-
-
 ?>
 
-   
- 
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>

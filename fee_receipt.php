@@ -62,9 +62,9 @@
 <div class="receipt-box shadow ">
     <h4>Download Hostel Fee Receipt</h4>
     <hr>
-    <form action="../HostelProject/report-generate/download_fee_receipt.php" method="post" autocomplete="off">
+    <form action="../HostelProject/report-generate/download_fee.php" method="post" autocomplete="off">
       <div class="mb-3">
-        <input type="text"name="enroll" class="form-control shadow-none text-center" placeholder="Enrollment No.">
+        <input type="number" name="enroll" class="form-control shadow-none text-center" placeholder="Enrollment No.">
       </div>
       <div class="mb-3">
         <select class="form-select shadow-none text-center" name="year" aria-label="Default select example" required="required">
