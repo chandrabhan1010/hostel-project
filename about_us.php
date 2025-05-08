@@ -143,72 +143,33 @@ About  Guru Govind Boys  Hostel
 <h2 class="fw-bold text-center" style="font-family: Barlow,sans-serif;">HOSTEL AUTHORITIES</h2>
 <div class="underline"></div>
 <div class="container">
-    <div class="row justify-content-between align-items-center">
-        <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-        <h4>Administrative Warden (GGBH)</h4>
-        <h5>Dr. Sudesh Kumar</h5>
-        <h6>Assistant Professor (Department Of Computer Science)</h6>
-        <i class='bx bxs-envelope mt-4'></i><a href="" class="ms-2 text-primary">sudesh.kumar@igntu.ac.in</a>
-        <br>
-        <i class='bx bxs-phonesudesh.kumar@igntu.ac.in'></i><a class="ms-2 text-dark">+91 7869171069</a>
-        </div>
-        <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-            <img src="./images/sudesh_kumar.jpg" class="shadow border rounded" style="width: 200px; height:200px;">
-        </div>
-    </div>
-    
-    <hr>
-    <br>
 
-    <div class="row justify-content-between align-items-center">
-        <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-        <h4>Chief Warden (GGBH)</h4>
-        <h5>Prof. Vikash Singh</h5>
-        <h6>Professor, Head & Dean (Department of Vocational Education and Skill Training)</h6>
-        <i class='bx bxs-envelope mt-4'></i><a href="mailto:vikash.singh@igntu.ac.in" class="ms-2 text-primary">vikash.singh@igntu.ac.in</a>
-        <br>
-        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 7587169076</a>
-        </div>
-        <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-            <img src="./images/DrVikash.jpg" class="shadow border rounded"  style="width: 200px; height:200px;">
-        </div>
-    </div>
-    
-    <hr>
-    <br>
+<?php
+            include('includes/db_config.php');
+            $query="select * from hostel_warden";
+            $result=mysqli_query($con,$query);
+            while($row=mysqli_fetch_assoc($result))
+            {
+            ?>
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
+                    <h4><?php echo $row['work']?></h4>
+                    <h5><?php echo $row['warden_name']?></h5>
+                    <h6><?php echo $row['department']?></h6>
+                    <i class='bx bxs-envelope mt-4'></i><a href="<?php echo $row['email']?>" class="ms-2 text-primary"><?php echo $row['email']?></a>
+                    <br>
+                    <i class='bx bxs-phone'></i><a class="ms-2 text-dark"><?php echo $row['mobile']?></a>
+                    </div>
+                    <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
+                        <img src="<?php echo 'hostelproject/' . $row['image']; ?>" class="shadow border rounded" style="width: 200px; height:200px;">
+                    </div>
+                </div>
+                <hr>
+                <br>
 
-    <div class="row justify-content-between align-items-center">
-        <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-        <h4>Warden (GGBH)</h4>
-        <h5>Dr. Janki Prasad </h5>
-        <h6>Assistant Professor ( Department of Geography and Regional Development)</h6>
-        <i class='bx bxs-envelope mt-4'></i><a href="mailto:janki.prasad@igntu.ac.in" class="ms-2 text-primary">janki.prasad@igntu.ac.in</a>
-        <br>
-        <i class='bx bxs-phone'></i><a class="ms-2 text-dark">+91 9407359251</a>
-        </div>
-        <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-            <img src="./images/janki_prasad.jpg" class="shadow border rounded"  style="width: 200px; height:200px;">
-        </div>
-    </div>
-    
-    <hr>
-    <br>
-
-    <div class="row justify-content-between align-items-center">
-        <div class="col-lg-6 col-md-5 mb-4 order-lg-1 order-md-1 order-2">
-        <h4>Warden (GGBH)</h4>
-        <h5>Dr. Shivaji Chaudhary</h5>
-        <h6>Professor & Head (Department Of Environmental Science)</h6>
-        <i class='bx bxs-envelope mt-4'></i><a href="mailto:shivaji.chaudhari@igntu.ac.in" class="ms-2 text-primary">shivaji.chaudhari@igntu.ac.in</a>
-        <br>
-        <i class='bx bxs-phone'></i><a class="ms-2 text-dark" >+91 9436093471</a>
-        </div>
-        <div class="col-5 col-md-5 mb-4 order-lg-2 order-md-2 order-1">
-            <img src="./images/shivaji.jpg" class="shadow border rounded" style="width: 200px; height:200px;">
-        </div>
-    </div>
-    <hr>
-    <br>
+            <?php
+                }
+                ?> 
 </div>
 </div>
 

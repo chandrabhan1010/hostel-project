@@ -25,8 +25,6 @@ if((isset($_SESSION['userLogin'])&& $_SESSION['userLogin']==true))
         $_SESSION['userLogin']= true;
         $_SESSION['userId'] = $row['sr_no'];
         redirect('dashboard.php');
-
-        // header('location:dashboard.php?msg= Welcome User :'.$email.'Login Success !');
     }
     else
     {

@@ -117,13 +117,21 @@
     </div>
 </nav>
 
+<?php if(isset($_SESSION['status'])):?>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <?php  echo $_SESSION['status']; ?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif;?>
+    <?php unset($_SESSION['status']);?>
+
 <div class="login-form text-center rounded bg-white shadow overflow-hidden ">
 
     <form method="POST">
         <h4 class="bg-dark text-white py-3">ADMIN LOGIN </h4>
         <div class="p-4">
             <div class="mb-3">
-                <input name="admin_name" required type="text" class="form-control shadow-none text-center" placeholder="Username">
+                <input name="admin_username" required type="text" class="form-control shadow-none text-center" placeholder="Username">
             </div>
 
             <div class="mb-4">
@@ -140,9 +148,9 @@
 if(isset($_POST['login'])) 
 {
     $frm_data = filteration($_POST);
-    $query ="SELECT * FROM `admin_cred` WHERE `admin_name` = ? AND `admin_pass` = ?";
+    $query ="SELECT * FROM `admin_cred` WHERE `admin_username` = ? AND `admin_pass` = ?";
 
-    $values = [$frm_data['admin_name'], $frm_data['admin_pass']];
+    $values = [$frm_data['admin_username'], $frm_data['admin_pass']];
 
     $datatypes = "ss";
 

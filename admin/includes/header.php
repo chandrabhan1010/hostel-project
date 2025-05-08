@@ -7,6 +7,7 @@ session_regenerate_id(true);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/adminpanel.css">
@@ -15,6 +16,7 @@ session_regenerate_id(true);
     <?php require('./includes/links.php');?>
 </head>
 <body class="bg-light">
+
 
 <!-- Sidebar Design -->
 <div class="sidebar">
@@ -37,42 +39,42 @@ session_regenerate_id(true);
         </li>
 
         <li>
-            <a href="#">
+            <a href="manage_room.php">
             <i class='bx bxs-building-house'></i>
             <span class="link_name">Manage Rooms</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="manage_student.php">
             <i class="bi bi-people-fill"></i>
             <span class="link_name">Manage Student</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="manage_idcard.php">
             <i class="bi bi-person-vcard"></i>
                     <span class="link_name">Manage Id Card</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="show_user.php">
             <i class="bi bi-people-fill"></i>
             <span class="link_name">Show User</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="fee_details.php">
             <i class='bx bx-rupee'></i>
             <span class="link_name">Fee Details</span> 
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="notice_board.php">
             <i class="bi bi-clipboard2-data"></i>
             <span class="link_name">Notice Board</span> 
             </a>
@@ -86,10 +88,10 @@ session_regenerate_id(true);
             </a>
             <!-- Dropdown submenu -->
             <ul class="sub-menu">
-                <li><a href="#">New </a></li>
-                <li><a href="#">In Progress</a></li>
-                <li><a href="#">Close</a></li>
-                <li><a href="#">All</a></li>
+                <li><a href="new-complaint.php">New </a></li>
+                <li><a href="progress-complaint.php">In Progress</a></li>
+                <li><a href="close-complaint.php">Close</a></li>
+                <li><a href="all-complaint.php">All</a></li>
             </ul>
         </li>
 
@@ -109,7 +111,7 @@ session_regenerate_id(true);
         </li>
 
         <li>
-            <a href="#">
+            <a href="setting.php">
             <i class='bx bxs-cog'></i>
             <span class="link_name">Setting</span> 
             </a>
@@ -120,25 +122,23 @@ session_regenerate_id(true);
 </div>
 
 <!-- home section -->
+
+
+
+
 <section class="home-section">
 <nav>
     <div class="sidebar-button">
     <i class='bx bx-menu sidebarBtn'></i>
     <span class="dashboard">Dashboard</span>
     </div>
+    
 
 
-    <div class="profile-details">
-         <div class="dropdown">
-         <img src="./img/Admin-Profile.png" alt="">
-            <a class="btn  dropdown-toggle shadow-none admin_name" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                Admin_Name
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Update Profile</a></li>
-                <li><a class="dropdown-item" href="#">Change Password</a></li>
-                <a class="dropdown-item" href="logout.php"><span>Logout</span><i class='bx bx-log-in'></i></a>
-            </ul>
-        </div>
-    </div>
+            <div class="profile-details">
+                <div class="">
+                <img src="./img/Admin-Profile.png" alt="">
+                    <a href="logout.php" class="btn" role="button"> Logout <i class='bx bx-exit ms-3 mb-2'></i></a>
+                </div>
+            </div>
 </nav>

@@ -4,20 +4,18 @@
             <div class="sec admission">
              <h2>Admission</h2>
              <ul>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Admission Procedure</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Admission Eligibility</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Seats Distribution</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Re-Admission</a></li>
+                <li><a href="./admission.php"><i class="fa-solid fa-angles-right"></i> Admission Procedure</a></li>
+                <li><a href="./admission.php"><i class="fa-solid fa-angles-right"></i> Admission Eligibility</a></li>
+                <li><a href="./admission.php"><i class="fa-solid fa-angles-right"></i> Seats Distribution</a></li>
              </ul>
             </div>
 
             <div class="sec rules">
              <h2>Rules & Regulations</h2>
              <ul>
-                 <li><a href="#"><i class="fa-solid fa-angles-right"></i> Hostel Fee</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Hostel Timings</a></li>
+                 <li><a href="./admission.php"><i class="fa-solid fa-angles-right"></i> Hostel Fee</a></li>
+                <li><a href="./rules.php"><i class="fa-solid fa-angles-right"></i> Hostel Timings</a></li>
                 <li><a href="#"><i class="fa-solid fa-angles-right"></i> Timings of Mess & Dining Hall</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Guests & Visitor</a></li>
              </ul>
 
             </div>
@@ -25,11 +23,9 @@
             <div class="sec link">
             <h2>Other Links:</h2>
             <ul>
-                <li  data-bs-toggle="modal" data-bs-target="#adminmodal"><a href="#"><i class="fa-solid fa-angles-right"></i> Admin Login</a></li>
-                <li  data-bs-toggle="modal" data-bs-target="#usermodal"><a href="#"><i class="fa-solid fa-angles-right"></i> Student Login</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Online Fee  Payment</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Hostel Fee Receipt</a></li>
-                <li><a href="#"><i class="fa-solid fa-angles-right"></i> Application Receipt</a></li>
+                <li><a href="./hostelfee.php"><i class="fa-solid fa-angles-right"></i> Online Fee  Payment</a></li>
+                <li><a href="./fee_receipt.php"><i class="fa-solid fa-angles-right"></i> Hostel Fee Receipt</a></li>
+                <li><a href="./hostel_receipt.php"><i class="fa-solid fa-angles-right"></i> Application Receipt</a></li>
             </ul>
             </div>
 

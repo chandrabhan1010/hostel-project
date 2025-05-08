@@ -10,6 +10,25 @@
 
     <title>Home</title>
 
+    <style>
+            .pop:hover{
+            border-top-color:#3c8dbc !important ;
+            transform: scale(1.03);
+            transition: all 0.3s ;
+        }
+        .link
+        {
+            text-decoration: none;
+            color: blue;
+
+        }
+        .link:hover
+        {
+            color:tomato;
+        }
+    </style>
+
+
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
 
@@ -112,25 +131,34 @@
                                         <li><i class="text-danger">01-April-2025 :</i> <b>Admission Open for new session 2025-26</b> <img src="./images/new1.gif" style="width: 40px;"></li>
                                         <li><i class="text-danger">01-April-2025 :</i> <b>Admission Open for new session 2025-26</b> <img src="./images/new1.gif" style="width: 40px;"></li>
                                         <li><i class="text-danger">01-April-2025 :</i>  <b>Admission Open for new session 2025-26</b><img src="./images/new1.gif" style="width: 40px;"></li>
-                                        
                                     </ul>
                             </marquee>
                     </div>
             </div>
         </div>
 
+
+
         <div class="card m-3 p-2 shadow mt-5  mb-3  " style="max-width: 30rem;">
             <h2 class="card-header heading  text-white text-center" style="background:#3c8dbc">Notice Board</h2>
+        <?php
+
+        include('includes/db_config.php');
+        $query="select * from notice";
+        $result=mysqli_query($con,$query);
+        
+        while($row=mysqli_fetch_assoc($result))
+        {
+        ?>
             <div class="card-body  ">
-                <img src="./images/new.gif" style="width: 50px;"><h5 class="card-title">List of provisionally eligible students for the Hostels</h5>
-                <h6 class="card-subtitle mb-2 text-muted">15 Nov 2024 : List of provisionally eligible students for the Hostels</h6>
-                <a href="#" class="card-link text-primary">Click here for : Provisionally eligible student for GGBH</a>
+                <img src="./images/new.gif" style="width: 50px;"><h5 class="card-title"><?php echo $row['title']?></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><?php $wop = $row['post_date']; print date("d M Y : ",strtotime($wop))?><?php echo $row['description']?></h6>
+                <?php echo"<a href='".'HostelProject/'.$row['file']."'target='blank'  class='link' ><p>Click here for : ".$row['link_title']."</p></a>" ?>
             </div>
-            <div class="card-body  ">
-                <img src="./images/new.gif" style="width: 50px;"><h5 class="card-title">GGBH Hostel New Student allotement list 2024 </h5>
-                <h6 class="card-subtitle mb-2 text-muted">23 Nov 2024 : List of provisionally eligible students for the Hostels</h6>
-                <a href="#" class="card-link text-primary">Click here for : Download list</a>
-            </div>
+        <?php
+            }
+            ?>
+
         </div> 
     </div>
 
@@ -146,21 +174,21 @@
                      <h4 class="text-center"><a href="#">Online Fee Payment</a></h4>
                                         </div>
                     <div class="card-group">
-                        <div class="card  m-3 p-2 shadow">
+                        <div class="card  m-3 p-2 shadow pop">
                             <img src="./images/no1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title text-center text-white" style="background:#3c8dbc; font-size:20px;">Hostel Front View</h5>   
                             </div>
                         </div>
 
-                        <div class="card m-3 p-2 shadow">
+                        <div class="card m-3 p-2 shadow pop">
                             <img src="./images/innerview.png" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title text-center text-white"style="background:#3c8dbc; font-size:20px;">Hostel Inner View</h5>
                             </div>
                         </div>
 
-                        <div class="card m-3 p-2 shadow">
+                        <div class="card m-3 p-2 shadow pop">
                             <img src="./images/mess.png" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title text-center text-white" style="background:#3c8dbc; font-size:20px;">Hostel Mess</h5>
@@ -172,19 +200,19 @@
             <!-- card circle code -->
 
             <div class="info-container">
-                <div class="info-box">
+                <div class="info-box pop">
                 <div class="circle">248</div>
                 <div class="label">ROOMS</div>
                 </div>
-                <div class="info-box">
+                <div class="info-box pop">
                 <div class="circle">3</div>
                 <div class="label">FLOORS </div>
                 </div>
-                <div class="info-box">
+                <div class="info-box pop">
                 <div class="circle">500+</div>
                 <div class="label">STUDENTS</div>
                 </div>
-                <div class="info-box">
+                <div class="info-box pop">
                 <div class="circle">1</div>
                 <div class="label">MESS</div>
                 </div>
@@ -205,44 +233,44 @@
   <div class="container">
 
   <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/reading.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">READING ROOM</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/cycle.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">CYCLE CLUB</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/common.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">COMMON ROOM</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/play.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">PLAY GROUND</h5></a>   
     </div>
   </div>
 
   <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/dining.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">DINNING HALL</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/watercooler.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">WATER COOLER</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/gym.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">MODERN GYM</h5></a>   
     </div>
 
-    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3">
+    <div class="col-lg-2 col-md-2 text-center bg-white rounded shadow py-4 my-3 pop">
     <img src="./images/wifi.png" width="80px">
     <a href="infrastructure.php"><h5 class="mt-3 myhover">WIFI</h5></a>   
     </div>
@@ -275,76 +303,33 @@
  <div class="team">
     <div class="container">
         <div class="row mt-5">
-            
-                <!-- Warden1 -->
-            <div class="col-lg-6  ">
+
+        <?php
+            include('includes/db_config.php');
+            $query="select * from hostel_warden";
+            $result=mysqli_query($con,$query);
+            while($row=mysqli_fetch_assoc($result))
+            {
+            ?>
+               <div class="col-lg-6  pop ">
                 <div class="member d-flex align-items-start">
-                    <div class="teampic">
-                        <img src="./images/sudesh_kumar.jpg" class="img-circle  shadow border  team-img" alt="team1">
-                    </div>
+                    <div class="teampic">  
+                    <img src="<?php echo 'hostelproject/' . $row['image']; ?>" class="img-circle shadow border team-img" alt="team1">
+                    </div> 
                     <div class="member-info">
-                        <h4>Dr. Sudesh Kumar</h4>
-                        <span>Administrative Warden (GGBH)</span>
-                        <p>Assistant Professor (Department Of Computer Science)</p>
-                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:sudesh.kumar@igntu.ac.in" class="ms-2 text-primary">sudesh.kumar@igntu.ac.in</a>
+                        <h4><?php echo $row['warden_name']?></h4>
+                        <span><?php echo $row['work']?></span>
+                        <p><?php echo $row['department']?></p>
+                        <i class='bx bxs-envelope mt-4'></i><a href="<?php echo $row['email']?>" class="ms-2 text-primary"><?php echo $row['email']?></a>
                         <br>
-                        <i class='bx bxs-phone'></i><a href="tel:+91 7869171069" class="ms-2 text-dark">+91 7869171069</a>
+                        <i class='bx bxs-phone'></i><a href="tel:+91 7869171069" class="ms-2 text-dark"><?php echo $row['mobile']?></a>
                     </div>
                 </div>
             </div>
 
-            <!-- Warden2 -->
-            <div class=" col-lg-6  ">
-                <div class=" member d-flex align-items-start">
-                    <div class="teampic">
-                        <img src="./images/DrVikash.jpg"class="img-circle  shadow border  team-img"  alt="team1">
-                    </div>
-                    <div class="member-info">
-                        <h4>Prof. Vikash Singh</h4>
-                        <span>Chief Warden (GGBH)</span>
-                        <p>Professor, Head & Dean (Department of Vocational Education and Skill Training)</p>
-                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:vikash.singh@igntu.ac.in" class="ms-2 text-primary">vikash.singh@igntu.ac.in</a>
-                        <br>
-                        <i class='bx bxs-phone'></i><a  href="tel:+91 7587169076" class="ms-2 text-dark">+91 7587169076</a>
-                    </div>
-                </div>  
-            </div>
-
-            <!-- Warden3 -->
-            <div class="col-lg-6 mt-3 ">
-                <div class=" member d-flex align-items-start">
-                    <div class="teampic">
-                        <img src="./images/janki_prasad.jpg" class="img-circle shadow border  team-img"  alt="team1">
-                    </div>
-                    <div class=" member-info">
-                        <h4>Dr. Janki Prasad </h4>
-                        <span>Warden (GGBH)</span>
-                        <p>Assistant Professor ( Department of Geography and Regional Development)</p>
-                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:janki.prasad@igntu.ac.in" class="ms-2 text-primary">janki.prasad@igntu.ac.in</a>
-                        <br>
-                        <i class='bx bxs-phone'></i><a href="tel:+91 9407359251" class="ms-2 text-dark">+91 9407359251</a>
-                    </div>
-
-                    
-                </div>  
-            </div>
-
-            <!-- Warden4 -->
-            <div class="col-lg-6 mt-3">
-                <div class=" member d-flex align-items-start">
-                    <div class="teampic">
-                        <img src="./images/shivaji.png" class="img-circle  shadow border  team-img"  alt="team1">
-                    </div>
-                    <div class="member-info">
-                        <h4>Dr. Shivaji Chaudhary</h4>
-                        <span>Warden (GGBH)</span>
-                        <p>Professor & Head (Department Of Environmental Science)</p>
-                        <i class='bx bxs-envelope mt-4'></i><a href="mailto:shivaji.chaudhari@igntu.ac.in" class="ms-2 text-primary">shivaji.chaudhari@igntu.ac.in</a>
-                        <br>
-                        <i class='bx bxs-phone'></i><a href="tel:+91 9436093471" class="ms-2 text-dark" >+91 9436093471</a>
-                    </div>
-                </div>  
-            </div>
+            <?php
+                }
+                ?>
         </div>
     </div>
  </div>

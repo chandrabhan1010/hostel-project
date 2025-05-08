@@ -26,8 +26,8 @@
  </nav>    
  <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-ly-2 shadow-sm sticky-top">
         <div class="container-fluid">
-           <a href="index.php"> <img src="./images/hostellogo.png" class="logo"></a>
-            <a class="navbar-brand me-4 fw-bold fs-3 h-font" href="index.php">GGBH HOSTEL<span>.</span></a>
+           <a href="../index.php"> <img src="./images/hostellogo.png" class="logo"></a>
+            <a class="navbar-brand me-4 fw-bold fs-3 h-font" href="../index.php">GGBH HOSTEL<span>.</span></a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>

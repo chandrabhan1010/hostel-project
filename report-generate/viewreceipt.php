@@ -16,6 +16,13 @@
     <?php require('./includes/header.php') ?>
 
     <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:"Poppins",sans-serif;
+        } 
         .print 
         {
             background-color: transparent;
@@ -65,39 +72,47 @@
                 text-align: center;
                 font-size: 28px;
             }
-
-            .container-fluid {
-                padding: 0 10px;
+            .container, .container-fluid {
+                padding-left: 10px;
+                padding-right: 10px;
             }
 
-            .panel-body {
+            .panel-body table td,
+            .panel-body table th {
+                font-size: 12px;
+                padding: 6px 4px;
+                word-break: break-word;
+            }
+
+            .panel-body h3
+            { 
+                font-size: 16px;
+                float: left;
+            }
+            .panel-body h4 {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .panel-body img {
+                float:left;
+                display: block;
+                margin: 0 auto 10px auto;
+                max-width: 80px;
+                height: auto;
+            }
+
+            .table-responsive {
                 overflow-x: auto;
             }
 
-            .table {
-                width: 100% !important;
-                background-color: white !important; /* or transparent */
-                position: relative;
-                left: 0 !important;
+            td[colspan="6"] {
+                text-align: center !important;
             }
 
-            .table th, .table td {
-                font-size: 14px;
-                padding: 10px;
-                text-align: left;
-                word-wrap: break-word;
-            }
-
-            .table th, .table td h3 {
-                font-size: 18px;
-            }
-
-            .table img {
-                background-color: transparent;
-                width: 80px;
-                height: 80px;
-                object-fit: cover;
-            }
+            .box {
+                margin-top: 60px !important;
+            }            
         }
 
 
@@ -149,7 +164,7 @@
 
                             <div class="panel-body">
 
-                                <table class="table table-bordered rounded" border="1">
+                                <table class="table table-bordered" border="1">
 
                                     <tbody>
 
