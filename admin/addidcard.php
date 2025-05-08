@@ -61,7 +61,6 @@
                         <input type="file" name="uploadfile2"  id="inputAddress" class="form-control shadow-none" placeholder="Enter Room Number" required >
                         </div>
 
-
                         <div class="mb-3 d-flex justify-content-center">
                         <button type="submit" class="btn btn-success" name="submit" >GENERATE</button>
                         </div>

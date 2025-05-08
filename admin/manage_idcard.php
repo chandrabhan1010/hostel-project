@@ -117,7 +117,7 @@
 
             if(!$result)
                 { 
-                    die("connection failed".mysqli_error($conn));
+                    die("connection failed".mysqli_error($con));
                 }
                 else
                 {

@@ -1,11 +1,9 @@
 <?php include('../includes/db_config.php')?>
-
 <?php require('../fpdf/fpdf.php');
 if(isset($_GET['enroll']) && isset($_GET['year']))
 {
     $enroll = $_GET['enroll'];
     $year = $_GET['year'];
-    
     
         $sql ="select * from paymentdetails where enrollment='$enroll' && pay_year='$year'";
         $data=mysqli_query($con,$sql);
@@ -156,15 +154,8 @@ if(isset($_GET['enroll']) && isset($_GET['year']))
         $pdf->SetFont('times','',8);
         $pdf->Cell(0,8,$row['pay_date'],1,1,'',);
 
-
         $pdf->Output('I','php.pdf');
-
-
-        // $pdf->Image('../student_img/download.jpg',165,3,35,35);
-        
-
-        
+ 
 }
-
 
 ?>

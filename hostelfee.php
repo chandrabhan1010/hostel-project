@@ -394,7 +394,6 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
 <!-- Razorpay Payment Gateway Implimentation  -->
 <script>
         function pay_now() {
@@ -426,8 +425,8 @@
                 success: function(result) {
                 
                     var options = {
-                        "key": "rzp_live_r8oKZCmRglt9xp", // test =  rzp_test_eTpcUPwLzCbf2q
-                                                          // live =  rzp_live_r8oKZCmRglt9xp
+                        "key": "rzp_live_ibWjw3QeXXSEoz", // test = rzp_test_mTvnY5eKrEj0B5 
+                                                          // live =  rzp_live_ibWjw3QeXXSEoz
                         "amount": amt * 100,
                         "currency": "INR",
                         "name": "Guru Govind  Boy's Hostel",

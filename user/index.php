@@ -8,7 +8,6 @@ session_start();
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="../images/hostellogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>User Login</title>
     <?php require('includes/links.php')?>
     <style>
@@ -144,18 +143,15 @@ if(isset($_SESSION['status']))
             <div class="mb-3">
                 <input name="user_name" required type="text" class="form-control shadow-none text-center" placeholder="Username/Email">
             </div>
-
             <div class="mb-4">
                  <input name="user_pass" required type="password" class="form-control shadow-none text-center" placeholder="Password">
                 
                  <a href="forget_pass.php" style="color:#3c8dbc">Forget Password ?</a>
                 </div>
-            
             <button name="login" type="submit "class="btn text-white btn-brand shadow-none">Login</button>
         </div>
     </form>
 </div>
-
 <script>
     setTimeout(function(){
     let alert =document.querySelector(".alert");
