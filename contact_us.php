@@ -41,7 +41,7 @@
     
             <div class="text">
                 <h3>Phone</h3>
-                <p>+91 8305746836</p>
+                <p>+91 99057468XX</p>
             </div>
         
     </div>
@@ -108,15 +108,15 @@ if(isset($_POST['submit']))
         
         //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send throug                         //Enable SMTP authentication
-        $mail->Username   ='shivamthakur13092003@gmail.com';                     //SMTP username
-        $mail->Password   = 'kkui okna zuoj tlpz';
+        $mail->Username   ='user@example.com';                     //SMTP username
+        $mail->Password   = 'secret';
         
         //SMTP password
         $mail->SMTPSecure ='tls';            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
-        $mail->setFrom('shivamthakur13092003@gmail.com','Notification');
+        $mail->setFrom('from@example.com','Notification');
         $mail->addAddress($email);     //Add a recipient
 
         //Content
