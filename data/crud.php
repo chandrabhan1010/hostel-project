@@ -175,34 +175,6 @@ if(isset($_POST['submit_pg']))
         echo "<script>alert('Please fill the form first');</script>";
     }
 
-    //   if($total1 == 1 && $total2 == 1)
-    //   {
-    //       echo "<script>alert('Cuet no. and email id already registered');</script>";
-    //   }
-    //   else
-    //   {
-    //     $query ="INSERT INTO `ugregistration`( `cuet_no`, `std_img`, `sname`, `father_name`, `mother_name`, `date_of_birth`, `gender`, `category`, `religion`, `course`, `phone_no`, `email_id`, `address`, `state`, `distance`, `aadhar_pdf`, `apply_date`) 
-   
-    //     VALUES ('$_POST[cuetno]','$imgpath','$_POST[sname]','$_POST[fname]','$_POST[mname]','$dob','$_POST[gender]','$_POST[category]','$_POST[religion]','$_POST[course]','$_POST[phone]','$_POST[email]','$_POST[address]','$_POST[state]','$_POST[distance]','$docpath',NOW())";
-    
-    //     if(mysqli_query($con,$query))
-    //     {
-    //         echo "<script>alert('Hostel Registration Successfull');</script>";
-    //         header('location: http://localhost:8080/HostelProject/report-generate/downloadapplication.php/?success=added');
-    //     }
-    //     else
-    //     {
-    //         header('location: http://localhost:8080/HostelProject/ug_register.php?alert=add_failed');
-    //     }
-    //   }
-
-    // }
-    // else
-    // {
-    //   echo "<script>alert('Please fill the form first');</script>";
-    // }
-
-    
     
  }
 ?>
