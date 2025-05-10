@@ -16,13 +16,13 @@ function  send_password_reset($get_name,$get_email,$token)
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'shivamthakur13092003@gmail.com';                     //SMTP username
-        $mail->Password   = 'kkui okna zuoj tlpz';                               //SMTP password
+        $mail->Username   = 'user@gmail.com';                     //SMTP username
+        $mail->Password   = 'secret';                               //SMTP password
         $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
-        $mail->setFrom('shivamthakur13092003@gmail.com',$get_name);
+        $mail->setFrom('user@gmail.com',$get_name);
         $mail->addAddress($get_email,'verify'); 
     
         //Attachments

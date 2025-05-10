@@ -425,8 +425,8 @@
                 success: function(result) {
                 
                     var options = {
-                        "key": "rzp_live_ibWjw3QeXXSEoz", // test = rzp_test_mTvnY5eKrEj0B5 
-                                                          // live =  rzp_live_ibWjw3QeXXSEoz
+                        "key": "YOUR_KEY_ID",  
+                                                         
                         "amount": amt * 100,
                         "currency": "INR",
                         "name": "Guru Govind  Boy's Hostel",

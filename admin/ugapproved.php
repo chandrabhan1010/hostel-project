@@ -34,15 +34,15 @@
             
             //Send using SMTP
             $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP 
-            $mail->Username   ='shivamthakur13092003@gmail.com';                     //SMTP username
-            $mail->Password   = 'kkui okna zuoj tlpz';
+            $mail->Username   ='user@@gmail.com';                     //SMTP username
+            $mail->Password   = 'secret';
             
             //SMTP password
             $mail->SMTPSecure ='TLS';            //Enable implicit TLS encryption
             $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         
             //Recipients
-            $mail->setFrom('shivamthakur13092003@gmail.com','Notification');
+            $mail->setFrom('user@gmail.com','Notification');
             $mail->addAddress($email);     //Add a recipient
     
             //Content
