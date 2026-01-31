@@ -5,7 +5,7 @@
 2. Technoloies Used
 3. Features
 4. Setup
-5. 
+   
 # General Information
 The ONLINE HOSTEL RECORD SYSTEM project is designed to smoothly  manage the hostel operations, including student registration, 
 room allocation, and managing their stay. The system facilitates the registration of new students, stores their personal and
